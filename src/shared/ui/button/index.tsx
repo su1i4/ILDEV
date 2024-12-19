@@ -1,6 +1,5 @@
 import { twMerge } from "tailwind-merge";
 import clsx from "clsx";
-import { ReactNode } from "react";
 
 interface ButtonProps {
   text: string;
