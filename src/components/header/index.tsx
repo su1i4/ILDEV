@@ -17,7 +17,7 @@ export const Header = () => {
       </div>
       <div className="flex items-center gap-[100px]">
         <Routers />
-        <div className="flex items-center gap-[20px]">
+        <div className="flex items-center gap-[20px] z-10">
           <Button text="связаться с нами!" />
           <Burger />
         </div>
