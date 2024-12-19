@@ -5,6 +5,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --lightDark: #18191e;
+  --lightOrange: #cb6337;
+  --font-custom: "TT Firs Neue", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,5 +20,43 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-custom);
+}
+
+.container {
+  max-width: 1640px;
+}
+
+.primary-button {
+  background: linear-gradient(
+    90deg,
+    #ba2025 0%,
+    #a6181b 20%,
+    #db7746 40%,
+    #cf6f35 60%,
+    #d57238 80%,
+    #ba2025 100%
+  );
+  background-size: 200% 100%;
+  animation: gradientMove 2.5s linear infinite;
+}
+
+.secondary-button {
+  background: linear-gradient(
+    90deg,
+    #000000 0%,
+    #808080 50%,
+    #ffffff 100%
+  );
+  background-size: 200% 100%;
+  animation: gradientMove 3s linear infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 200% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
