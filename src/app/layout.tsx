@@ -62,7 +62,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={myFont.className}>
-      <body className={`${myFont.variable} antialiased`}>
+      <body className={`${myFont.variable} antialiased overflow-hidden`}>
         {children}
         <SpeedInsights />
       </body>
