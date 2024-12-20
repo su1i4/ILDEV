@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from '@vercel/analytics/next';
 
 const myFont = localFont({
   src: [
@@ -65,6 +66,7 @@ export default function RootLayout({
       <body className={`${myFont.variable} antialiased overflow-hidden`}>
         {children}
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
