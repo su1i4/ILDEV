@@ -5,7 +5,7 @@ import { Animation } from "./ui/animation";
 
 export const Banner = () => {
   return (
-    <div className="w-full h-[100vh] relative overflow-hidden">
+    <div className="w-full h-[100vh] relative">
        <div className="absolute top-0 bottom-0 w-full flex items-center justify-end">
         <Animation />
       </div>

@@ -1,6 +1,6 @@
 import { Logo } from "@/assets/icons/Logo";
 import { Routers } from "./ui/routers";
-import { Button } from "@/shared/ui/button";
+import { Button } from "@/shared/button";
 import { Burger } from "@/assets/icons/Burger";
 
 export const Header = () => {
