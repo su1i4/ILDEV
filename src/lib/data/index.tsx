@@ -50,18 +50,22 @@ export const SERVICES = [
       {
         component: <Hand />,
         classNames: "absolute bottom-0 left-[calc(50%-75px)] z-10 ",
+        alt: "",
       },
       {
         component: <CoinTopLeft />,
         classNames: "absolute left-[25%] top-[5%]",
+        alt: "",
       },
       {
         component: <CoinMiddleLeft />,
         classNames: "absolute top-[30%] left-[33%]",
+        alt: "",
       },
       {
         component: <CoinBottomLeft />,
         classNames: "absolute bottom-[25%] left-[16%]",
+        alt: "",
       },
     ],
   },

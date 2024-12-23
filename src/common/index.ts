@@ -8,4 +8,5 @@ export interface IService {
 export interface IServiceIconElement {
     component: ReactNode,
     classNames: string
+    alt: string
 }

@@ -5,5 +5,5 @@ interface AnimatedBackgroundProps {
 }
 
 export const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({ children }) => {
-  return <div className="w-full">{children}</div>;
+  return <div className="w-full wrapper">{children}</div>;
 };
