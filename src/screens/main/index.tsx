@@ -1,14 +1,17 @@
 import { Banner } from "../main/ui/banner";
-import { Services } from "./ui/services";
-import { AnimatedBackground } from "./ui/animated-background";
+import React from "react";
+
+const AnimatedBackground = React.lazy(() => import("./ui/animated-background"));
+const Services = React.lazy(() => import("./ui/services"));
 
 export default function HomePage() {
   return (
     <div className="w-full h-[100vh] overflow-y-auto">
       <Banner />
-      <AnimatedBackground>
+
+      {/* <AnimatedBackground> */}
         <Services />
-      </AnimatedBackground>
+      {/* </AnimatedBackground> */}
     </div>
   );
 }

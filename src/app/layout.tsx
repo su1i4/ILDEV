@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Analytics } from '@vercel/analytics/next';
+import { Analytics } from "@vercel/analytics/next";
+import { Header } from "@/components/header";
 
 const myFont = localFont({
   src: [
@@ -64,6 +65,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={myFont.className}>
       <body className={`${myFont.variable} antialiased overflow-hidden`}>
+        <header className="w-full fixed top-6 z-[99999]" >
+          <Header />
+        </header>
         {children}
         <SpeedInsights />
         <Analytics />

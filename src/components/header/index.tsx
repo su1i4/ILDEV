@@ -5,7 +5,7 @@ import { Burger } from "@/assets/icons/Burger";
 
 export const Header = () => {
   return (
-    <div className="w-full mx-auto container flex justify-between items-center px-24">
+    <div className="w-full mx-auto container flex justify-between items-center px-24 backdrop-blur-md py-2">
       <div className="flex items-center gap-1">
         <Logo width="36" height="36" />
         <div className="text-white mt-1">
@@ -19,7 +19,9 @@ export const Header = () => {
         <Routers />
         <div className="flex items-center gap-[20px] z-10">
           <Button text="связаться с нами!" />
-          <Burger />
+          <div className="min-w-[41px]">
+            <Burger />
+          </div>
         </div>
       </div>
     </div>

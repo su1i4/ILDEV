@@ -1,13 +1,34 @@
-import { SERVICES } from "@/lib/data";
+"use client";
+
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
+
+import { SERVICES } from "@/lib/data/services.data";
 import { ServiceCard } from "./ui/card";
 import { Title } from "@/shared/title";
 import { IService } from "@/common";
 
-export const Services = () => {
+const Services = () => {
+  const [sliderRef, slider] = useKeenSlider({
+    mode: "free-snap",
+    slides: {
+      perView: 3,
+      spacing: 20,
+    },
+    breakpoints: {
+      "(max-width: 1024px)": {
+        slides: { perView: 2, spacing: 15 },
+      },
+      "(max-width: 768px)": {
+        slides: { perView: 1, spacing: 10 },
+      },
+    },
+  });
+
   return (
     <div className="w-full py-20 flex flex-col gap-20">
       <Title text="Наши услуги" classNames="text-center" />
-      <div className="w-full px-24 flex items-center gap-[80px] overflow-x-auto">
+      <div ref={sliderRef} className="keen-slider px-8">
         {SERVICES.map((item: IService, index: number) => (
           <ServiceCard {...item} key={index} />
         ))}
@@ -15,3 +36,5 @@ export const Services = () => {
     </div>
   );
 };
+
+export default Services

@@ -1,12 +1,10 @@
-import { ReactNode } from "react"
 
 export interface IService {
     name: string
-    icons: IServiceIconElement[]
+    image: any
 }
 
-export interface IServiceIconElement {
-    component: ReactNode,
-    classNames: string
-    alt: string
+export interface IRoutes {
+    link: string
+    name: string
 }
