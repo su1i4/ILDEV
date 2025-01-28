@@ -6,8 +6,7 @@ export const Middle = () => {
   return (
     <div className="container mx-auto px-24">
       <h1 className="mb-[20px]">
-        {"ILDEV — МЫ СОЗДАЕМ\nРЕВОЛЮЦИОННЫЕ\nЦИФРОВЫЕ РЕШЕНИЯ"
-          .split("")
+        {"ILDEV — МЫ СОЗДАЕМ\nРЕВОЛЮЦИОННЫЕ\nЦИФРОВЫЕ РЕШЕНИЯ".split("")
           .map((char, index) => {
             if (char === "\n") {
               return <br key={`break-${index}`} />;
