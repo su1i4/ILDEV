@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { Link } from "@/assets/icons/Link";
-import { Button } from "@/shared/ui/button";
+import { Button } from "@/shared/button";
 
 export const Middle = () => {
   return (

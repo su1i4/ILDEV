@@ -1,11 +1,11 @@
 import { Logo } from "@/assets/icons/Logo";
 import { Routers } from "./ui/routers";
-import { Button } from "@/shared/ui/button";
+import { Button } from "@/shared/button";
 import { Burger } from "@/assets/icons/Burger";
 
 export const Header = () => {
   return (
-    <div className="w-full mx-auto container flex justify-between items-center px-24">
+    <div className="w-full mx-auto container flex justify-between items-center px-24 backdrop-blur-md py-2">
       <div className="flex items-center gap-1">
         <Logo width="36" height="36" />
         <div className="text-white mt-1">
