@@ -17,7 +17,16 @@ export default {
         foreground: "var(--foreground)",
         lightDark: "var(--lightDark)",
         lightOrange: "var(--lightOrange)",
-      }
+      },
+      screens: {
+        xl: { max: "1279px" }, // => @media (max-width: 1279px) { ... }
+        ml: { max: "1060px" },
+        lg: { max: "960px" }, // => @media (max-width: 1023px) { ... }
+        md: { max: "768px" }, // => @media (max-width: 767px) { ... }
+        sm: { max: "640px" }, // => @media (max-width: 639px) { ... }
+        xs: { max: "440px" }, // => @media (max-width: 440px) { ... }
+        "sm!": { min: "640px" },
+      },
     },
   },
   plugins: [],
