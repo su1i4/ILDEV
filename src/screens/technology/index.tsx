@@ -11,8 +11,8 @@ const Technology = ({
   technologies,
 }: TechnologyProps) => {
   return (
-    <div className="p-10 min-h-screen">
-      <div className="flex flex-col items-center justify-between bg-gray-900 p-8 pb-6 rounded-2xl w-full">
+    <div className="py-10">
+      <div className="flex flex-col items-center justify-between bg-[#18191E] p-8 pb-6 rounded-2xl w-[90%] m-auto">
         <h1 className="text-[48px] font-medium text-white">{title}</h1>
         <div className="flex items-center gap-[50px] mt-[30px]">
           {Array.isArray(technologies) &&

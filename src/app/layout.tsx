@@ -4,7 +4,7 @@ import localFont from "next/font/local";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 import { Header } from "@/components/header";
-import Footer from "@/screens/footer";
+import Footer from "@/components/footer";
 
 const myFont = localFont({
   src: [

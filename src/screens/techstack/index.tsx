@@ -18,7 +18,7 @@ const TechCard = ({ title, icons = [], description }: Tech) => (
 
 const TechStack = () => {
   return (
-    <div className="p-10 min-h-screen">
+    <div className="p-10">
       <h2 className="text-3xl font-bold text-white mb-8">Стек / Технологии</h2>
       <div className="grid grid-cols-3 gap-x-5 gap-y-7">
         {techStack.map((tech, index) => (
