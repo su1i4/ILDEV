@@ -18,10 +18,8 @@ export const Header = () => {
       <div className="flex items-center gap-[100px]">
         <Routers />
         <div className="flex items-center gap-[20px] z-10">
-          <Button text="связаться с нами!" />
-          <div className="min-w-[41px]">
-            <Burger />
-          </div>
+          <Button text="связаться с нами! "  />
+          <Burger />
         </div>
       </div>
     </div>
