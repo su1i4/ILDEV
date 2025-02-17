@@ -1,4 +1,4 @@
-import { Download } from "@/assets/icons/download";
+import { Download } from "@/assets/icons/Download";
 import { Email } from "@/assets/icons/Email";
 import { Logo } from "@/assets/icons/Logo";
 import { ROUTES } from "@/lib/data";
@@ -34,14 +34,14 @@ const Footer = () => {
           <p className="text-white">© 2024 ILDEV. Все права защищены</p>
         </div>
         <div className="flex flex-col gap-4">
-            <div className="flex items-center gap-[5px]">
-                <Email />
-                <p>ildev@info.kg</p>
-            </div>
-            <div className="flex items-center gap-[5px]">
-                <Download />
-                <p>Скачать презентацию</p>
-            </div>
+          <div className="flex items-center gap-[5px]">
+            <Email />
+            <p>ildev@info.kg</p>
+          </div>
+          <div className="flex items-center gap-[5px]">
+            <Download />
+            <p>Скачать презентацию</p>
+          </div>
           <p>Политика конфиденциальности</p>
         </div>
       </div>
