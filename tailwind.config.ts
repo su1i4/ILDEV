@@ -18,6 +18,10 @@ export default {
         lightDark: "var(--lightDark)",
         lightOrange: "var(--lightOrange)",
       },
+      backgroundImage: {
+        "custom-gradient":
+          "linear-gradient(89.07deg, #BA2025 -0.5%, #A6181B 23.19%, #DB7746 47.33%, #CF6F35 72.49%, #D57238 96.87%)",
+      },
       screens: {
         xl: { max: "1279px" }, // => @media (max-width: 1279px) { ... }
         ml: { max: "1060px" },
