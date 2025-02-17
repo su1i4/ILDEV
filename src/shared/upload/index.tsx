@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from "react";
 import { X } from "lucide-react";
-import { Download } from "@/assets/icons/Download";
+import { Download } from "@/assets/icons/download";
 
 interface FileUploadProps {
   maxSize?: number;

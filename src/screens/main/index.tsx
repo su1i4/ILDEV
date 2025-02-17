@@ -5,6 +5,8 @@ import Card from "./ui/card";
 
 // const AnimatedBackground = React.lazy(() => import("./ui/animated-background"));
 const Services = React.lazy(() => import("./ui/services"));
+const Clients = React.lazy(() => import("./ui/clients"))
+const Footer = React.lazy(() => import("../../components/footer"))
 
 export default function HomePage() {
   return (
@@ -12,18 +14,10 @@ export default function HomePage() {
       <Banner />
 
       {/* <AnimatedBackground> */}
-      <Services />
-      <div className="flex flex-wrap lg:flex-col gap-6 max-w-[90%] m-auto">
-        {OUR_WORKS.map((project, index) => (
-          <Card
-            key={project.title}
-            {...project}
-            array={OUR_WORKS}
-            index={index}
-          />
-        ))}
-      </div>
+        <Services />
+        <Clients />
       {/* </AnimatedBackground> */}
+      <Footer />
     </div>
   );
 }
