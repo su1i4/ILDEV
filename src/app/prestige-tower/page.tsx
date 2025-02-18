@@ -1,15 +1,15 @@
 import InfoTitle from "@/screens/infotitle";
 import Technology from "@/screens/technology";
-import Container from "@/shared/container";
 import Ios from "@/assets/images/ios.png";
 import Android from "@/assets/images/android.png";
 import Card from "@/screens/main/ui/card";
 import { OUR_WORKS } from "@/lib/data/card.data";
+import PrestigeTowerBanner from "@/screens/main/ui/prestige-tower-banner";
 
 const PrestigeTower = () => {
   return (
     <div className="w-full h-[100vh] overflow-y-auto">
-      <Container>aasdfd</Container>
+      <PrestigeTowerBanner />
       <InfoTitle texts={["Описание", "Процесс"]} />
 
       <Technology title="Технологии" technologies={[Ios, Android]} />

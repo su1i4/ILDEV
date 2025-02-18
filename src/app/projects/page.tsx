@@ -7,7 +7,7 @@ const Projects = () => {
   return (
     <div className="w-full h-[100vh] overflow-y-auto">
       <Container>
-        <div className="flex justify-between mt-[100px]">
+        <div className="flex justify-between min-h-[304px] mt-[100px] items-center">
           <h1 className="text-white text-[64px] font-[600] leading-[57.6px] max-w-[393px]">
             НАШИ ПРОЕКТЫ
           </h1>

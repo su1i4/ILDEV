@@ -1,6 +1,8 @@
 import Image from "next/image";
+import { StaticImageData } from "next/image";
+
 type ImageOption = {
-  image: string;
+  image: string | StaticImageData;
   styles?: string;
 };
 
@@ -35,26 +37,26 @@ const Card = ({
       }`}
     >
       <div className="flex flex-col gap-4">
-        <h2 className="text-[48px] md:text-[20px] font-[500] text-[#FFFFFF] ">
+        <h2 className="text-[48px] md:text-[20px] font-[500] text-[#FFFFFF]">
           {title}
         </h2>
-        <p className="text-[24px] md:text-[15px] font-[400] text-[#FFFFFF] ">
+        <p className="text-[24px] md:text-[15px] font-[400] text-[#FFFFFF]">
           {description}
         </p>
       </div>
       <Image
-        src={firstImageOption?.image}
+        src={firstImageOption.image}
         alt={title}
         width={400}
         height={200}
-        className={firstImageOption?.styles}
+        className={firstImageOption.styles}
       />
       <Image
-        src={secondImageOption?.image}
+        src={secondImageOption.image}
         alt={title}
         width={400}
         height={200}
-        className={secondImageOption?.styles}
+        className={secondImageOption.styles}
       />
       <div className="flex flex-col gap-4">
         <span className="text-gray-300 font-semibold">{quantity}</span>
