@@ -7,10 +7,12 @@ import C from "@/assets/images/C.png";
 import Vue from "@/assets/images/vue.png";
 import Card from "@/screens/main/ui/card";
 import { OUR_WORKS } from "@/lib/data/card.data";
+import OnlyWorkBanner from "@/screens/main/ui/only-work/only-work-banner";
 
 const OnlyWork = () => {
   return (
     <div className="w-full h-[100vh] overflow-y-auto">
+      <OnlyWorkBanner />
       <InfoTitle texts={["Описание", "Процесс"]} />
       <Screenshots />
       <Technology

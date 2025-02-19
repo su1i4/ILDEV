@@ -37,7 +37,7 @@ const ScreenshotCard: React.FC<ScreenshotCardProps> = ({ title, images }) => {
 
 export const Screenshots: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-900 text-white p-8">
+    <div className="bg-[#18191E] text-white p-8">
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-4">Задача</h2>
         <p className="text-gray-300">{projectData.task.description}</p>

@@ -7,15 +7,14 @@ import C from "@/assets/images/C.png";
 import Vue from "@/assets/images/vue.png";
 import Card from "@/screens/main/ui/card";
 import { OUR_WORKS } from "@/lib/data/card.data";
-import Container from "@/shared/container";
-import AlphaCargo from "@/screens/main/ui/alpha-cargo";
+import AlphaCargoBanner from "@/screens/main/ui/alpha-cargo/alpha-cargo-banner";
+// import Container from "@/shared/container";
+// import AlphaCargo from "@/screens/main/ui/alpha-cargo";
 
 const AlphaCargoPage = () => {
   return (
-    <div className="w-full h-[100vh] overflow-y-auto">
-      <Container>
-        <AlphaCargo />
-      </Container>
+    <div className="w-full h-[100vh] overflow-y-auto flex flex-col gap-[100px]">
+      <AlphaCargoBanner />
       <InfoTitle texts={["Описание", "Процесс"]} />
       <Screenshots />
       <Technology
