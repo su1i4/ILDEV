@@ -7,11 +7,11 @@ const Projects = () => {
   return (
     <div className="w-full h-[100vh] overflow-y-auto">
       <Container>
-        <div className="flex justify-between min-h-[304px] mt-[100px] items-center">
+        <div className="flex justify-between min-h-[204px] mt-[100px] items-center">
           <h1 className="text-white text-[64px] font-[600] leading-[57.6px] max-w-[393px]">
             НАШИ ПРОЕКТЫ
           </h1>
-          <p className="text-white text-[24px] text-[400] max-w-[491px] text-end">
+          <p className="text-white text-[24px] text-[400] max-w-[491px] text-end leading-[21.6px]">
             создаем инновационный софт и сайты, помогая бизнесу расти, жизни
             становиться проще, а миру — умнее
           </p>

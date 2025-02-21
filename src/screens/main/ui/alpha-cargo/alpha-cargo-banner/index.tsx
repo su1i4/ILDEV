@@ -3,8 +3,8 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import PrestigetowerImage1 from "@/assets/images/prestige-tower-1.png";
-import PrestigetowerImage2 from "@/assets/images/prestige-tower-2.png";
+import AlphaCargoImage1 from "@/assets/images/alpha-cargo-1.png";
+import AlphaCargoImage2 from "@/assets/images/alpha-cargo-2.png";
 
 const AlphaCargoBanner = () => {
   const fadeInUp = {
@@ -53,13 +53,13 @@ const AlphaCargoBanner = () => {
             <div className="w-[501px] h-[501px] rounded-full bg-custom-gradient absolute "></div>
 
             <motion.div
-              className="absolute left-0 lg:-left-[120px] top-[20px] z-[2] w-[610px] md:w-[350px] lg:w-auto"
+              className="absolute left-0 lg:-left-[120px] top-[100px] z-[2] w-[610px] md:w-[350px] lg:w-auto"
               initial={imageAnimation.initial}
               animate={imageAnimation.animate}
               transition={imageAnimation.transition}
             >
               <Image
-                src={PrestigetowerImage1}
+                src={AlphaCargoImage1}
                 alt="Desktop view"
                 className="rounded-lg object-cover shadow-lg hover:scale-105 transition-transform duration-300"
               />
@@ -71,7 +71,7 @@ const AlphaCargoBanner = () => {
               transition={{ ...imageAnimation.transition, delay: 0.6 }}
             >
               <Image
-                src={PrestigetowerImage2}
+                src={AlphaCargoImage2}
                 alt="Mobile view"
                 className="rounded-lg shadow-xl object-cover hover:scale-105 transition-transform duration-300"
               />
@@ -87,12 +87,12 @@ const AlphaCargoBanner = () => {
         transition={{ duration: 0.6, delay: 0.8 }}
       >
         <div>
-          <div className="flex lg:gap-32 gap-[182px]">
+          <div className="flex lg:gap-32 gap-[20px]">
             <h2 className="text-2xl lg:text-3xl font-bold text-white text-nowrap">
               О ПРОЕКТЕ
             </h2>
-            <div className="flex flex-col leading-[21.6px]">
-              <p className="text-lg lg:text-xl text-gray-300 max-w-3xl">
+            <div className="flex flex-col leading-[22.6px] text-[24px]">
+              <p className="lg:text-xl text-gray-300 max-w-3xl">
                 Альфа Карго — лидер на рынке грузоперевозок одежды и текстиля из
                 Кыргызстана в Россию. Совместно разработали цифровую экосистему
                 для клиентов, включающую современный сайт и мобильное
@@ -103,7 +103,7 @@ const AlphaCargoBanner = () => {
                 Теперь пользователь может пройти весь путь доставки всего за
                 несколько шагов:
               </p>
-              <ul className="pl-5 list-disc">
+              <ul className="pl-8 list-disc mb-[15px]">
                 <li>Оформить заявку на вывоз груза с удобной геолокацией.</li>
                 <li>
                   Следить за статусом доставки в режиме реального времени.{" "}

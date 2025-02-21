@@ -19,7 +19,7 @@ interface FormData {
   phone: string;
   file: File | null;
   agree: boolean;
-  description: string;
+  description?: string;
 }
 
 interface FormErrors {
@@ -32,7 +32,7 @@ interface FormErrors {
 export default function QuestionForm({
   title = "",
   description = "",
-  textarea = true,
+  textarea = false,
 }: FormDataProps) {
   const [formData, setFormData] = useState<FormData>({
     name: "",
@@ -185,7 +185,7 @@ export default function QuestionForm({
                       description: e.target.value,
                     }))
                   }
-                  value={formData.description}
+                  value={formData.description || ""}
                   placeholder="Напиши немного о себе..."
                 />
               </div>

@@ -1,33 +1,15 @@
-import Dashboard from "@/assets/images/dashboard-graphic.png";
-import DashboardLaptop from "@/assets/images/dashboard-laptop.png";
-import { StaticImageData } from "next/image";
-
-interface ProjectData {
-  task: {
-    year: number;
-    description: string;
-  };
-  result: {
-    mainText: string;
-    features: string[];
-  };
-  technicalDetails: {
-    title: string;
-    features: string[];
-  };
-}
-
-interface AppScreenshot {
-  id: number;
-  title: string;
-  images: string | StaticImageData[];
-}
+import Application1 from "@/assets/images/application-1.png";
+import Application2 from "@/assets/images/application-2.png";
+import Application3 from "@/assets/images/application-3.png";
+import Application4 from "@/assets/images/application-4.png";
+import WebsiteImage from "@/assets/images/website.png";
+import { AppScreenshot, ProjectData } from "@/common";
 
 export const projectData: ProjectData = {
   task: {
     year: 2024,
-    description:
-      "В 2024 году компания Альфа Карго обратилась к нам с задачей разработки современного сайта и мобильного приложения, которые бы упростили клиентам взаимодействие с сервисом грузоперевозок...",
+    description: `В 2024 году компания Альфа Карго обратилась к нам, с задачей разработки современного сайта и мобильного приложения, которые бы упростили клиентам взаимодействие с сервисом грузоперевозок. Цель заключалась в создании удобной цифровой платформы для отслеживания отправлений, оплаты услуг, управления документами и взаимодействия с менеджерами компании.
+Мы детально изучили потребности Альфа Карго, а также запросы их клиентов, чтобы предложить оптимальные решения, соответствующие высоким стандартам отрасли.`,
   },
   result: {
     mainText:
@@ -40,6 +22,8 @@ export const projectData: ProjectData = {
       "Полную адаптивность сайта и приложения для удобной работы на любых устройствах",
       "Возможность получения уведомлений о статусе отправлений и акциях компании",
     ],
+    mainText2:
+      "Для повышения взаимодействия с клиентами мы реализовали функционал сторис в приложении, где пользователи могут получать обновления о новостях, скидках и новых услугах Альфа Карго.",
   },
   technicalDetails: {
     title: "Технологические особенности",
@@ -49,6 +33,8 @@ export const projectData: ProjectData = {
       "Интеграция с платежными системами для безопасных и удобных транзакций",
       "Возможность работы оффлайн: клиенты могут сохранять информацию и работать с ней без подключения к интернету",
     ],
+    title2:
+      "Мы детально изучили потребности Альфа Карго, а также запросы их клиентов, чтобы предложить оптимальные решения, соответствующие высоким стандартам отрасли.",
   },
 };
 
@@ -57,38 +43,32 @@ export const appScreenshots: AppScreenshot[] = [
     id: 1,
     title: "Приложение",
     images: [
-      Dashboard,
-      DashboardLaptop,
-      Dashboard,
-      Dashboard,
-      Dashboard,
-      Dashboard,
-      Dashboard,
-      Dashboard,
-      DashboardLaptop,
-      Dashboard,
-      Dashboard,
-      Dashboard,
-      Dashboard,
-      Dashboard,
-      DashboardLaptop,
-      Dashboard,
-      Dashboard,
-      Dashboard,
-      Dashboard,
-      Dashboard,
-      Dashboard,
-      DashboardLaptop,
-      Dashboard,
-      Dashboard,
-      Dashboard,
-      Dashboard,
-      Dashboard,
+      {
+        image: Application1,
+        className: "h-[634px]",
+      },
+      {
+        image: Application2,
+        className: "h-[634px]",
+      },
+      {
+        image: Application3,
+        className: "h-[634px]",
+      },
+      {
+        image: Application4,
+        className: "h-[634px]",
+      },
     ],
   },
   {
     id: 2,
     title: "Пункты Альфа",
-    images: [Dashboard	],
+    images: [
+      {
+        image: WebsiteImage,
+        className: "h-[784px] object-contain",
+      },
+    ],
   },
 ];

@@ -5,7 +5,6 @@ import Android from "@/assets/images/android.png";
 import Card from "@/screens/main/ui/card";
 import { OUR_WORKS } from "@/lib/data/card.data";
 import PrestigeTowerBanner from "@/screens/main/ui/prestige/prestige-tower-banner";
-import PrestigeTowerInfo from "@/screens/main/ui/prestige/prestige-tower-info";
 
 const PrestigeTower = () => {
   return (
@@ -14,8 +13,6 @@ const PrestigeTower = () => {
       <InfoTitle texts={["Описание", "Процесс"]} />
 
       <Technology title="Технологии" technologies={[Ios, Android]} />
-
-      <PrestigeTowerInfo />
 
       <div className="flex flex-wrap lg:flex-col gap-6 max-w-[90%] m-auto my-[100px]">
         {OUR_WORKS.splice(0, 2).map((project, index) => (

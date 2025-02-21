@@ -8,6 +8,7 @@ import Vue from "@/assets/images/vue.png";
 import Card from "@/screens/main/ui/card";
 import { OUR_WORKS } from "@/lib/data/card.data";
 import AlphaCargoBanner from "@/screens/main/ui/alpha-cargo/alpha-cargo-banner";
+import { appScreenshots, projectData } from "@/lib/data/alpha.cargo";
 // import Container from "@/shared/container";
 // import AlphaCargo from "@/screens/main/ui/alpha-cargo";
 
@@ -16,7 +17,7 @@ const AlphaCargoPage = () => {
     <div className="w-full h-[100vh] overflow-y-auto flex flex-col gap-[100px]">
       <AlphaCargoBanner />
       <InfoTitle texts={["Описание", "Процесс"]} />
-      <Screenshots />
+      <Screenshots screenshots={appScreenshots} projectData={projectData} />
       <Technology
         title="Технологии"
         technologies={[netframework, JavaScript, C, Vue]}

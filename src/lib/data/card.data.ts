@@ -22,7 +22,8 @@ export const OUR_WORKS = [
     stats: "Скачиваний",
     firstImageOption: {
       image: Iphone13Left,
-      styles: "w-[304px] sm:w-[250px] xs:w-[270px] absolute right-[150px] sm:right-[100px] xs:right-[10px] bottom-[10px] xs:bottom-[70px]",
+      styles:
+        "w-[304px] sm:w-[250px] xs:w-[270px] absolute right-[150px] sm:right-[100px] xs:right-[10px] bottom-[10px] xs:bottom-[70px]",
     },
     secondImageOption: {
       styles: "w-[250px] sm:w-[207px] absolute right-0 bottom-[10px]",

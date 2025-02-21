@@ -1,62 +1,72 @@
-import { appScreenshots, projectData } from "@/lib/data/alpha.cargo";
+import { AppScreenshot, ProjectData } from "@/common";
 import Image, { StaticImageData } from "next/image";
 import React from "react";
 
 interface ScreenshotCardProps {
   title: string;
-  images: string | StaticImageData[];
+  images: { className?: string; image: string | StaticImageData }[];
 }
 
 const ScreenshotCard: React.FC<ScreenshotCardProps> = ({ title, images }) => {
   return (
-    <div className="rounded-lg overflow-hidden">
-      <div className="p-4">
-        <h3 className="text-lg font-medium">{title}</h3>
-      </div>
+    <div className="">
+      <h2 className="text-[32px] font-medium mb-6">{title}</h2>
       <div
         className={`${
           images.length === 1
             ? "w-full"
-            : "grid grid-flow-col grid-cols-2 auto-cols-max gap-[20px] md:gap-[10px]  overflow-x-scroll scrollbar-hide"
+            : "grid grid-flow-col grid-cols-2 auto-cols-max gap-[20px] md:gap-[10px] scrollbar-hide"
         }`}
       >
         {Array.isArray(images) &&
-          images.map((image, i) => (
-            <Image
-              key={i}
-              src={image}
-              alt={title}
-              className="object-cover w-full h-auto"
-              sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 20vw"
-            />
+          images.map(({ image, className }, i) => (
+            <div key={i}>
+              <Image
+                src={image}
+                alt={title}
+                className={`object-cover w-full ${className}`}
+                sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 20vw "
+              />
+            </div>
           ))}
       </div>
     </div>
   );
 };
 
-export const Screenshots: React.FC = () => {
+interface ScreenshotsProps {
+  projectData: ProjectData;
+  screenshots: AppScreenshot[];
+}
+
+export const Screenshots = ({ projectData, screenshots }: ScreenshotsProps) => {
   return (
-    <div className="bg-[#18191E] text-white p-8">
-      <section className="mb-12">
+    <div
+      className="bg-[#18191E] text-white p-8 text-[24px] font-[400]
+text-[24px] font-[400]"
+    >
+      <section className="mb-12 flex gap-[80px] leading-[22.6px]">
         <h2 className="text-2xl font-bold mb-4">Задача</h2>
-        <p className="text-gray-300">{projectData.task.description}</p>
+        <p className="text-white">{projectData.task.description}</p>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-12 flex gap-[40px]">
         <h2 className="text-2xl font-bold mb-4">Результат</h2>
-        <p className="text-gray-300 mb-4">{projectData.result.mainText}</p>
-        <ul className="space-y-2">
-          {projectData.result.features.map((feature, index) => (
-            <li key={index} className="flex items-start">
-              <span className="text-green-500 mr-2">•</span>
-              <span>{feature}</span>
-            </li>
-          ))}
-        </ul>
+        <div>
+          <p className="mb-4">{projectData.result.mainText}</p>
+          <ul className="space-y-2 leading-[22.6px]">
+            {projectData.result.features.map((feature, index) => (
+              <li key={index} className="flex items-start">
+                <span className="text-green-500 mr-2">•</span>
+                <span>{feature}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-12 ml-[172px]">
+        <div className="leading-[22.6px]">{projectData.result.mainText2}</div>
         <h2 className="text-2xl font-bold mb-4">
           {projectData.technicalDetails.title}
         </h2>
@@ -68,12 +78,14 @@ export const Screenshots: React.FC = () => {
             </li>
           ))}
         </ul>
+        <div className="leading-[22.6px]">
+          {projectData.technicalDetails.title2}
+        </div>
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold mb-6">Приложение</h2>
         <div className="grid grid-cols-1  gap-6">
-          {appScreenshots.map((screenshot) => (
+          {screenshots.map((screenshot) => (
             <ScreenshotCard
               key={screenshot.id}
               title={screenshot.title}

@@ -8,13 +8,17 @@ import Vue from "@/assets/images/vue.png";
 import Card from "@/screens/main/ui/card";
 import { OUR_WORKS } from "@/lib/data/card.data";
 import OnlyWorkBanner from "@/screens/main/ui/only-work/only-work-banner";
+import { ONLY_WORK_DATA, ONLY_WORK_SCREEN } from "@/lib/data/only-work";
 
 const OnlyWork = () => {
   return (
     <div className="w-full h-[100vh] overflow-y-auto">
       <OnlyWorkBanner />
       <InfoTitle texts={["Описание", "Процесс"]} />
-      <Screenshots />
+      <Screenshots
+        screenshots={ONLY_WORK_SCREEN}
+        projectData={ONLY_WORK_DATA}
+      />
       <Technology
         title="Технологии"
         technologies={[netframework, JavaScript, C, Vue]}
