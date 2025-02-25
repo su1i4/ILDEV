@@ -1,6 +1,5 @@
-import QuestionForm from "@/components/form";
 import Container from "@/shared/container";
-import React from "react";
+import PlatformCategory from "@/screens/platform-category";
 
 const Vacancies = () => {
   return (
@@ -16,31 +15,7 @@ const Vacancies = () => {
         </div>
       </Container>
 
-      <section className="w-[90%] m-auto">
-        <h3 className="text-[48px] font-[500] mb-[30px]">Выбери категорию</h3>
-        <ul className="flex flex-col gap-[20px]">
-          {[
-            "Backend go developer",
-            "IOS developer",
-            "Android developer",
-            "Backend developer python",
-            "QA engineer",
-            "Бухгалтер",
-          ].map((item: string) => (
-            <li
-              key={item}
-              className="bg-[#18191E] p-[30px] rounded-[30px] font-[500] text-[32px]"
-            >
-              {item}
-            </li>
-          ))}
-        </ul>
-        <QuestionForm
-          title="Нашел вакансию? Пиши"
-          description="Заполните форму и мы свяжемся с вами в ближайшее время"
-          textarea
-        />
-      </section>
+      <PlatformCategory />
     </div>
   );
 };

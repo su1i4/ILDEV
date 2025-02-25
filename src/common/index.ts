@@ -39,3 +39,12 @@ export interface AppScreenshot {
   title: string;
   images: { className?: string; image: string | StaticImageData }[];
 }
+
+export interface PlatformData {
+  id: string;
+  title: string;
+  description: string;
+  conditional: string[];
+  pending: string[];
+  tasks?: string[];
+}
