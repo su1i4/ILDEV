@@ -1,3 +1,6 @@
+"use client";
+
+import { useRouter } from "@/navigation";
 import Image from "next/image";
 import { StaticImageData } from "next/image";
 
@@ -15,6 +18,7 @@ interface CardProps {
   secondImageOption: ImageOption;
   array?: CardProps[];
   index?: number;
+  url: string;
 }
 
 const Card = ({
@@ -24,17 +28,20 @@ const Card = ({
   secondImageOption,
   quantity,
   stats,
+  url,
   array,
   index,
 }: CardProps) => {
   const isLastOdd =
     !!array && index === array.length - 1 && array.length % 2 !== 0;
+  const router = useRouter();
 
   return (
     <div
-      className={`bg-black w-[48%] lg:w-[100%] text-white h-[502px] p-6 rounded-2xl shadow-lg flex flex-col justify-between gap-4 relative overflow-hidden ${
-        isLastOdd ? "xl:col-span-2" : ""
+      className={`bg-black w-[48%] lg:w-[100%] text-white h-[502px] sm:h-[442px] p-6 rounded-2xl shadow-lg flex flex-col justify-between gap-4 relative overflow-hidden ${
+        isLastOdd ? "w-[100%]" : ""
       }`}
+      onClick={() => router.push(url)}
     >
       <div className="flex flex-col gap-4">
         <h2 className="text-[48px] md:text-[20px] font-[500] text-[#FFFFFF]">

@@ -13,10 +13,12 @@ import { Screenshots } from "@/screens/screenshots";
 import { OUR_WORKS } from "@/lib/data/card.data";
 import Card from "@/screens/main/ui/card";
 import { CARGO_SYSTEM, CARGO_SYSTEM_SCREEN } from "@/lib/data/cargo-system";
+import { useTranslations } from "next-intl";
 
 const CargoSystem = () => {
   const [isActive, setIsActive] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const t = useTranslations();
 
   useEffect(() => {
     setMounted(true);
@@ -88,14 +90,16 @@ const CargoSystem = () => {
         technologies={[netframework, JavaScript, C, Vue]}
       />
       <div className="flex flex-wrap lg:flex-col gap-6 max-w-[90%] m-auto my-[100px]">
-        {OUR_WORKS.splice(2, 3).map((project, index) => (
-          <Card
-            key={project.title}
-            {...project}
-            array={OUR_WORKS}
-            index={index}
-          />
-        ))}
+        {OUR_WORKS(t)
+          .splice(2, 3)
+          .map((project, index) => (
+            <Card
+              key={project.title}
+              {...project}
+              array={OUR_WORKS(t)}
+              index={index}
+            />
+          ))}
       </div>
     </div>
   );

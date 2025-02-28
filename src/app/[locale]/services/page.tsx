@@ -9,8 +9,11 @@ import TechStack from "@/screens/techstack";
 import QuestionForm from "@/components/form";
 import { SocialMedia } from "@/shared/socials";
 import { Logo } from "@/assets/icons/Logo";
+import { useTranslations } from "next-intl";
 
 const Service = () => {
+  const t = useTranslations();
+
   return (
     <div className="w-full h-[100vh] overflow-y-auto flex flex-col gap-[100px]">
       <Container>
@@ -32,14 +35,16 @@ const Service = () => {
           Кейсы
         </h1>
         <div className="flex flex-wrap lg:flex-col gap-6 m-auto">
-          {OUR_WORKS.splice(2, 3).map((project, index) => (
-            <Card
-              key={project.title}
-              {...project}
-              array={OUR_WORKS}
-              index={index}
-            />
-          ))}
+          {OUR_WORKS(t)
+            .splice(2, 3)
+            .map((project, index) => (
+              <Card
+                key={project.title}
+                {...project}
+                array={OUR_WORKS(t)}
+                index={index}
+              />
+            ))}
         </div>
       </Container>
 

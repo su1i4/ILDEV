@@ -48,3 +48,7 @@ export interface PlatformData {
   pending: string[];
   tasks?: string[];
 }
+
+export type Props = {
+  params: { locale: string };
+};

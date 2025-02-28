@@ -1,6 +1,6 @@
 "use client";
 import QuestionForm from "@/components/form";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/navigation";
 
 const PlatformCategory = () => {
   const router = useRouter();

@@ -1,12 +1,15 @@
 import clsx from "clsx";
 import { Link } from "@/assets/icons/Link";
 import { Button } from "@/shared/button";
+import { useTranslations } from "next-intl";
 
 export const Middle = () => {
+  const t = useTranslations();
   return (
     <div className="container mx-auto px-24">
       <h1 className="mb-[20px]">
-        {"ILDEV — МЫ СОЗДАЕМ\nРЕВОЛЮЦИОННЫЕ\nЦИФРОВЫЕ РЕШЕНИЯ".split("")
+        {"ILDEV — МЫ СОЗДАЕМ\nРЕВОЛЮЦИОННЫЕ\nЦИФРОВЫЕ РЕШЕНИЯ"
+          .split("")
           .map((char, index) => {
             if (char === "\n") {
               return <br key={`break-${index}`} />;
@@ -22,10 +25,10 @@ export const Middle = () => {
               >
                 {char}
               </span>
-            )
+            );
           })}
       </h1>
-      <Button text="Оставить заявку" icon={<Link />} />
+      <Button text={t("home.action")} icon={<Link />} />
     </div>
   );
 };

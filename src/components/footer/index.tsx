@@ -2,13 +2,15 @@ import { Download } from "@/assets/icons/Download";
 import { Email } from "@/assets/icons/Email";
 import { Logo } from "@/assets/icons/Logo";
 import { ROUTES } from "@/lib/data";
+import { Link } from "@/navigation";
 import { SocialMedia } from "@/shared/socials";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 const Footer = () => {
+  const t = useTranslations();
   return (
     <footer className="w-full bg-[#18191E]">
-      <div className="flex items-end justify-between px-24 py-8 rounded-[30px]">
+      <div className="flex items-end justify-between px-24 py-8 rounded-[30px] sm:flex-col">
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-1 mx-auto m-2 container">
             <Logo width="80" height="80" />
@@ -20,8 +22,8 @@ const Footer = () => {
             </div>
           </div>
           <SocialMedia />
-          <div className="flex bg items-center gap-[20px]">
-            {ROUTES.map((item, i) => (
+          <div className="flex bg items-center gap-[20px] sm:flex-wrap">
+            {ROUTES(t).map((item, i) => (
               <Link key={item.link} href={item.link} className="group z-10">
                 <p className="text-[18px] font-[400] relative">
                   {item.name}
@@ -40,9 +42,9 @@ const Footer = () => {
           </div>
           <div className="flex items-center gap-[5px]">
             <Download />
-            <p>Скачать презентацию</p>
+            <p>{t("layout.nav.download")}</p>
           </div>
-          <p>Политика конфиденциальности</p>
+          <p>{t("layout.nav.politic")}</p>
         </div>
       </div>
     </footer>

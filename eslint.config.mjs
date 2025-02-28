@@ -14,6 +14,24 @@ const eslintConfig = [
   {
     rules: {
       "@typescript-eslint/no-explicit-any": "off",
+      "no-restricted-imports": [
+        "error",
+        {
+          name: "next/link",
+          message: "Please import from `@/navigation` instead.",
+          importNames: ["default"],
+        },
+        {
+          name: "next/navigation",
+          message: "Please import `@/navigation` instead.",
+          importNames: [
+            "redirect",
+            "permanentRedirect",
+            "useRouter",
+            "usePathname",
+          ],
+        },
+      ],
     },
   },
 ];

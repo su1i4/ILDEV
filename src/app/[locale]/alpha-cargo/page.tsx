@@ -13,9 +13,11 @@ import { OUR_WORKS } from "@/lib/data/card.data";
 import AlphaCargoBanner from "@/screens/main/ui/alpha-cargo/alpha-cargo-banner";
 import { appScreenshots, projectData } from "@/lib/data/alpha.cargo";
 import Container from "@/shared/container";
+import { useTranslations } from "next-intl";
 
 const AlphaCargoPage = () => {
   const [isActive, setIsActive] = useState(false);
+  const t = useTranslations();
 
   const [mounted, setMounted] = useState(false);
 
@@ -117,14 +119,16 @@ const AlphaCargoPage = () => {
         technologies={[netframework, JavaScript, C, Vue]}
       />
       <div className="flex flex-wrap lg:flex-col gap-6 max-w-[90%] m-auto my-[100px]">
-        {OUR_WORKS.slice(0, 2).map((project, index) => (
-          <Card
-            key={project.title}
-            {...project}
-            array={OUR_WORKS}
-            index={index}
-          />
-        ))}
+        {OUR_WORKS(t)
+          .slice(0, 2)
+          .map((project, index) => (
+            <Card
+              key={project.title}
+              {...project}
+              array={OUR_WORKS(t)}
+              index={index}
+            />
+          ))}
       </div>
     </div>
   );

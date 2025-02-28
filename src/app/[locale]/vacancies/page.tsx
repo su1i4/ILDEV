@@ -1,7 +1,11 @@
 import Container from "@/shared/container";
 import PlatformCategory from "@/screens/platform-category";
+import { Props } from "@/common";
+import { unstable_setRequestLocale } from "next-intl/server";
 
-const Vacancies = () => {
+const Vacancies = ({ params: { locale } }: Props) => {
+  unstable_setRequestLocale(locale);
+
   return (
     <div className="w-full h-[100vh] overflow-y-auto flex flex-col gap-[100px]">
       <Container>

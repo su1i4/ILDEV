@@ -13,10 +13,12 @@ import Vue from "@/assets/images/vue.png";
 import BrandFabricaBanner from "@/screens/main/ui/brand-fabrica";
 import { BRAND_FABRICA, BRAND_FABRICA_SCREEN } from "@/lib/data/brand-fabrica";
 import Container from "@/shared/container";
+import { useTranslations } from "next-intl";
 
 const BrandFabrica = () => {
   const [isActive, setIsActive] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const t = useTranslations();
 
   useEffect(() => {
     setMounted(true);
@@ -103,14 +105,16 @@ const BrandFabrica = () => {
         technologies={[netframework, JavaScript, C, Vue]}
       />
       <div className="flex flex-wrap lg:flex-col gap-6 max-w-[90%] m-auto my-[100px]">
-        {OUR_WORKS.slice(2, 4).map((project, index) => (
-          <Card
-            key={project.title}
-            {...project}
-            array={OUR_WORKS}
-            index={index}
-          />
-        ))}
+        {OUR_WORKS(t)
+          .slice(2, 4)
+          .map((project, index) => (
+            <Card
+              key={project.title}
+              {...project}
+              array={OUR_WORKS(t)}
+              index={index}
+            />
+          ))}
       </div>
     </div>
   );

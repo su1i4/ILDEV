@@ -1,0 +1,76 @@
+{
+  "LocaleSwitcher": {
+    "label": "change language",
+    "locale": "{locale, select, ru {Russian} en {English} other {Unknown}}"
+  },
+  "LocaleLayout": {
+    "title": "next-intl example"
+  },
+  "home": {
+    "title": "ILDEV — WE CREATE REVOLUTIONARY DIGITAL SOLUTIONS",
+    "action": "Submit request",
+    "project": "Projects",
+
+    "clients": "Clients",
+    "service": {
+      "our_service": "Our services",
+      "list1": "Mobile application development",
+      "list2": "Software and website development",
+      "list3": "Cybersecurity",
+      "list4": "UX/UI, motion design, branding and illustrations"
+    },
+    "projects": {
+      "alphacargo": {
+        "title": "ALPHA CARGO",
+        "desc": "Website and application for a logistics company with user personal account",
+        "sum": "5000",
+        "sumdesc": "Downloads"
+      },
+      "prestigetower": {
+        "title": "PRESTIGE TOWER",
+        "desc": "Website for office sales and rentals",
+        "sum": "100 000",
+        "sumdesc": "Website visitors"
+      },
+      "onlywork": {
+        "title": "ONLYWORK",
+        "desc": "Employee work time tracking software",
+        "sum": "20%",
+        "sumdesc": "Routine task automation"
+      },
+      "brandfabrica": {
+        "title": "BRAND FABRICA",
+        "desc": "Wholesale marketplace for factory",
+        "sum": "1 000",
+        "sumdesc": "orders through the website"
+      },
+      "systemcargo": {
+        "title": "CARGO SYSTEM",
+        "desc": "ERP - CRM System for Cargo operations",
+        "sum": "400+",
+        "sumdesc": "Active users"
+      }
+    },
+    "form": {
+      "title": "Ready to discuss your project?",
+      "desc": "Fill out the form and we will contact you shortly",
+      "name": "Your name",
+      "phoneNumber": "Phone number",
+      "file": "Attach project file",
+      "checked": "I confirm that I have read and agree to the privacy policy",
+      "send_request": "Submit request"
+    }
+  },
+  "layout": {
+    "nav": {
+      "projects": "projects",
+      "blog": "blog",
+      "contacts": "contacts",
+      "vacancy": "careers",
+      "condif": "All rights reserved",
+      "download": "Download presentation",
+      "politic": "Privacy policy",
+      "action": "contact us!"
+    }
+  }
+}

@@ -7,6 +7,7 @@ import { Checkbox } from "@/shared/checkbox";
 import FileUpload from "@/shared/upload";
 import { TextArea } from "@/shared/textArea";
 import { SocialMedia } from "@/shared/socials";
+import { useTranslations } from "next-intl";
 
 interface FormDataProps {
   title: string;
@@ -41,6 +42,8 @@ export default function QuestionForm({
     agree: false,
     description: "",
   });
+
+  const t = useTranslations();
 
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -146,7 +149,7 @@ export default function QuestionForm({
           <form onSubmit={handleSubmit} className="flex flex-col gap-4 flex-1">
             <div>
               <Input
-                placeholder="Ваше имя"
+                placeholder={t("home.form.name")}
                 value={formData.name}
                 onChange={(e) =>
                   setFormData((prev) => ({ ...prev, name: e.target.value }))
@@ -161,7 +164,7 @@ export default function QuestionForm({
 
             <div>
               <Input
-                placeholder="Номер телефона"
+                placeholder={t("home.form.phoneNumber")}
                 value={formData.phone}
                 onChange={(e) =>
                   setFormData((prev) => ({
@@ -206,8 +209,7 @@ export default function QuestionForm({
                   setFormData((prev) => ({ ...prev, agree: !!checked }))
                 }
               />
-              Подтверждаю, что ознакомлен и согласен с политикой
-              конфиденциальности
+              {t("home.form.checked")}
             </label>
             {errors.agree && (
               <p className="text-red-500 text-sm mt-1">{errors.agree}</p>
@@ -216,7 +218,7 @@ export default function QuestionForm({
             <Button
               type="primary"
               classNames="text-center"
-              text={isSubmitting ? "Отправка..." : "Отправить заявку"}
+              text={isSubmitting ? "Отправка..." : t("home.form.send_request")}
             />
           </form>
         </div>

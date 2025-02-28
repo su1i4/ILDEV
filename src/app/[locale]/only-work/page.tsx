@@ -13,10 +13,12 @@ import OnlyWorkBanner from "@/screens/main/ui/only-work/only-work-banner";
 import { ONLY_WORK_DATA, ONLY_WORK_SCREEN } from "@/lib/data/only-work";
 import { useEffect, useState } from "react";
 import Container from "@/shared/container";
+import { useTranslations } from "next-intl";
 
 const OnlyWork = () => {
   const [isActive, setIsActive] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const t = useTranslations();
 
   useEffect(() => {
     setMounted(true);
@@ -107,14 +109,16 @@ const OnlyWork = () => {
         technologies={[netframework, JavaScript, C, Vue]}
       />
       <div className="flex flex-wrap lg:flex-col gap-6 max-w-[90%] m-auto my-[100px]">
-        {OUR_WORKS.splice(0, 2).map((project, index) => (
-          <Card
-            key={project.title}
-            {...project}
-            array={OUR_WORKS}
-            index={index}
-          />
-        ))}
+        {OUR_WORKS(t)
+          .splice(0, 2)
+          .map((project, index) => (
+            <Card
+              key={project.title}
+              {...project}
+              array={OUR_WORKS(t)}
+              index={index}
+            />
+          ))}
       </div>
     </div>
   );

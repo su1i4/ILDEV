@@ -28,7 +28,7 @@ const OnlyWorkBanner = () => {
 
   return (
     <div className="min-h-screen bg-zinc-900 flex flex-col justify-between gap-[150px] px-6">
-      <div className="relative flex lg:flex-col flex-row items-center pt-20 lg:pt-32 px-4 lg:px-8 mt-[100px]">
+      <div className="relative flex lg:flex-col flex-row items-center pt-20  sm:pt-0 px-4 lg:px-8 mt-[100px]">
         <motion.div
           className="container mx-auto lg:max-w-7xl z-10"
           initial={fadeInUp.initial}
@@ -43,18 +43,16 @@ const OnlyWorkBanner = () => {
         </motion.div>
 
         <motion.div
-          className="relative w-full lg:w-[45%] mt-12 lg:mt-0 lg:absolute lg:right-8 lg:top-1/2 lg:-translate-y-1/2"
+          className="relative w-full lg:w-[45%] mt-12 lg:mt-0 lg:absolute lg:right-8 lg:top-1/1 lg:-translate-y-1/2"
           initial={fadeInRight.initial}
           animate={fadeInRight.animate}
           transition={fadeInRight.transition}
         >
-          <div className="hidden lg:block w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[501px] lg:h-[501px] rounded-full bg-blue-900 absolute z-0 -top-[50px]"></div>
-
           <div className="relative flex justify-center lg:justify-start h-[400px] lg:h-[600px]">
-            <div className="w-[501px] h-[501px] rounded-full bg-custom-gradient absolute "></div>
+            <div className="w-[501px] h-[501px] rounded-full bg-custom-gradient absolute sm:w-[350px] sm:h-[350px] sm:left-1/1 sm:top-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2"></div>
 
             <motion.div
-              className="absolute left-0 lg:-left-[120px] top-[20px]  w-[410px] md:w-[350px] lg:w-auto"
+              className="absolute left-0 lg:-left-[120px] top-[20px] w-[410px] md:w-[350px] lg:w-auto sm:top-1/2 sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 transform rotate-[20deg]"
               initial={imageAnimation.initial}
               animate={imageAnimation.animate}
               transition={imageAnimation.transition}
@@ -88,7 +86,7 @@ const OnlyWorkBanner = () => {
         transition={{ duration: 0.6, delay: 0.8 }}
       >
         <div className="">
-          <div className="flex lg:gap-32 gap-[182px]">
+          <div className="flex lg:gap-32 gap-[182px] sm:gap-0">
             <h2 className="text-2xl lg:text-3xl font-bold text-white whitespace-normal lg:whitespace-nowrap">
               О ПРОЕКТЕ
             </h2>
