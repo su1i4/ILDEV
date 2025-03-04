@@ -12,11 +12,10 @@ const Projects = () => {
       <Container className="sm:w-[100%] sm:pb-[30px]">
         <div className="flex justify-between min-h-[204px] xs:min-h-[150px] mt-[70px] items-center sm:flex-col sm:justify-start xs:items-start">
           <h1 className="text-white text-[64px] font-[600] lg:text-[48px] sm:-[32px] xs:text-[20px] leading-[57.6px] max-w-[393px] ">
-            НАШИ ПРОЕКТЫ
+            {t("projects.our_projects")}
           </h1>
           <p className="text-white text-[24px] text-[400] max-w-[491px] text-end leading-[21.6px] sm:text-[15px] xs:text-left">
-            создаем инновационный софт и сайты, помогая бизнесу расти, жизни
-            становиться проще, а миру — умнее
+            {t("projects.desc_projects")}
           </p>
         </div>
       </Container>

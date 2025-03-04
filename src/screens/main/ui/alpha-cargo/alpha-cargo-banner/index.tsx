@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import AlphaCargoImage1 from "@/assets/images/alpha-cargo-1.png";
 import AlphaCargoImage2 from "@/assets/images/alpha-cargo-2.png";
+import { useTranslations } from "next-intl";
 
 const AlphaCargoBanner = () => {
   const fadeInUp = {
@@ -24,6 +25,7 @@ const AlphaCargoBanner = () => {
     animate: { scale: 1, opacity: 1 },
     transition: { duration: 0.8, delay: 0.4 },
   };
+  const t = useTranslations();
 
   return (
     <div className=" bg-zinc-900 flex flex-col justify-between gap-[150px] px-6">
@@ -89,51 +91,41 @@ const AlphaCargoBanner = () => {
         <div>
           <div className="flex lg:gap-32 gap-[20px]">
             <h2 className="text-2xl lg:text-3xl font-bold text-white text-nowrap">
-              О ПРОЕКТЕ
+              {t("alpha-cargo.project.about.title")}
             </h2>
             <div className="flex flex-col leading-[22.6px] text-[24px]">
               <p className="lg:text-xl text-gray-300 max-w-3xl">
-                Альфа Карго — лидер на рынке грузоперевозок одежды и текстиля из
-                Кыргызстана в Россию. Совместно разработали цифровую экосистему
-                для клиентов, включающую современный сайт и мобильное
-                приложение, которые упрощают процесс отправки, отслеживания и
-                оплаты грузов.
+                {t("alpha-cargo.project.about.description")}
               </p>
-              <p>
-                Теперь пользователь может пройти весь путь доставки всего за
-                несколько шагов:
-              </p>
+              <p>{t("alpha-cargo.project.about.steps")}</p>
               <ul className="pl-8 list-disc mb-[15px]">
-                <li>Оформить заявку на вывоз груза с удобной геолокацией.</li>
-                <li>
-                  Следить за статусом доставки в режиме реального времени.{" "}
-                </li>
-                <li>Оплатить услуги онлайн.</li>
-                <li>
-                  Хранить, скачивать и управлять всей документацией в личном
-                  кабинете.
-                </li>
+                <li>{t("alpha-cargo.project.about.stepsList.step1")}</li>
+                <li>{t("alpha-cargo.project.about.stepsList.step2")}</li>
+                <li>{t("alpha-cargo.project.about.stepsList.step3")}</li>
+                <li>{t("alpha-cargo.project.about.stepsList.step4")}</li>
               </ul>
-              <p>
-                С начала 2024 года, благодаря внедрению новых технологий и
-                цифровизации процессов, интерес к сервисам Альфа Карго
-                значительно вырос. Клиенты отмечают удобство использования
-                платформы и возможность решить все вопросы, связанные с
-                перевозкой, в одном месте.
-              </p>
+              <p>{t("alpha-cargo.project.about.results")}</p>
             </div>
           </div>
           <div className="flex flex-col gap-4 mt-[40px]">
-            <h1 className="text-[32px] font-medium">ПРОЕКТ В ЦИФРАХ</h1>
+            <h1 className="text-[32px] font-medium">
+              {t("alpha-cargo.project.stats.title")}
+            </h1>
             <div className="flex gap-[20px] text-white rounded-lg">
               <div className="flex-1 border border-gray-700 p-[30px]">
-                <p className="text-[64px] font-bold">100 000+</p>
-                <p className="text-[48px] font-medium">пользователей</p>
+                <p className="text-[64px] font-bold">
+                  {t("alpha-cargo.project.stats.users.number")}
+                </p>
+                <p className="text-[48px] font-medium">
+                  {t("alpha-cargo.project.stats.users.label")}
+                </p>
               </div>
               <div className="flex-1 border border-gray-700 p-[30px] ">
-                <p className="text-[64px] font-bold">12</p>
+                <p className="text-[64px] font-bold">
+                  {t("alpha-cargo.project.stats.team.number")}
+                </p>
                 <p className="text-[48px] font-medium leading-[43.2px]">
-                  человек работали в этом проекте
+                  {t("alpha-cargo.project.stats.team.label")}
                 </p>
               </div>
             </div>

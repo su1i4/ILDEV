@@ -3,11 +3,13 @@ import { useParams } from "next/navigation";
 import Container from "@/shared/container";
 import { PLATFORM } from "@/lib/data/platform";
 import PlatformCategory from "@/screens/platform-category";
+import { useTranslations } from "next-intl";
 
 const BackendVacancies = () => {
   const { platform } = useParams();
+  const t = useTranslations();
 
-  const currentPlatform = PLATFORM.find((item) => item.id === platform);
+  const currentPlatform = PLATFORM(t).find((item) => item.id === platform);
 
   return (
     <div className="w-full h-[100vh] overflow-y-auto flex flex-col gap-[100px]">
@@ -24,7 +26,7 @@ const BackendVacancies = () => {
       <Container>
         <div className="mb-8 flex gap-[20px]">
           <h2 className="text-[32px] font-medium mb-4 min-w-[162px]">
-            Условия
+            {t("vacancies.conditional")}
           </h2>
           <ul className="space-y-2 leading-[22.6px]">
             {currentPlatform?.conditional?.map((condit: string, i: number) => (
@@ -37,7 +39,9 @@ const BackendVacancies = () => {
         </div>
 
         <div className="flex gap-[20px] mb-8">
-          <h2 className="text-[32px] font-medium mb-4">Ожидания</h2>
+          <h2 className="text-[32px] font-medium mb-4">
+            {t("vacancies.pending")}
+          </h2>
           <ul className="space-y-2 leading-[22.6px]">
             {currentPlatform?.pending?.map((condit: string, i: number) => (
               <li className="flex items-start" key={i}>
@@ -50,7 +54,10 @@ const BackendVacancies = () => {
 
         {Array.isArray(currentPlatform?.tasks) ? (
           <div className="flex gap-[20px]">
-            <h2 className="text-[32px] font-medium mb-4 w-[162px]">Задачи</h2>
+            <h2 className="text-[32px] font-medium mb-4 w-[162px]">
+              {" "}
+              {t("vacancies.tasks")}
+            </h2>
             <ul className="space-y-2 leading-[22.6px]">
               {currentPlatform?.pending?.map((condit: string, i: number) => (
                 <li className="flex items-start" key={i}>

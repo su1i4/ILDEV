@@ -25,102 +25,92 @@ const AlphaCargoPage = () => {
     setMounted(true);
   }, []);
 
-  if (!mounted) return <div>Загрузка...</div>;
+  if (!mounted) return <div>{t("global.download")}...</div>;
   return (
     <div className="w-full h-[100vh] overflow-y-auto flex flex-col gap-[100px]">
       <AlphaCargoBanner />
       <InfoTitle
-        texts={["Описание", "Процесс"]}
+        texts={[t("global.desc"), t("global.proccess")]}
         onClick={() => setIsActive(!isActive)}
       />
       {isActive ? (
         <Container>
           <div className="flex gap-[40px]">
-            <h2 className="text-[24px] font-medium mb-4">Процесс</h2>
+            <h2 className="text-[24px] font-medium mb-4">
+              {t("global.proccess")}
+            </h2>
             <div className="text-[24px] font-[400] leading-[23.6px]">
+              <p className="mb-4">{t("alpha-cargo.technology.introduction")}</p>
               <p className="mb-4">
-                При создании сайта и мобильного приложения для Альфа Карго мы
-                сделали ставку на современные технологии, которые обеспечивают
-                высокую производительность, удобство поддержки и гибкость
-                масштабирования.
+                {t.rich("alpha-cargo.technology.frontend", {
+                  bold: (chunks) => (
+                    <span className="font-semibold">{chunks}</span>
+                  ),
+                })}
               </p>
               <p className="mb-4">
-                Для фронтенда мы выбрали{" "}
-                <span className="font-semibold">React</span> и{" "}
-                <span className="font-semibold">TypeScript</span>. Этот стек
-                позволил нам создать интуитивно понятный интерфейс, который
-                легко адаптируется под разные устройства, будь то мобильные
-                телефоны или компьютеры.
-              </p>
-              <p className="mb-4">
-                На бэкенде мы использовали{" "}
-                <span className="font-semibold">Node.js</span> и{" "}
-                <span className="font-semibold">NestJS</span>. Это сочетание
-                обеспечило:
+                {t.rich("alpha-cargo.technology.backend", {
+                  bold: (chunks) => (
+                    <span className="font-semibold">{chunks}</span>
+                  ),
+                })}
               </p>
               <ul className="list-disc list-inside mb-4">
-                <li>Высокую скорость работы благодаря архитектуре Node.js.</li>
-                <li>
-                  Четкую структуру кода и возможность легкого масштабирования с
-                  помощью NestJS.
-                </li>
+                <li>{t("alpha-cargo.technology.backendBenefits.point1")}</li>
+                <li>{t("alpha-cargo.technology.backendBenefits.point2")}</li>
               </ul>
               <h3 className="text-lg font-semibold mb-2">
-                Основные вызовы и их решения:
+                {t("alpha-cargo.technology.challengesTitle")}
               </h3>
-              <ol className="list-decimal list-inside space-y-2">
+              <ol className="list-decimal list-inside space-y-2 mt-[30px]">
                 <li>
                   <span className="font-semibold">
-                    Разработка API для сложных процессов.
+                    {t("alpha-cargo.technology.challenges.item1.title")}
                   </span>{" "}
-                  Мы реализовали RESTful API с четким разделением
-                  ответственности.
-                </li>
-                <li>
-                  <span className="font-semibold">Безопасность данных.</span>{" "}
-                  Использовали передовые подходы, включая токенизацию,
-                  шифрование и безопасные связи.
+                  {t("alpha-cargo.technology.challenges.item1.description")}
                 </li>
                 <li>
                   <span className="font-semibold">
-                    Работа с геолокацией и картами.
+                    {t("alpha-cargo.technology.challenges.item2.title")}
                   </span>{" "}
-                  Мы реализовали карты с возможностью отслеживания грузов в
-                  реальном времени.
+                  {t("alpha-cargo.technology.challenges.item2.description")}
                 </li>
                 <li>
                   <span className="font-semibold">
-                    Обработка большого объема данных.
+                    {t("alpha-cargo.technology.challenges.item3.title")}
                   </span>{" "}
-                  Использовали микросервисную архитектуру NestJS для
-                  распределения нагрузки.
+                  {t("alpha-cargo.technology.challenges.item3.description")}
                 </li>
                 <li>
                   <span className="font-semibold">
-                    Совместимость и поддержка разных версий.
+                    {t("alpha-cargo.technology.challenges.item4.title")}
                   </span>{" "}
-                  Мы провели многократное тестирование для обеспечения
-                  стабильной работы.
+                  {t("alpha-cargo.technology.challenges.item4.description")}
+                </li>
+                <li>
+                  <span className="font-semibold">
+                    {t("alpha-cargo.technology.challenges.item5.title")}
+                  </span>{" "}
+                  {t("alpha-cargo.technology.challenges.item5.description")}
                 </li>
               </ol>
-              <p className="mt-4">
-                Мы детально изучили потребности Альфа Карго, а также запросы их
-                клиентов, чтобы предложить оптимальные решения, соответствующие
-                высоким стандартам отрасли.
-              </p>
+              <p className="mt-4">{t("alpha-cargo.technology.conclusion")}</p>
             </div>
           </div>
         </Container>
       ) : (
-        <Screenshots screenshots={appScreenshots} projectData={projectData} />
+        <Screenshots
+          screenshots={appScreenshots(t)}
+          projectData={projectData(t)}
+        />
       )}
       <Technology
-        title="Технологии"
+        title={t("global.technology")}
         technologies={[netframework, JavaScript, C, Vue]}
       />
       <div className="flex flex-wrap lg:flex-col gap-6 max-w-[90%] m-auto my-[100px]">
         {OUR_WORKS(t)
-          .slice(0, 2)
+          .slice(2, 4)
           .map((project, index) => (
             <Card
               key={project.title}

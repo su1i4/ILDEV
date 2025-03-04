@@ -11,39 +11,40 @@ interface AppScreenshot {
   images: { className?: string; image: string | StaticImageData }[];
 }
 
-export const ONLY_WORK_DATA: ProjectData = {
-  task: {
-    year: 2024,
-    description: `В 2024 году компания ILDEV начала работу над проектом Only Work — инновационной платформой для управления персоналом. Основная цель заключалась в создании решения, которое поможет бизнесам легко и эффективно отслеживать рабочее время сотрудников, генерировать детализированные отчеты, а также повысить прозрачность и продуктивность процессов внутри компаний.
-	 `,
-  },
-  result: {
-    mainText: "Ключевые задачи:",
-    features: [
-      "Разработать приложение для учета рабочего времени сотрудников с функцией точного входа и выхода.",
-      "Обеспечить генерацию автоматических отчетов за любой период.",
-      "Внедрить функции аналитики для выявления точек повышения эффективности.",
-      "Создать удобный интерфейс как для сотрудников, так и для HR и руководителей.",
-    ],
-    mainText2: "",
-  },
-  technicalDetails: {
-    title: "",
-    features: [
-      "Прозрачный учет рабочего времени. Компании получили инструмент, который минимизирует ошибки при учете часов работы и позволяет повысить дисциплину сотрудников.",
-      "Экономия времени на подготовку отчетов. Система автоматизировала создание отчетов, что позволило HR и руководителям сосредоточиться на более важных задачах.",
-      "Повышение продуктивности. Аналитические данные помогли бизнесам лучше понять, как распределяется рабочее время, и внести изменения для повышения эффективности.",
-      "Удобный интерфейс. Only Work получил положительные отзывы за удобство использования и простоту интеграции в бизнес-процессы.",
-      "Гибкость масштабирования. Продукт был разработан с учетом потребностей как малого, так и крупного бизнеса, что делает его универсальным решением для различных компаний.",
-    ],
-    title2: "",
-  },
+export const ONLY_WORK_DATA = (t: any): ProjectData => {
+  return {
+    task: {
+      year: 2024,
+      description: t("only-work.projectDetails.description"),
+    },
+    result: {
+      mainText: t("only-work.result.mainText"),
+      features: [
+        t("only-work.result.features.list1"),
+        t("only-work.result.features.list2"),
+        t("only-work.result.features.list3"),
+        t("only-work.result.features.list4"),
+      ],
+      mainText2: "",
+    },
+    technicalDetails: {
+      title: "",
+      features: [
+        t("only-work.technicalDetails.features.list1"),
+        t("only-work.technicalDetails.features.list2"),
+        t("only-work.technicalDetails.features.list3"),
+        t("only-work.technicalDetails.features.list4"),
+        t("only-work.technicalDetails.features.list5"),
+      ],
+      title2: "",
+    },
+  };
 };
 
-export const ONLY_WORK_SCREEN: AppScreenshot[] = [
+export const ONLY_WORK_SCREEN = (t: any): AppScreenshot[] => [
   {
     id: 1,
-    title: "Веб-приложение",
+    title: t("only-work.web"),
     images: [
       {
         image: Dashboard,

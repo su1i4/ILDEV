@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 
 import SignInImage from "@/assets/images/signin-image.png";
 import DashboardLaptop from "@/assets/images/dashboard-laptop.png";
+import { useTranslations } from "next-intl";
 
 const OnlyWorkBanner = () => {
   const fadeInUp = {
@@ -25,9 +26,10 @@ const OnlyWorkBanner = () => {
     animate: { scale: 1, opacity: 1 },
     transition: { duration: 0.8, delay: 0.4 },
   };
+  const t = useTranslations();
 
   return (
-    <div className="min-h-screen bg-zinc-900 flex flex-col justify-between gap-[150px] px-6">
+    <div className=" bg-zinc-900 flex flex-col justify-between gap-[150px] px-6">
       <div className="relative flex lg:flex-col flex-row items-center pt-20  sm:pt-0 px-4 lg:px-8 mt-[100px]">
         <motion.div
           className="container mx-auto lg:max-w-7xl z-10"
@@ -88,27 +90,29 @@ const OnlyWorkBanner = () => {
         <div className="">
           <div className="flex lg:gap-32 gap-[182px] sm:gap-0">
             <h2 className="text-2xl lg:text-3xl font-bold text-white whitespace-normal lg:whitespace-nowrap">
-              О ПРОЕКТЕ
+              {t("only-work.about.title")}
             </h2>
-            <p className="text-lg lg:text-xl text-gray-300 max-w-3xl">
-              Only Work — инновационная платформа для управления персоналом.
-              Основная цель заключалась в создании решения, которое поможет
-              бизнесам легко и эффективно отслеживать рабочее время сотрудников,
-              генерировать детализированные отчеты, а также повысить
-              прозрачность и продуктивность процессов внутри компаний.
+            <p className="text-[24px] lg:text-xl text-[#FFFFFF] max-w-5xl">
+              {t("only-work.about.description")}
             </p>
           </div>
-          <div className="flex flex-col gap-4 mt-[194px]">
-            <h1 className="text-[32px] font-medium">ПРОЕКТ В ЦИФРАХ</h1>
+          <div className="flex flex-col gap-4 mt-[104px]">
+            <h1 className="text-[32px] font-medium">
+              {t("only-work.stats.title")}
+            </h1>
             <div className="flex gap-[20px] text-white rounded-lg">
               <div className="flex-1 border border-gray-700 p-[30px]">
-                <p className="text-[64px] font-bold">1000+</p>
-                <p className="text-[48px] font-medium">пользователей</p>
+                <p className="text-[64px] font-bold">
+                  {t("only-work.stats.users.number")}
+                </p>
+                <p className="text-[48px] font-medium">
+                  {t("only-work.stats.users.label")}
+                </p>
               </div>
               <div className="flex-1 border border-gray-700 p-[30px] ">
                 <p className="text-[64px] font-bold">4</p>
                 <p className="text-[48px] font-medium leading-[43.2px]">
-                  человека работали в этом проекте
+                  {t("only-work.stats.team.label")}
                 </p>
               </div>
             </div>

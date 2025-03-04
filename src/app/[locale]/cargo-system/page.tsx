@@ -14,6 +14,7 @@ import { OUR_WORKS } from "@/lib/data/card.data";
 import Card from "@/screens/main/ui/card";
 import { CARGO_SYSTEM, CARGO_SYSTEM_SCREEN } from "@/lib/data/cargo-system";
 import { useTranslations } from "next-intl";
+import Container from "@/shared/container";
 
 const CargoSystem = () => {
   const [isActive, setIsActive] = useState(false);
@@ -30,63 +31,69 @@ const CargoSystem = () => {
     <div className="w-full h-[100vh] overflow-y-auto flex flex-col gap-[100px]">
       <CargoSystemBanner />
       <InfoTitle
-        texts={["Описание", "Процесс"]}
+        texts={[t("global.desc"), t("global.proccess")]}
         onClick={() => setIsActive(!isActive)}
       />
       {isActive ? (
-        <div className="bg-black text-white p-6 rounded-2xl shadow-lg w-full max-w-4xl mx-auto">
-          <h2 className="text-xl font-semibold mb-4">Процесс</h2>
-          <p className="mb-4">Для реализации использовались:</p>
-          <ul className="list-disc list-inside mb-4 space-y-2">
-            <li>
-              <span className="font-semibold">Frontend:</span> Vue.js для
-              создания интерактивного интерфейса.
-            </li>
-            <li>
-              <span className="font-semibold">Backend:</span> .NET и C# для
-              обработки данных и управления логистикой.
-            </li>
-            <li>
-              <span className="font-semibold">Анализ и проектирование.</span>{" "}
-              Определены ключевые функции системы: отслеживание грузов,
-              онлайн-оплата, расчет тарифов. Разработаны прототипы личного
-              кабинета и интерфейса для сотрудников.
-            </li>
-            <li>
-              <span className="font-semibold">Разработка backend-части.</span>{" "}
-              .NET и C# использованы для построения устойчивого backend-а.
-              Внедрена REST API-структура для интеграции с внутренними
-              системами. Добавлены модули расчетов стоимости и страхования
-              грузов.
-            </li>
-            <li>
-              <span className="font-semibold">Разработка frontend-части.</span>{" "}
-              Vue.js обеспечил динамический и удобный интерфейс. Реализована
-              функция генерации накладных и запросов на выезд курьера.
-            </li>
-            <li>
-              <span className="font-semibold">Интеграция.</span>{" "}
-              Синхронизирована информация с системой склада и GPS-отслеживанием.
-              Добавлен расчет сроков доставки в реальном времени.
-            </li>
-            <li>
-              <span className="font-semibold">
-                Тестирование и масштабирование.
-              </span>{" "}
-              Проведено тестирование на всех этапах логистического процесса.
-              Оптимизировано время загрузки при большом объеме операций.
-            </li>
-          </ul>
-        </div>
+        <Container>
+          <div className="text-white rounded-2xl shadow-lg w-full">
+            <div className="flex gap-[20px] items-center">
+              <h2 className="text-xl font-semibold mb-4">
+                {t("global.proccess")}
+              </h2>
+              <p className="mb-4">{t("cargosystem.proccess.text")}</p>
+            </div>
+            <ul className="list-disc list-inside mb-4 ml-[110px] space-y-2 text-[24px]">
+              <li>
+                <span className="font-semibold">Frontend:</span>
+                {t("cargosystem.proccess.frontend")}
+              </li>
+              <li>
+                <span className="font-semibold">Backend:</span>{" "}
+                {t("cargosystem.proccess.backend")}
+              </li>
+              <li>
+                <span className="font-semibold">
+                  {t("cargosystem.proccess.analithe_title")}
+                </span>{" "}
+                {t("cargosystem.proccess.analithe")}
+              </li>
+              <li>
+                <span className="font-semibold">
+                  {t("cargosystem.proccess.back_title")}
+                </span>{" "}
+                {t("cargosystem.proccess.devback")}
+              </li>
+              <li>
+                <span className="font-semibold">
+                  {t("cargosystem.proccess.front_title")}
+                </span>{" "}
+                {t("cargosystem.proccess.devfront")}
+              </li>
+              <li>
+                <span className="font-semibold">
+                  {t("cargosystem.proccess.devfront")}
+                </span>{" "}
+                {t("cargosystem.proccess.request_title")}
+              </li>
+              <li>
+                <span className="font-semibold">
+                  {t("cargosystem.proccess.qa_title")}
+                </span>{" "}
+                {t("cargosystem.proccess.qa")}
+              </li>
+            </ul>
+          </div>
+        </Container>
       ) : (
         <Screenshots
-          screenshots={CARGO_SYSTEM_SCREEN}
-          projectData={CARGO_SYSTEM}
+          screenshots={CARGO_SYSTEM_SCREEN(t)}
+          projectData={CARGO_SYSTEM(t)}
         />
       )}
 
       <Technology
-        title="Технологии"
+        title={t("global.technology")}
         technologies={[netframework, JavaScript, C, Vue]}
       />
       <div className="flex flex-wrap lg:flex-col gap-6 max-w-[90%] m-auto my-[100px]">

@@ -1,9 +1,11 @@
 "use client";
 import { Socials } from "@/lib/data/socials.data";
+import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 
 const Contacts = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const t = useTranslations();
 
   useEffect(() => {
     setTimeout(() => setIsVisible(true), 300);
@@ -20,7 +22,7 @@ const Contacts = () => {
                 : "opacity-0 -translate-x-10"
             } transition-all duration-700`}
           >
-            <h2 className="text-3xl font-bold mb-4">Почта:</h2>
+            <h2 className="text-3xl font-bold mb-4">{t("contacts.email")}</h2>
             <div className="flex items-center gap-2 text-lg">
               <svg
                 width="30"
@@ -53,7 +55,7 @@ const Contacts = () => {
                 isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
               } hover:scale-110`}
             >
-              <span>Контакты:</span>
+              <span>{t("contacts.contact")}</span>
               <span className="italic text-lg">+7 777 777 77 77</span>
             </div>
 

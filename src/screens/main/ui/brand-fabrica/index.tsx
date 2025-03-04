@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import BrandAndFabrica1 from "@/assets/images/brand-fabrica-1.png";
 import BrandAndFabrica2 from "@/assets/images/brand-fabrica-2.png";
+import { useTranslations } from "next-intl";
 
 const BrandFabricaBanner = () => {
   const fadeInUp = {
@@ -24,6 +25,7 @@ const BrandFabricaBanner = () => {
     animate: { scale: 1, opacity: 1 },
     transition: { duration: 0.8, delay: 0.4 },
   };
+  const t = useTranslations();
 
   return (
     <div className=" bg-zinc-900 flex flex-col justify-between gap-[150px] px-6">
@@ -89,32 +91,32 @@ const BrandFabricaBanner = () => {
         <div>
           <div className="flex lg:gap-32 gap-[182px]">
             <h2 className="text-2xl lg:text-3xl font-bold text-white text-nowrap">
-              О ПРОЕКТЕ
+              {t("brandfabrica.aboutProject.title")}
             </h2>
             <div className="flex flex-col leading-[22.6px] text-[24px]">
               <p className="lg:text-xl text-gray-300 max-w-3xl">
-                Brand Fabrica — это специализированная платформа, созданная для
-                автоматизации производства и оптовой продажи брендированной
-                одежды. Проект разработан для упрощения взаимодействия с
-                клиентами из России и Казахстана. Основной упор сделан на
-                интеграцию всех этапов, начиная от выбора дизайна и заказа до
-                доставки готовой продукции. Компания ILDEV взяла на себя задачу
-                модернизации производственного процесса через создание цифровой
-                экосистемы.
+                {t("brandfabrica.aboutProject.description")}
               </p>
             </div>
           </div>
           <div className="flex flex-col gap-4 mt-[40px]">
-            <h1 className="text-[32px] font-medium">ПРОЕКТ В ЦИФРАХ</h1>
+            <h1 className="text-[32px] font-medium">
+              {" "}
+              {t("brandfabrica.projectNumbers.title")}
+            </h1>
             <div className="flex gap-[20px] text-white rounded-lg">
               <div className="flex-1 border border-gray-700 p-[30px]">
-                <p className="text-[64px] font-bold">1000+</p>
-                <p className="text-[48px] font-medium">клиентов через сайт</p>
+                <p className="text-[64px] font-bold">
+                  {t("brandfabrica.projectNumbers.client.value")}
+                </p>
+                <p className="text-[48px] font-medium">
+                  {t("brandfabrica.projectNumbers.client.label")}
+                </p>
               </div>
               <div className="flex-1 border border-gray-700 p-[30px] ">
                 <p className="text-[64px] font-bold">4.6</p>
                 <p className="text-[48px] font-medium leading-[43.2px]">
-                  Средняя оценка в сторах
+                  {t("brandfabrica.projectNumbers.team.label")}
                 </p>
               </div>
             </div>

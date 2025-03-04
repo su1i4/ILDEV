@@ -7,7 +7,7 @@
     "title": "next-intl example"
   },
   "home": {
-    "title": "ILDEV — WE CREATE REVOLUTIONARY DIGITAL SOLUTIONS",
+    "title": "ILDEV — WE CREATE \n REVOLUTIONARY \n DIGITAL SOLUTIONS",
     "action": "Submit request",
     "project": "Projects",
 
@@ -61,6 +61,424 @@
       "send_request": "Submit request"
     }
   },
+  "projects": {
+    "our_projects": "OUR PROJECTS",
+    "desc_projects": "We create innovative software and websites, helping businesses grow, making life easier, and making the world smarter."
+  },
+  "contacts": {
+    "email": "Email:",
+    "contact": "Contacts:"
+  },
+  "vacancies": {
+    "title": "Vacancies",
+    "desc": "ILDEV is a team of professionals in development, design, and machine learning. Every day, millions of people worldwide use our services and applications.",
+    "categories": {
+      "title": "Choose a category",
+      "bux": "Accountant"
+    },
+    "question_form": "Found a vacancy? Write to us",
+    "desc_form": "Fill out the form, and we will contact you as soon as possible.",
+    "about_myself": "Write a little about yourself...",
+    "conditional": "Conditions",
+    "pending": "Expectations",
+    "tasks": "Tasks"
+  },
+  "backend": {
+    "desc": "We are currently expanding our team and looking for an experienced Backend Developer (Go) (Middle|Senior) to work on a large-scale project. You will be involved in developing a multi-user text editor, creating product features, and solving complex technical challenges.",
+    "conditional": {
+      "list1": "Opportunity for employment in an accredited IT company in Bishkek;",
+      "list2": "Flexible schedule, office in the center of Bishkek, or the possibility of remote work within Kyrgyzstan;",
+      "list3": "Participation in industry conferences and professional development courses at our expense;",
+      "list4": "Compensation for English language classes;",
+      "list5": "Performance Review with salary revisions twice a year;",
+      "list6": "A dynamic and friendly team always ready to share vast experience and provide support."
+    },
+    "pending": {
+      "list1": "At least 3 years of commercial experience in backend development with Go (Golang);",
+      "list2": "Experience working with high-load systems;",
+      "list3": "Strong proficiency in Python;",
+      "list4": "Understanding and knowledge of classical algorithms and data structures;",
+      "list5": "Experience working with PostgreSQL;",
+      "list6": "Experience using gRPC;",
+      "list7": "Skills in working with Docker (experience with Kubernetes is a plus);",
+      "list8": "Experience working with GraphQL."
+    }
+  },
+  "ios": {
+    "desc": "We are currently expanding our team and looking for an experienced iOS Developer (Middle|Senior) to join a large-scale project. You will be responsible for developing new features within the application, fixing bugs, and conducting code reviews.",
+    "conditional": {
+      "list1": "Opportunity for employment in an accredited IT company;",
+      "list2": "Flexible schedule, office in the center of Bishkek, or the possibility of remote work within Kyrgyzstan;",
+      "list3": "Participation in industry conferences and professional development courses at our expense;",
+      "list4": "Compensation for English language classes;",
+      "list5": "Performance Review with salary revisions twice a year;",
+      "list6": "A dynamic and friendly team always ready to share vast experience and provide support."
+    },
+    "pending": {
+      "list1": "At least 3 years of commercial experience in iOS development;",
+      "list2": "Excellent knowledge of Swift and Objective-C;",
+      "list3": "Knowledge of iOS system frameworks and Apple guidelines;",
+      "list4": "Understanding and knowledge of classical algorithms and data structures;",
+      "list5": "Experience working with MVP and MVC patterns;",
+      "list6": "Profiling skills."
+    }
+  },
+  "android": {
+    "desc": "We are currently expanding our team and looking for an experienced Senior Android developer to join our team for a major mobile application development project.",
+    "conditions": {
+      "list1": "Possibility of employment in an accredited IT company in Bishkek",
+      "list2": "Flexible schedule, office in the center of Bishkek, or the possibility of remote work within Kyrgyzstan",
+      "list3": "Participation in industry conferences and professional development courses at our expense",
+      "list4": "Compensation for English language classes",
+      "list5": "Performance review with salary revision twice a year",
+      "list6": "Energetic and friendly team always ready to share vast experience and provide support",
+      "list7": "Healthcare benefits: a medical budget that can be spent on any type of treatment and medication"
+    },
+    "expectations": {
+      "list1": "Experience in Android development (at least 3 years)",
+      "list2": "Knowledge of Kotlin, Coroutines, and Flow",
+      "list3": "Ability to implement custom UI elements",
+      "list4": "Experience working with multi-module projects",
+      "list5": "Deep understanding of dependency injection (Dagger 2) for multi-module projects",
+      "list6": "Experience writing Unit/UI tests"
+    },
+    "tasks": {
+      "ui_layout": "UI layout for Android according to the technical specifications",
+      "android_auto_optimization": "Optimization of the application for working with Android Auto",
+      "security_features": "Implementation of specific functionality and ensuring security for automotive applications"
+    }
+  },
+  "python": {
+    "desc": "We are currently expanding our team and looking for an experienced QA Engineer (Web) (Middle/Senior) to work on a large-scale project. Your responsibilities will include functional testing of web applications, participating in releases, updating test documentation, making decisions on service improvements with the team, and optimizing testing processes.",
+    "conditional": {
+      "list1": "Modern stack, new technologies, experienced team",
+      "list2": "Possibility of employment in an accredited IT company in Bishkek",
+      "list3": "Flexible schedule, office in the center of Bishkek, or the possibility of remote work within Kyrgyzstan",
+      "list4": "Performance review with salary revision twice a year",
+      "list5": "Participation in industry conferences and professional development courses at our expense",
+      "list6": "Compensation for English language classes",
+      "list7": "Healthcare benefits: a medical budget that can be spent on any type of treatment and medication",
+      "list8": "Consultations on personal matters with an in-house lawyer"
+    },
+    "expectations": {
+      "list1": "At least 3 years of commercial experience in backend development",
+      "list2": "Strong knowledge of Python and web development frameworks",
+      "list3": "Ability and willingness to write tests",
+      "list4": "Experience working with SQL databases (Postgres)",
+      "list5": "Understanding of clean architecture principles",
+      "list6": "Experience in designing architecture from scratch",
+      "list7": "Experience with React"
+    },
+    "tasks": {
+      "develop_maintain_apps": "Develop new and maintain existing applications",
+      "improve_architecture": "Support and refine architecture in existing projects and propose new solutions",
+      "project_from_scratch": "Implement projects from scratch, lay out architecture, and select suitable technologies",
+      "code_review": "Conduct Code Reviews",
+      "mentorship": "Mentor colleagues"
+    }
+  },
+  "qa": {
+    "desc": "Now we are expanding our team and looking for an experienced QA Engineer (Web) (Middle/Senior) to work on a large project. You will be responsible for functional testing of web applications, participation in releases, updating test documentation, making decisions on service improvements with the team, and optimizing testing processes.",
+    "conditions": {
+      "list1": "Possibility of employment in an accredited IT company in Bishkek",
+      "list2": "Flexible schedule, office in the center of Bishkek, or the possibility of remote work within Kyrgyzstan",
+      "list3": "Participation in industry conferences and professional development courses at our expense",
+      "list4": "Compensation for English language courses",
+      "list5": "Performance Review with salary revision twice a year",
+      "list6": "A dynamic and friendly team always ready to share vast experience and help",
+      "list7": "Healthcare benefits: a medical budget that can be used for any treatment and medication"
+    },
+    "expectations": {
+      "list1": "At least 3 years of commercial experience in manual testing of web applications",
+      "list2": "Understanding of development and testing processes",
+      "list3": "Proficiency in test design techniques and the ability to apply them",
+      "list4": "Experience working with API tools such as Postman and Insomnia",
+      "list5": "Using proxy tools like Charles and Proxyman",
+      "list6": "Performing debugging using DevTools"
+    }
+  },
+  "accountant": {
+    "desc": "Due to the expansion of our financial department, we are looking for an accountant.",
+    "conditions": {
+      "list1": "Opportunity for employment in an accredited IT company in Bishkek;",
+      "list2": "A 24/7 office in the city center of Bishkek, with fruits and a coffee machine;",
+      "list3": "Paid vacations and sick leave;",
+      "list4": "Healthcare benefits: a medical budget that can be spent on any type of treatment and medication;",
+      "list5": "Participation in industry conferences and professional development courses at our expense;",
+      "list6": "A dynamic and friendly team always ready to share extensive experience and provide support."
+    },
+
+    "pending": {
+      "list1": "Accounting and tax reporting for an LLC in Russia (accredited by the Ministry of Digital Development), assisting in collecting primary documentation for foreign legal entities within the group;",
+      "list2": "Preparation and submission of accounting and tax reports to regulatory authorities;",
+      "list3": "Managing multiple legal entities and individual entrepreneurs (simplified taxation system, patent-based taxation);",
+      "list4": "Issuing invoices and service acceptance certificates to clients (sending via email, messengers, or electronic document management systems);",
+      "list5": "Processing advance reports;",
+      "list6": "Entering data into the internal accounting system;",
+      "list7": "Basic HR record-keeping;",
+      "list8": "Payroll calculation, accrual, and payment;",
+      "list9": "Accounting in 1C: Enterprise 8.3, using services like Elba and Diadoc."
+    }
+  },
+  "prestige-tower": {
+    "title": "REAL ESTATE SALES WEBSITE — PRESTIGE TOWER",
+    "about_projects": "ABOUT THE PROJECT",
+    "projects_desc": "This is a modern class 'A' business center, designed according to the latest world-standard technologies"
+  },
+  "alpha-cargo": {
+    "technology": {
+      "introduction": "When creating the website and mobile application for Alpha Cargo, we focused on modern technologies that provide high performance, ease of maintenance, and scalability flexibility.",
+      "frontend": "For the frontend, we chose <bold>React</bold> and <bold>TypeScript</bold>. This stack allowed us to create an intuitive interface that easily adapts to different devices, whether mobile phones or computers.",
+      "backend": "On the backend, we used <bold>Node.js</bold> and <bold>NestJS</bold>. This combination provided:",
+      "backendBenefits": {
+        "point1": "High performance thanks to Node.js architecture.",
+        "point2": "Clear code structure and easy scalability with NestJS."
+      },
+      "challengesTitle": "Main challenges and solutions:",
+      "challenges": {
+        "item1": {
+          "title": "Development of API for complex processes.",
+          "description": "We implemented a RESTful API with clear separation of responsibilities."
+        },
+        "item2": {
+          "title": "Data security.",
+          "description": "We used advanced approaches, including tokenization, encryption, and secure connections."
+        },
+        "item3": {
+          "title": "Working with geolocation and maps.",
+          "description": "We implemented maps with real-time cargo tracking capabilities."
+        },
+        "item4": {
+          "title": "Processing large volumes of data.",
+          "description": "We used NestJS microservice architecture to distribute the load."
+        },
+        "item5": {
+          "title": "Compatibility and support for different versions.",
+          "description": "We conducted multiple tests to ensure stable operation."
+        }
+      },
+      "conclusion": "We thoroughly studied the needs of Alpha Cargo, as well as the requests of their clients, to offer optimal solutions that meet the high standards of the industry."
+    },
+    "project": {
+      "about": {
+        "title": "ABOUT THE PROJECT",
+        "description": "Alpha Cargo is a leader in the market of clothing and textile transportation from Kyrgyzstan to Russia. Together, we developed a digital ecosystem for clients, including a modern website and mobile application that simplify the process of sending, tracking, and paying for cargo.",
+        "steps": "Now users can go through the entire delivery process in just a few steps:",
+        "stepsList": {
+          "step1": "Submit a cargo pickup request with convenient geolocation.",
+          "step2": "Track delivery status in real-time.",
+          "step3": "Pay for services online.",
+          "step4": "Store, download, and manage all documentation in the personal account."
+        },
+        "results": "Since the beginning of 2024, thanks to the implementation of new technologies and digitalization of processes, interest in Alpha Cargo services has significantly increased. Clients note the convenience of using the platform and the ability to resolve all transportation-related issues in one place."
+      },
+      "stats": {
+        "title": "PROJECT IN NUMBERS",
+        "users": {
+          "number": "100,000+",
+          "label": "users"
+        },
+        "team": {
+          "number": "12",
+          "label": "people worked on this project"
+        }
+      }
+    },
+    "projectData": {
+      "task": "In 2024, Alpha Cargo approached us with the task of developing a modern website and mobile application that would simplify client interaction with the cargo transportation service. The goal was to create a convenient digital platform for tracking shipments, paying for services, managing documents, and interacting with company managers. We thoroughly studied the needs of Alpha Cargo, as well as the requests of their clients, to offer optimal solutions that meet the high standards of the industry.",
+      "result": {
+        "mainText": "We developed a website and mobile application with extensive functionality, providing:",
+        "features": {
+          "list1": "Client's personal account, where they can:",
+          "list2": "Track shipment status in real-time. Manage invoices and view shipment history.",
+          "list3": "Make quick online payments for services. Request an on-site team for cargo pickup.",
+          "list4": "Integration with the company's CRM system for automating internal management processes",
+          "list5": "Full adaptability of the website and application for convenient use on any devices",
+          "list6": "Ability to receive notifications about shipment status and company promotions"
+        },
+        "mainText2": "To enhance interaction with clients, we implemented a stories feature in the app, where users can receive updates on Alpha Cargo's news, discounts, and new services."
+      },
+      "technicalDetails": {
+        "title": "Technical Features",
+        "features": {
+          "list1": "A user-friendly interface was developed with an emphasis on speed and ease of interaction",
+          "list2": "An analytics system was implemented to track user behavior for further service improvement",
+          "list3": "Integration with payment systems for secure and convenient transactions",
+          "list4": "Offline functionality: clients can save information and work with it without an internet connection"
+        },
+        "title2": "We thoroughly studied the needs of Alpha Cargo, as well as the requests of their clients, to offer optimal solutions that meet the high standards of the industry."
+      }
+    },
+    "appScreenshots": {
+      "application": "Application",
+      "punkt": "Alpha Points"
+    }
+  },
+  "only-work": {
+    "about": {
+      "title": "ABOUT THE PROJECT",
+      "description": "Only Work is an innovative platform for workforce management. The main goal was to create a solution that helps businesses easily and efficiently track employees' working hours, generate detailed reports, and enhance transparency and productivity within companies."
+    },
+    "stats": {
+      "title": "PROJECT IN NUMBERS",
+      "users": {
+        "number": "1000+",
+        "label": "users"
+      },
+      "team": {
+        "number": "4",
+        "label": "people worked on this project"
+      }
+    },
+    "developmentProcess": {
+      "introduction": "Development process. For the implementation of the project, we used the following technologies:",
+      "technologies": {
+        "frontend": "Vue.js – for creating a fast and intuitive interface.",
+        "backend": ".NET and C# – for building a scalable and high-performance server application."
+      },
+      "steps": {
+        "analith": "Analysis and design.",
+        "dev": "Backend development.",
+        "dev_front": "Frontend development.",
+        "integration": "Module integration.",
+        "qa_ceo": "Testing and optimization.",
+        "analysisAndDesign": "A deep analysis of user needs was conducted. Prototypes of modules were created: time tracking, dashboards, reporting, and analytics system.",
+        "backendDevelopment": ".NET and C# enabled the implementation of a high-performance server with a flexible architecture. The system was built using REST API, ensuring stable integration between the server and client side. Geolocation functions and real-time data verification were integrated.",
+        "frontendDevelopment": "Vue.js ensured simplicity in development and interface adaptability. The entire user interface was designed with a focus on usability and quick access to key features. Several custom components were created for data visualization: charts, interactive tables, and filters.",
+        "moduleIntegration": "The time tracking module was synchronized with reports and analytics to ensure real-time data display. Push notifications were added to remind employees about the start/end of the workday.",
+        "testingAndOptimization": "Multi-level testing of backend and frontend parts was carried out. The application was optimized to ensure stability as the number of users increased."
+      }
+    },
+    "web": "Web application",
+    "projectDetails": {
+      "year": 2024,
+      "description": "In 2024, ILDEV began work on the Only Work project – an innovative platform for workforce management. The main goal was to create a solution that helps businesses easily and efficiently track employees' working hours, generate detailed reports, and enhance transparency and productivity within companies."
+    },
+    "result": {
+      "mainText": "Key objectives:",
+      "features": {
+        "list1": "Develop an application for employee time tracking with precise clock-in and clock-out functionality.",
+        "list2": "Ensure automatic report generation for any period.",
+        "list3": "Implement analytics functions to identify areas for efficiency improvement.",
+        "list4": "Create a user-friendly interface for employees, HR, and management."
+      }
+    },
+    "technicalDetails": {
+      "features": {
+        "list1": "Transparent time tracking. Companies received a tool that minimizes errors in work hour accounting and improves employee discipline.",
+        "list2": "Time savings on report preparation. The system automated report generation, allowing HR and managers to focus on more important tasks.",
+        "list3": "Increased productivity. Analytical data helped businesses better understand how working hours are distributed and make changes to improve efficiency.",
+        "list4": "User-friendly interface. Only Work received positive feedback for its ease of use and simple integration into business processes.",
+        "list5": "Scalability flexibility. The product was developed to meet the needs of both small and large businesses, making it a universal solution for various companies."
+      }
+    }
+  },
+  "brandfabrica": {
+    "text": "Order Management System Development",
+    "details": {
+      "frontend": {
+        "title": "Vue.js for creating a user-friendly interface."
+      },
+      "backend": {
+        "title": ".NET and C# for a scalable server architecture."
+      }
+    },
+    "screen": "CRM System",
+    "stages": {
+      "list1": {
+        "title": "Analysis and Design",
+        "description": "An audit of the current business processes of Brand Fabrica was conducted. A prototype interface was created with modules: product catalog, order management system, and reporting."
+      },
+      "list2": {
+        "title": "Backend Development",
+        "description": ".NET and C# were used to implement a centralized order processing system. A pricing calculation system was integrated, considering options such as quantity, design, and materials. Inventory management was synchronized with the order system."
+      },
+      "list3": {
+        "title": "Frontend Development",
+        "description": "Vue.js enabled the creation of an intuitive interface for wholesale buyers. Features for uploading custom logos, selecting designs, and previewing were added."
+      },
+      "list4": {
+        "title": "Delivery System Integration",
+        "description": "Integration of transport company APIs for cost and delivery time calculation. Order tracking in the user account."
+      },
+      "list5": {
+        "title": "Testing and Optimization",
+        "description": "Module testing eliminated errors in mass orders. Page load times and large data processing were optimized."
+      }
+    },
+    "data": {
+      "task": "In 2024, ILDEV began developing the Brand Fabrica platform, designed for the production and wholesale sale of branded clothing. The main goal of the project is to simplify interactions with customers from Russia and Kazakhstan, automate order management, and integrate key processes into a single solution.",
+      "result": {
+        "mainText": "Key Objectives:",
+        "features": {
+          "list1": "Create a platform for online orders of branded clothing.",
+          "list2": "Implement an order management module, including design selection, cost calculation, and delivery management.",
+          "list3": "Develop an analytics system for production control.",
+          "list4": "Provide real-time access to product availability information."
+        }
+      },
+      "technicalDetails": {
+        "features": {
+          "list1": "Customer convenience. Users can complete orders entirely online, including design, cost calculation, and payment.",
+          "list2": "Business process automation. Order management and inventory control are simplified.",
+          "list3": "Faster order fulfillment. Thanks to production integration, order processing time was reduced by 30%.",
+          "list4": "Scalability. The platform is adapted to support large clients with high order volumes.",
+          "list5": "Sales growth. The intuitive system increased wholesale order volume by 25% within the first few months of operation."
+        }
+      }
+    },
+    "aboutProject": {
+      "title": "ABOUT THE PROJECT",
+      "description": "Brand Fabrica is a specialized platform designed to automate the production and wholesale sales of branded clothing. The project was developed to simplify interactions with clients from Russia and Kazakhstan. The main focus is on integrating all stages, from design selection and ordering to the delivery of finished products. The company ILDEV took on the task of modernizing the production process by creating a digital ecosystem."
+    },
+    "projectNumbers": {
+      "title": "PROJECT IN NUMBERS",
+      "client": {
+        "value": "1000+",
+        "label": "clients via the website"
+      },
+      "team": {
+        "value": "4.6",
+        "label": "Average rating in stores"
+      }
+    }
+  },
+  "cargosystem": {
+    "desc": "Cargo System is a digital platform developed to automate the logistics processes of the company Alpha Cargo. The main goal of the project was to create a transportation management system and a user-friendly interface for clients and employees.",
+    "project-sum": "PROJECT IN NUMBERS",
+    "download-count": "app downloads",
+    "middle-rating": "Average rating in stores",
+    "tasks": "ILDEV developed Cargo System to automate the logistics processes of Alpha Cargo, one of the largest players in the cargo transportation market from Kyrgyzstan to Russia. The main goal was to create a platform for managing shipments, tracking parcels, and providing convenient client interactions.",
+    "firstblock": {
+      "list1": "Create a personal account for clients to manage their shipments.",
+      "list2": "Develop a module for tracking cargo statuses.",
+      "list3": "Implement an online payment system.",
+      "list4": "Integrate APIs to work with transport companies and insurance partners."
+    },
+    "secondblock": {
+      "list1": "Improving service quality. Clients gained access to a convenient personal account with full shipment control functions.",
+      "list2": "Accelerating order processing. Order processing time was reduced by 40%.",
+      "list3": "Increasing transparency. The ability to track cargo statuses in real-time increased customer trust.",
+      "list4": "Stability and scalability. The platform successfully serves both private clients and corporate partners.",
+      "list5": "Cost reduction. Automation reduced operational process costs by 20%."
+    },
+    "crm": "CRM system",
+    "proccess": {
+      "text": "The following were used for implementation:",
+      "frontend": "Vue.js for creating an interactive interface.",
+      "backend": ".NET and C# for data processing and logistics management.",
+      "analithe": "Key system functions were defined: cargo tracking, online payment, tariff calculation. Prototypes of the personal account and employee interface were developed.",
+      "devback": ".NET and C# were used to build a robust backend. A REST API structure was implemented for integration with internal systems. Modules for cost calculation and cargo insurance were added.",
+      "devfront": "Vue.js provided a dynamic and user-friendly interface. Implemented functions for generating invoices and courier request submissions.",
+      "request": "Synchronized information with the warehouse system and GPS tracking. Added real-time delivery time calculation.",
+      "qa": "Testing was conducted at all stages of the logistics process. Load time was optimized for high-volume operations.",
+      "analithe_title": "Analysis and design.",
+      "back_title": "Backend development.",
+      "front_title": "Frontend development.",
+      "request_title": "Integration.",
+      "qa_title": "Testing and scaling."
+    }
+  },
   "layout": {
     "nav": {
       "projects": "projects",
@@ -72,5 +490,12 @@
       "politic": "Privacy policy",
       "action": "contact us!"
     }
+  },
+  "global": {
+    "desc": "Description",
+    "proccess": "Process",
+    "technology": "Technologies",
+    "search": "Search",
+    "download": "Загрузка"
   }
 }

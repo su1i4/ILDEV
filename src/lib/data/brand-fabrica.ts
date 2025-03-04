@@ -3,38 +3,40 @@ import ResultImage2 from "@/assets/images/result-fabrica-2.png";
 
 import { AppScreenshot, ProjectData } from "@/common";
 
-export const BRAND_FABRICA: ProjectData = {
-  task: {
-    year: 2024,
-    description: `В 2024 году компания ILDEV начала разработку платформы Brand Fabrica, предназначенной для производства и продажи брендированной одежды оптом. Основная цель проекта — упростить взаимодействие с клиентами из России и Казахстана, автоматизировать управление заказами и интегрировать ключевые процессы в одном решении.`,
-  },
-  result: {
-    mainText: "Ключевые задачи:",
-    features: [
-      "Создать платформу для онлайн-заказов брендированной одежды.",
-      "Внедрить модуль управления заказами, включающий выбор дизайна, расчет стоимости и управление доставкой.",
-      "Разработать систему аналитики для контроля производства.",
-      "Предоставить доступ к информации о наличии товаров в реальном времени.",
-    ],
-    mainText2: "",
-  },
-  technicalDetails: {
-    title: "",
-    features: [
-      "Удобство для клиентов. Пользователи могут полностью оформлять заказы онлайн, включая дизайн, расчет стоимости и оплату.",
-      "Автоматизация бизнес-процессов. Упрощено управление заказами и контроль складских остатков.",
-      "Скорость выполнения заказов. Благодаря интеграции с производством сроки выполнения заказов сократились на 30%.",
-      "Масштабируемость. Платформа адаптирована для поддержки крупных клиентов с большим количеством заказов.",
-      "Рост продаж. Интуитивно понятная система позволила увеличить объем оптовых заказов на 25% уже в первые месяцы работы.",
-    ],
-    title2: "",
-  },
+export const BRAND_FABRICA = (t: any): ProjectData => {
+  return {
+    task: {
+      year: 2024,
+      description: t("brandfabrica.data.task"),
+    },
+    result: {
+      mainText: t("brandfabrica.data.result.mainText"),
+      features: [
+        t("brandfabrica.data.result.features.list1"),
+        t("brandfabrica.data.result.features.list2"),
+        t("brandfabrica.data.result.features.list3"),
+        t("brandfabrica.data.result.features.list4"),
+      ],
+      mainText2: "",
+    },
+    technicalDetails: {
+      title: "",
+      features: [
+        t("brandfabrica.data.technicalDetails.features.list1"),
+        t("brandfabrica.data.technicalDetails.features.list2"),
+        t("brandfabrica.data.technicalDetails.features.list3"),
+        t("brandfabrica.data.technicalDetails.features.list4"),
+        t("brandfabrica.data.technicalDetails.features.list5"),
+      ],
+      title2: "",
+    },
+  };
 };
 
-export const BRAND_FABRICA_SCREEN: AppScreenshot[] = [
+export const BRAND_FABRICA_SCREEN = (t: any): AppScreenshot[] => [
   {
     id: 1,
-    title: "CRM - система",
+    title: t("brandfabrica.screen"),
     images: [
       {
         image: ResultImage1,

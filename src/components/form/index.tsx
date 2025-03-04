@@ -189,7 +189,7 @@ export default function QuestionForm({
                     }))
                   }
                   value={formData.description || ""}
-                  placeholder="Напиши немного о себе..."
+                  placeholder={t("vacancies.about_myself")}
                 />
               </div>
             )}

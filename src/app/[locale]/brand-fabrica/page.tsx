@@ -29,65 +29,56 @@ const BrandFabrica = () => {
     <div className="w-full h-[100vh] overflow-y-auto flex flex-col gap-[100px]">
       <BrandFabricaBanner />
       <InfoTitle
-        texts={["Описание", "Процесс"]}
+        texts={[t("global.desc"), t("global.proccess")]}
         onClick={() => setIsActive(!isActive)}
       />
       {isActive ? (
         <Container>
           <div className="flex gap-[40px]">
-            <h2 className="text-[24px] font-medium mb-4">Процесс</h2>
+            <h2 className="text-[24px] font-medium mb-4">
+              {t("global.proccess")}
+            </h2>
             <section className="text-[24px] font-[400]">
               <ul className="list-disc list-inside mb-4 space-y-2">
                 <li>
-                  <span className="font-semibold">Frontend:</span> Vue.js для
-                  создания удобного пользовательского интерфейса.
+                  <span className="font-semibold">Frontend:</span>{" "}
+                  {t("brandfabrica.details.frontend.title")}
                 </li>
                 <li>
-                  <span className="font-semibold">Backend:</span> .NET и C# для
-                  масштабируемой серверной архитектуры.
+                  <span className="font-semibold">Backend:</span>{" "}
+                  {t("brandfabrica.details.backend.title")}
                 </li>
               </ul>
               <ol className="list-decimal list-inside space-y-2">
                 <li>
                   <span className="font-semibold">
-                    Анализ и проектирование.
+                    {t("brandfabrica.stages.list1.title")}
                   </span>{" "}
-                  Проведен аудит текущих бизнес-процессов компании Brand
-                  Fabrica. Создан прототип интерфейса с модулями: каталог
-                  продукции, система управления заказами, отчетность.
+                  {t("brandfabrica.stages.list1.description")}
                 </li>
                 <li>
                   <span className="font-semibold">
-                    Разработка backend-части.
+                    {t("brandfabrica.stages.list2.title")}
                   </span>{" "}
-                  На основе .NET и C# реализована централизованная система
-                  обработки заказов. Встроен расчет стоимости с учетом опций
-                  (количество, дизайн, материалы). Синхронизирован учет наличия
-                  на складе с системой заказов.
+                  {t("brandfabrica.stages.list2.description")}
                 </li>
                 <li>
                   <span className="font-semibold">
-                    Разработка frontend-части.
+                    {t("brandfabrica.stages.list3.title")}
                   </span>{" "}
-                  Vue.js позволил создать интуитивно понятный интерфейс для
-                  оптовых покупателей. Добавлены функции загрузки собственных
-                  логотипов, выбор дизайнов и предварительного просмотра.
+                  {t("brandfabrica.stages.list3.description")}
                 </li>
                 <li>
                   <span className="font-semibold">
-                    Интеграция системы доставки.
+                    {t("brandfabrica.stages.list4.title")}
                   </span>{" "}
-                  Интеграция API транспортных компаний для расчета стоимости и
-                  сроков доставки. Отслеживание статуса заказа в личном
-                  кабинете.
+                  {t("brandfabrica.stages.list4.description")}
                 </li>
                 <li>
                   <span className="font-semibold">
-                    Тестирование и оптимизация.
+                    {t("brandfabrica.stages.list5.title")}
                   </span>{" "}
-                  Тестирование модулей позволило исключить ошибки при массовых
-                  заказах. Оптимизировано время загрузки страниц и обработка
-                  больших объемов данных.
+                  {t("brandfabrica.stages.list5.description")}
                 </li>
               </ol>
             </section>
@@ -95,13 +86,13 @@ const BrandFabrica = () => {
         </Container>
       ) : (
         <Screenshots
-          screenshots={BRAND_FABRICA_SCREEN}
-          projectData={BRAND_FABRICA}
+          screenshots={BRAND_FABRICA_SCREEN(t)}
+          projectData={BRAND_FABRICA(t)}
         />
       )}
 
       <Technology
-        title="Технологии"
+        title={t("global.technology")}
         technologies={[netframework, JavaScript, C, Vue]}
       />
       <div className="flex flex-wrap lg:flex-col gap-6 max-w-[90%] m-auto my-[100px]">

@@ -19,11 +19,14 @@ const PrestigeTower = () => {
     <div className="w-full h-[100vh] overflow-y-auto  flex flex-col gap-[100px]">
       <PrestigeTowerBanner />
       <InfoTitle
-        texts={["Описание", "Процесс"]}
+        texts={[t("global.desc"), t("global.proccess")]}
         onClick={() => setIsActive(!isActive)}
       />
 
-      <Technology title="Технологии" technologies={[Ios, Android]} />
+      <Technology
+        title={t("global.technology")}
+        technologies={[Ios, Android]}
+      />
 
       <div className="flex flex-wrap lg:flex-col gap-6 max-w-[90%] m-auto my-[100px]">
         {OUR_WORKS(t)

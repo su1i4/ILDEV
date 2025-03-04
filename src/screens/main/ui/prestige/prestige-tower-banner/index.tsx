@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import PrestigetowerImage1 from "@/assets/images/prestige-tower-1.png";
 import PrestigetowerImage2 from "@/assets/images/prestige-tower-2.png";
+import { useTranslations } from "next-intl";
 
 const PrestigeTowerBanner = () => {
   const fadeInUp = {
@@ -25,6 +26,8 @@ const PrestigeTowerBanner = () => {
     transition: { duration: 0.8, delay: 0.4 },
   };
 
+  const t = useTranslations();
+
   return (
     <div className="min-h-screen bg-zinc-900 flex flex-col justify-between px-6">
       <div className="relative flex lg:flex-col flex-row items-center pt-20 lg:pt-32 px-4 lg:px-8 mt-[100px]">
@@ -36,7 +39,7 @@ const PrestigeTowerBanner = () => {
         >
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-4xl lg:text-6xl font-bold text-white leading-tight mb-8">
-              САЙТ ПО ПРОДАЖЕ НЕДВИЖИМОСТИ — PRESTIGE TOWER
+              {t("prestige-tower.title")}
             </h1>
           </div>
         </motion.div>
@@ -89,11 +92,10 @@ const PrestigeTowerBanner = () => {
         <div className="">
           <div className="flex lg:gap-32 gap-[182px]">
             <h2 className="text-2xl lg:text-3xl font-bold text-white whitespace-normal lg:whitespace-nowrap">
-              О ПРОЕКТЕ
+              {t("prestige-tower.about_projects")}
             </h2>
             <p className="text-lg lg:text-xl text-gray-300 max-w-3xl">
-              Это современный бизнес-центр класса «А», спроектированный по
-              новейшим технологиям мирового стандарта
+              {t("prestige-tower.projects_desc")}
             </p>
           </div>
         </div>

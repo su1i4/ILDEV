@@ -5,38 +5,40 @@ import CargoDashboard from "@/assets/images/cargo-dashboard.png";
 
 import { AppScreenshot, ProjectData } from "@/common";
 
-export const CARGO_SYSTEM: ProjectData = {
-  task: {
-    year: 2024,
-    description: `Компания ILDEV разработала Cargo System для автоматизации логистических процессов Альфа Карго, одного из крупнейших игроков на рынке грузоперевозок из Кыргызстана в Россию. Основной целью было создание платформы для управления отправками, отслеживания посылок и удобного взаимодействия с клиентами.`,
-  },
-  result: {
-    mainText: "Ключевые задачи:",
-    features: [
-      "Создать личный кабинет для клиентов, где можно управлять отправлениями.",
-      "Разработать модуль отслеживания статусов грузов.",
-      "Внедрить систему онлайн-оплаты.",
-      "Интегрировать API для работы с транспортными компаниями и страховыми партнерами.",
-    ],
-    mainText2: "",
-  },
-  technicalDetails: {
-    title: "",
-    features: [
-      "Повышение качества обслуживания. Клиенты получили доступ к удобному личному кабинету с функцией полного контроля за отправками.",
-      "Ускорение обработки заказов. Время обработки заявок сократилось на 40%.",
-      "Увеличение прозрачности. Возможность отслеживания статусов грузов в реальном времени повысила доверие клиентов.",
-      "Стабильность и масштабируемость. Платформа успешно обслуживает как частных клиентов, так и корпоративных партнеров.",
-      "Снижение издержек. Автоматизация позволила сократить затраты на операционные процессы на 20%.",
-    ],
-    title2: "",
-  },
+export const CARGO_SYSTEM = (t: any): ProjectData => {
+  return {
+    task: {
+      year: 2024,
+      description: t("cargosystem.tasks"),
+    },
+    result: {
+      mainText: t("only-work.result.mainText"),
+      features: [
+        t("cargosystem.firstblock.list1"),
+        t("cargosystem.firstblock.list2"),
+        t("cargosystem.firstblock.list3"),
+        t("cargosystem.firstblock.list4"),
+      ],
+      mainText2: "",
+    },
+    technicalDetails: {
+      title: "",
+      features: [
+        t("cargosystem.secondblock.list1"),
+        t("cargosystem.secondblock.list2"),
+        t("cargosystem.secondblock.list3"),
+        t("cargosystem.secondblock.list4"),
+        t("cargosystem.secondblock.list5"),
+      ],
+      title2: "",
+    },
+  };
 };
 
-export const CARGO_SYSTEM_SCREEN: AppScreenshot[] = [
+export const CARGO_SYSTEM_SCREEN = (t: any): AppScreenshot[] => [
   {
     id: 1,
-    title: "CRM - система",
+    title: t("cargosystem.crm"),
     images: [
       {
         image: CargoLogin,

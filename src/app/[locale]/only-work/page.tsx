@@ -26,73 +26,62 @@ const OnlyWork = () => {
 
   if (!mounted) return null;
   return (
-    <div className="w-full h-[100vh] overflow-y-auto">
+    <div className="w-full h-[100vh] overflow-y-auto flex flex-col gap-[50px]">
       <OnlyWorkBanner />
       <InfoTitle
-        texts={["Описание", "Процесс"]}
+        texts={[t("global.desc"), t("global.proccess")]}
         onClick={() => setIsActive(!isActive)}
       />
       {isActive ? (
         <Container>
           <div className="flex gap-[40px]">
-            <h2 className="text-[24px] font-medium mb-4">Процесс</h2>
+            <h2 className="text-[24px] font-medium mb-4">
+              {t("global.proccess")}
+            </h2>
             <div className="text-[24px] font-[400]">
               <p className="mb-4">
-                Процесс разработки. Для реализации проекта мы использовали
-                следующие технологии:
+                {t("only-work.developmentProcess.introduction")}
               </p>
               <ul className="list-disc list-inside mb-4 space-y-2">
                 <li>
-                  <span className="font-semibold">Frontend:</span> Vue.js — для
-                  создания быстрого и интуитивно понятного интерфейса.
+                  <span className="font-semibold">Frontend:</span>{" "}
+                  {t("only-work.developmentProcess.technologies.frontend")}
                 </li>
                 <li>
-                  <span className="font-semibold">Backend:</span> .NET и C# —
-                  для построения масштабируемого и производительного серверного
-                  приложения.
-                </li>
-                <li>
-                  <span className="font-semibold">
-                    Анализ и проектирование.
-                  </span>{" "}
-                  Проведен глубокий анализ потребностей пользователей. Созданы
-                  прототипы модулей: тайм-трекинг, дашборды, система отчетности
-                  и аналитики.
+                  <span className="font-semibold">Backend:</span>{" "}
+                  {t("only-work.developmentProcess.technologies.backend")}
                 </li>
                 <li>
                   <span className="font-semibold">
-                    Разработка backend-части.
+                    {t("only-work.developmentProcess.steps.analith")}
                   </span>{" "}
-                  .NET и C# позволили реализовать производительный сервер с
-                  гибкой архитектурой. Система построена с использованием REST
-                  API, что обеспечило стабильную интеграцию между сервером и
-                  клиентской частью. Встроены функции геолокации и проверки
-                  данных в реальном времени.
+                  {t("only-work.developmentProcess.steps.analysisAndDesign")}
                 </li>
                 <li>
                   <span className="font-semibold">
-                    Разработка frontend-части.
+                    {t("only-work.developmentProcess.steps.dev")}
                   </span>{" "}
-                  Vue.js обеспечил простоту разработки и адаптивность
-                  интерфейса. Весь пользовательский интерфейс был разработан с
-                  упором на удобство и скорость доступа к ключевым функциям.
-                  Создано несколько кастомных компонентов для визуализации
-                  данных: графики, интерактивные таблицы и фильтры.
-                </li>
-                <li>
-                  <span className="font-semibold">Интеграция модулей.</span>{" "}
-                  Модуль тайм-трекинга синхронизирован с отчетами и аналитикой,
-                  чтобы данные отображались в реальном времени. Добавлены
-                  push-уведомления для напоминаний о начале/окончании рабочего
-                  дня.
+                  {t("only-work.developmentProcess.steps.backendDevelopment")}
                 </li>
                 <li>
                   <span className="font-semibold">
-                    Тестирование и оптимизация.
+                    {t("only-work.developmentProcess.steps.dev_front")}
                   </span>{" "}
-                  Проведено многоуровневое тестирование backend и frontend
-                  частей. Оптимизирована работа приложения для обеспечения
-                  стабильности при увеличении количества пользователей.
+                  {t("only-work.developmentProcess.steps.frontendDevelopment")}
+                </li>
+                <li>
+                  <span className="font-semibold">
+                    {t("only-work.developmentProcess.steps.integration")}
+                  </span>{" "}
+                  {t("only-work.developmentProcess.steps.moduleIntegration")}
+                </li>
+                <li>
+                  <span className="font-semibold">
+                    {t("only-work.developmentProcess.steps.qa_ceo")}
+                  </span>{" "}
+                  {t(
+                    "only-work.developmentProcess.steps.testingAndOptimization"
+                  )}
                 </li>
               </ul>
             </div>
@@ -100,12 +89,12 @@ const OnlyWork = () => {
         </Container>
       ) : (
         <Screenshots
-          screenshots={ONLY_WORK_SCREEN}
-          projectData={ONLY_WORK_DATA}
+          screenshots={ONLY_WORK_SCREEN(t)}
+          projectData={ONLY_WORK_DATA(t)}
         />
       )}
       <Technology
-        title="Технологии"
+        title={t("global.technology")}
         technologies={[netframework, JavaScript, C, Vue]}
       />
       <div className="flex flex-wrap lg:flex-col gap-6 max-w-[90%] m-auto my-[100px]">

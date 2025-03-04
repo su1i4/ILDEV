@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import CargoSystem1 from "@/assets/images/dashboard-graphic.png";
 import CargoSystem2 from "@/assets/images/cargo-system-2.png";
+import { useTranslations } from "next-intl";
 
 const CargoSystemBanner = () => {
   const fadeInUp = {
@@ -24,6 +25,8 @@ const CargoSystemBanner = () => {
     animate: { scale: 1, opacity: 1 },
     transition: { duration: 0.8, delay: 0.4 },
   };
+
+  const t = useTranslations();
 
   return (
     <div className=" bg-zinc-900 flex flex-col justify-between gap-[150px] px-6">
@@ -87,29 +90,29 @@ const CargoSystemBanner = () => {
         <div>
           <div className="flex lg:gap-32 gap-[182px]">
             <h2 className="text-2xl lg:text-3xl font-bold text-white text-nowrap">
-              О ПРОЕКТЕ
+              {t("prestige-tower.about_projects")}
             </h2>
             <div className="flex flex-col leading-[22.6px] text-[24px]">
               <p className="lg:text-xl text-gray-300 max-w-3xl">
-                Cargo System — это цифровая платформа, разработанная для
-                автоматизации логистических процессов компании Альфа Карго.
-                Основной задачей проекта было создание системы управления
-                перевозками и удобного интерфейса для клиентов и сотрудников
-                компании.
+                {t("cargosystem.desc")}
               </p>
             </div>
           </div>
           <div className="flex flex-col gap-4 mt-[40px]">
-            <h1 className="text-[32px] font-medium">ПРОЕКТ В ЦИФРАХ</h1>
+            <h1 className="text-[32px] font-medium">
+              {t("cargosystem.project-sum")}
+            </h1>
             <div className="flex gap-[20px] text-white rounded-lg">
               <div className="flex-1 border border-gray-700 p-[30px]">
                 <p className="text-[64px] font-bold">100 000+</p>
-                <p className="text-[48px] font-medium">установок приложения</p>
+                <p className="text-[48px] font-medium">
+                  {t("cargosystem.download-count")}
+                </p>
               </div>
               <div className="flex-1 border border-gray-700 p-[30px] ">
                 <p className="text-[64px] font-bold">4.6</p>
                 <p className="text-[48px] font-medium leading-[43.2px]">
-                  Средняя оценка в сторах
+                  {t("cargosystem.middle-rating")}
                 </p>
               </div>
             </div>

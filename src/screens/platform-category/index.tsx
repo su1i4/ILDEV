@@ -1,12 +1,16 @@
 "use client";
 import QuestionForm from "@/components/form";
 import { useRouter } from "@/navigation";
+import { useTranslations } from "next-intl";
 
 const PlatformCategory = () => {
   const router = useRouter();
+  const t = useTranslations();
   return (
     <section className="w-[90%] m-auto">
-      <h3 className="text-[48px] font-[500] mb-[30px]">Выбери категорию</h3>
+      <h3 className="text-[48px] font-[500] mb-[30px]">
+        {t("vacancies.categories.title")}
+      </h3>
       <ul className="flex flex-col gap-[20px]">
         {[
           {
@@ -16,18 +20,18 @@ const PlatformCategory = () => {
           { title: "IOS developer", url: "ios" },
           {
             title: "Android developer",
-            url: "backend-python",
+            url: "android-developer",
           },
           {
             title: "Backend developer python",
-            url: "qa-engineer",
+            url: "backend-python",
           },
           {
             title: "QA engineer",
             url: "qa-engineer",
           },
           {
-            title: "Бухгалтер",
+            title: t("vacancies.categories.bux"),
             url: "accountant",
           },
         ].map((item: { title: string; url: string }) => (
@@ -41,8 +45,8 @@ const PlatformCategory = () => {
         ))}
       </ul>
       <QuestionForm
-        title="Нашел вакансию? Пиши"
-        description="Заполните форму и мы свяжемся с вами в ближайшее время"
+        title={t("vacancies.question_form")}
+        description={t("vacancies.desc_form")}
         textarea
       />
     </section>
