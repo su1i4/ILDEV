@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from "react";
 import { X } from "lucide-react";
-import { Download } from "@/assets/icons/Download";
+// import { Download } from "@/assets/icons/Download";
 import { useTranslations } from "next-intl";
 
 interface FileUploadProps {
@@ -131,7 +131,7 @@ const FileUpload: React.FC<FileUploadProps> = ({
             )}
           </div>
           <div className="rounded-full bg-white p-3 shadow-sm">
-            <Download />
+            {/* <Download /> */}
           </div>
           {error && <div className="text-sm text-red-500 mt-2">{error}</div>}
         </div>
