@@ -1,15 +1,27 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 interface InfoTitleProps {
   search?: boolean;
   texts: string[];
+  onClick: () => void;
 }
 
-export default function InfoTitle({ texts, search = false }: InfoTitleProps) {
+export default function InfoTitle({
+  texts,
+  search = false,
+  onClick,
+}: InfoTitleProps) {
   const [searchTerm, setSearchTerm] = useState("");
   const [activeTab, setActiveTab] = useState(0);
+  const t = useTranslations();
+
+  const tabHandler = (i: number) => {
+    setActiveTab(i);
+    onClick();
+  };
 
   return (
     <nav className="flex items-center justify-between bg-[#18191E] p-8 pb-6 rounded-2xl w-[90%] m-auto">
@@ -17,7 +29,7 @@ export default function InfoTitle({ texts, search = false }: InfoTitleProps) {
         {texts?.map((text, i) => (
           <li
             key={text}
-            onClick={() => setActiveTab(i)}
+            onClick={() => tabHandler(i)}
             className={`cursor-pointer transition-all duration-300 ${
               i === activeTab
                 ? "gradient-text flex items-center font-medium text-[48px] xs:h-[26px] md:text-[32px] xs:text-[24px]"
@@ -31,7 +43,7 @@ export default function InfoTitle({ texts, search = false }: InfoTitleProps) {
       {search && (
         <input
           type="text"
-          placeholder="Поиск"
+          placeholder={t("global.search")}
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           className="bg-gray-700 hidden xl:block text-white px-4 py-2 w-full max-w-md rounded-full outline-none transition-all"

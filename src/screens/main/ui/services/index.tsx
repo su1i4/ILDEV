@@ -7,6 +7,7 @@ import { SERVICES } from "@/lib/data/services.data";
 import { ServiceCard } from "./ui/card";
 import { Title } from "@/shared/title";
 import { IService } from "@/common";
+import { useTranslations } from "next-intl";
 
 const Services = () => {
   const [sliderRef, slider] = useKeenSlider({
@@ -25,11 +26,13 @@ const Services = () => {
     },
   });
 
+  const t = useTranslations();
+
   return (
     <div className="w-full py-20 flex flex-col gap-20">
-      <Title text="Наши услуги" classNames="text-center" />
+      <Title text={t("home.service.our_service")} classNames="text-center" />
       <div ref={sliderRef} className="keen-slider px-8">
-        {SERVICES.map((item: IService, index: number) => (
+        {SERVICES(t).map((item: IService, index: number) => (
           <ServiceCard {...item} key={index} />
         ))}
       </div>
@@ -37,4 +40,4 @@ const Services = () => {
   );
 };
 
-export default Services
+export default Services;

@@ -4,14 +4,13 @@ import Image from "next/image";
 
 const AlphaCargo = () => {
   return (
-    <div className="min-h-screen bg-gray-900 text-white p-8">
-      {/* Main Content */}
+    <div className="text-white p-8">
       <div className="flex justify-between items-center mb-20">
         <div className="w-1/2 animate-fadeInLeft">
           <h1 className="text-6xl font-bold mb-16">ALPHA CARGO</h1>
 
           <div className="space-y-6">
-            <h2 className="text-2xl font-bold mb-4">О ПРОЕКТЕ</h2>
+          <h2 className="text-2xl font-bold mb-4">О ПРОЕКТЕ</h2>
             <p className="text-gray-300">
               Альфа Карго — лидер на рынке грузоперевозок одежды и текстиля из
               Кыргызстана в Россию. Совместно разработали цифровую экосистему

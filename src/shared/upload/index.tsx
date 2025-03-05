@@ -1,6 +1,7 @@
 import React, { useCallback, useState } from "react";
 import { X } from "lucide-react";
 import { Download } from "@/assets/icons/Download";
+import { useTranslations } from "next-intl";
 
 interface FileUploadProps {
   maxSize?: number;
@@ -16,6 +17,7 @@ const FileUpload: React.FC<FileUploadProps> = ({
   const [isDragging, setIsDragging] = useState(false);
   const [file, setFile] = useState<File | null>(null);
   const [error, setError] = useState<string>("");
+  const t = useTranslations();
 
   const validateFile = (file: File): boolean => {
     setError("");
@@ -124,7 +126,7 @@ const FileUpload: React.FC<FileUploadProps> = ({
               </div>
             ) : (
               <div>
-                <span>Прикрепить файл проекта</span>
+                <span>{t("home.form.file")}</span>
               </div>
             )}
           </div>

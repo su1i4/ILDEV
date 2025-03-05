@@ -1,10 +1,13 @@
-import Link from "next/link";
 import { ROUTES } from "@/lib/data";
+import { Link } from "@/navigation";
+import { useTranslations } from "next-intl";
 
 export const Routers = () => {
+  const t = useTranslations();
+
   return (
     <div className="flex bg items-center gap-[20px]">
-      {ROUTES.map((item) => (
+      {ROUTES(t).map((item) => (
         <Link key={item.link} href={item.link} className="group z-10">
           <p className="text-[18px] font-[400] relative">
             {item.name}

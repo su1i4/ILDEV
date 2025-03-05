@@ -1,94 +1,72 @@
-import Dashboard from "@/assets/images/dashboard-graphic.png";
-import DashboardLaptop from "@/assets/images/dashboard-laptop.png";
-import { StaticImageData } from "next/image";
+import Application1 from "@/assets/images/application-1.png";
+import Application2 from "@/assets/images/application-2.png";
+import Application3 from "@/assets/images/application-3.png";
+import Application4 from "@/assets/images/application-4.png";
+import WebsiteImage from "@/assets/images/website.png";
+import { AppScreenshot, ProjectData } from "@/common";
 
-interface ProjectData {
-  task: {
-    year: number;
-    description: string;
+export const projectData = (t: any): ProjectData => {
+  return {
+    task: {
+      year: 2024,
+      description: t("alpha-cargo.projectData.task"),
+    },
+    result: {
+      mainText: t("alpha-cargo.projectData.result.mainText"),
+      features: [
+        t("alpha-cargo.projectData.result.features.list1"),
+        t("alpha-cargo.projectData.result.features.list2"),
+        t("alpha-cargo.projectData.result.features.list3"),
+        t("alpha-cargo.projectData.result.features.list4"),
+        t("alpha-cargo.projectData.result.features.list5"),
+        t("alpha-cargo.projectData.result.features.list6"),
+      ],
+      mainText2: t("alpha-cargo.projectData.result.mainText2"),
+    },
+    technicalDetails: {
+      title: t("alpha-cargo.projectData.technicalDetails.title"),
+      features: [
+        t("alpha-cargo.projectData.technicalDetails.features.list1"),
+        t("alpha-cargo.projectData.technicalDetails.features.list2"),
+        t("alpha-cargo.projectData.technicalDetails.features.list3"),
+        t("alpha-cargo.projectData.technicalDetails.features.list4"),
+      ],
+      title2: t("alpha-cargo.projectData.technicalDetails.title2"),
+    },
   };
-  result: {
-    mainText: string;
-    features: string[];
-  };
-  technicalDetails: {
-    title: string;
-    features: string[];
-  };
-}
-
-interface AppScreenshot {
-  id: number;
-  title: string;
-  images: string | StaticImageData[];
-}
-
-export const projectData: ProjectData = {
-  task: {
-    year: 2024,
-    description:
-      "В 2024 году компания Альфа Карго обратилась к нам с задачей разработки современного сайта и мобильного приложения, которые бы упростили клиентам взаимодействие с сервисом грузоперевозок...",
-  },
-  result: {
-    mainText:
-      "Мы разработали сайт и мобильное приложение с широким функционалом, которые обеспечивают:",
-    features: [
-      "Личный кабинет клиента, где можно:",
-      "Отслеживать статус отправлений в реальном времени. Управлять накладными и смотреть историю отправлений.",
-      "Производить быструю онлайн-оплату услуг. Вызывать выездную группу для забора груза.",
-      "Интеграция с CRM-системой компании для автоматизации внутренних процессов управления",
-      "Полную адаптивность сайта и приложения для удобной работы на любых устройствах",
-      "Возможность получения уведомлений о статусе отправлений и акциях компании",
-    ],
-  },
-  technicalDetails: {
-    title: "Технологические особенности",
-    features: [
-      "Разработан удобный интерфейс с акцентом на скорость и простоту взаимодействия",
-      "Внедрена система аналитики, позволяющая отслеживать поведение пользователей для дальнейшего улучшения сервиса",
-      "Интеграция с платежными системами для безопасных и удобных транзакций",
-      "Возможность работы оффлайн: клиенты могут сохранять информацию и работать с ней без подключения к интернету",
-    ],
-  },
 };
 
-export const appScreenshots: AppScreenshot[] = [
+export const appScreenshots = (t: any): AppScreenshot[] => [
   {
     id: 1,
-    title: "Приложение",
+    title: t("alpha-cargo.appScreenshots.application"),
     images: [
-      Dashboard,
-      DashboardLaptop,
-      Dashboard,
-      Dashboard,
-      Dashboard,
-      Dashboard,
-      Dashboard,
-      Dashboard,
-      DashboardLaptop,
-      Dashboard,
-      Dashboard,
-      Dashboard,
-      Dashboard,
-      Dashboard,
-      DashboardLaptop,
-      Dashboard,
-      Dashboard,
-      Dashboard,
-      Dashboard,
-      Dashboard,
-      Dashboard,
-      DashboardLaptop,
-      Dashboard,
-      Dashboard,
-      Dashboard,
-      Dashboard,
-      Dashboard,
+      {
+        image: Application1,
+        className: "h-[634px]",
+      },
+      {
+        image: Application2,
+        className: "h-[634px]",
+      },
+      {
+        image: Application3,
+        className: "h-[634px]",
+      },
+      {
+        image: Application4,
+        className: "h-[634px]",
+      },
     ],
   },
   {
     id: 2,
-    title: "Пункты Альфа",
-    images: [Dashboard	],
+    title: t("alpha-cargo.appScreenshots.punkt"),
+    images: [
+      {
+        image: WebsiteImage,
+        className: "h-[784px] object-contain",
+      },
+    ],
   },
 ];
