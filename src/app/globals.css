@@ -33,27 +33,27 @@ body {
     90deg,
     #ba2025 0%,
     #a6181b 20%,
-    #db7746 40%,
+    #db7746 40%,  
     #cf6f35 60%,
     #d57238 80%,
     #ba2025 100%
   );
-  background-size: 200% 100%;
-  animation: gradientMove 2.5s linear infinite;
+  background-size: 400% 100%;
+  animation: gradientMoveButton 3s linear infinite;
 }
 
 .secondary-button {
   background: linear-gradient(90deg, #000000 0%, #808080 50%, #ffffff 100%);
   background-size: 200% 100%;
-  animation: gradientMove 3s linear infinite;
+  animation: gradientMoveButton 3s linear infinite;
 }
 
-@keyframes gradientMove {
+@keyframes gradientMoveButton {
   0% {
-    background-position: 200% 50%;
+    background-position: 0% 50%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 400% 50%;
   }
 }
 
@@ -71,10 +71,10 @@ body {
   background-clip: text;
   color: transparent;
   background-size: 200% 100%;
-  animation: gradientMove 2.5s linear infinite;
+  animation: gradientMoveText 2.5s linear infinite;
 }
 
-@keyframes gradientMove {
+@keyframes gradientMoveText {
   0% {
     background-position: 200% 0;
   }
@@ -212,9 +212,9 @@ body {
 @keyframes pulse {
   0%,
   100% {
-    opacity: 0.2;
+    opacity: 0.9;
   }
   50% {
-    opacity: 0.15;
+    opacity: 0.85;
   }
 }

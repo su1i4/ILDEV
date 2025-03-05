@@ -6,6 +6,8 @@ import Card from "./ui/card";
 import { OUR_WORKS } from "@/lib/data/card.data";
 import { useTranslations } from "next-intl";
 
+import AnimatedBackground from "./ui/animated-background";
+
 // const AnimatedBackground = React.lazy(() => import("./ui/animated-background"));
 const Services = React.lazy(() => import("./ui/services"));
 const Clients = React.lazy(() => import("./ui/clients"));
@@ -18,11 +20,12 @@ export default function HomePage() {
     <div className="w-full h-[100vh] overflow-y-auto">
       <Banner />
 
-      {/* <AnimatedBackground> */}
       <Services />
       <Clients />
 
-      <h1 className="text-[64px] font-[600] pl-[100px] mt-[20px]">{t("home.project")}</h1>
+      <h1 className="text-[64px] font-[600] pl-[100px] mt-[20px]">
+        {t("home.project")}
+      </h1>
 
       <div className="flex flex-wrap lg:flex-col gap-6 max-w-[90%] m-auto my-[100px]">
         {OUR_WORKS(t)
@@ -36,7 +39,6 @@ export default function HomePage() {
             />
           ))}
       </div>
-      {/* </AnimatedBackground> */}
       <div className="my-[100px] max-w-[80%] m-auto">
         <QuestionForm
           title={t("home.form.title")}
