@@ -1,4 +1,4 @@
-import { Download } from "@/assets/icons/Download";
+// import { Download } from "@/assets/icons/Download";
 import { Email } from "@/assets/icons/Email";
 import { Logo } from "@/assets/icons/Logo";
 import { ROUTES } from "@/lib/data";
@@ -41,7 +41,7 @@ const Footer = () => {
             <p>ildev@info.kg</p>
           </div>
           <div className="flex items-center gap-[5px]">
-            <Download />
+            {/* <Download /> */}
             <p>{t("layout.nav.download")}</p>
           </div>
           <p>{t("layout.nav.politic")}</p>

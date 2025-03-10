@@ -12,7 +12,7 @@ export const Header = () => {
   const router = useRouter();
   const t = useTranslations();
   return (
-    <div className="w-full mx-auto container flex justify-between items-center sm:gap-[5px] px-24 sm:px-6 backdrop-blur-md py-2">
+    <div className="w-full mx-auto container flex justify-between items-center sm:gap-[5px] px-24 sm:px-6 xs:px-2 backdrop-blur-md py-2">
       <div
         className="flex items-center gap-1 cursor-pointer"
         onClick={() => router.push("/")}
@@ -25,8 +25,8 @@ export const Header = () => {
           <p className="text-[6px]">SOFTWARE DEVELOPMENT</p>
         </div>
       </div>
-      <div className="flex items-center gap-[100px]">
-        <nav className="sm:hidden">
+      <div className="flex items-center gap-[100px] ml:gap-[30px]">
+        <nav className="sm:hidden lg:hidden">
           <Routers />
         </nav>
 
@@ -34,9 +34,9 @@ export const Header = () => {
           <LocaleSwitcher />
           <Button
             text={t("layout.nav.action")}
-            classNames="text-nowrap font-[300] text-[15px] px-3"
+            classNames="text-nowrap font-[400] text-[15px] px-3 !min-w-[160px] w-[160px] text-center xs:hidden"
           />
-          <article className="hidden sm:block">
+          <article className="hidden lg:block">
             <Burger />
           </article>
         </div>

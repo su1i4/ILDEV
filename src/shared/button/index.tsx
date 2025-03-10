@@ -19,7 +19,7 @@ export const Button = ({
     <div
       className={twMerge(
         clsx(
-          "px-6 py-3 rounded-full text-lg font-medium relative overflow-hidden cursor-pointer transition-all duration-300 animate-pulse hover:shadow-lg hover:shadow-[#BA2025] hover:translate-x-1 hover:translate-y-[-4px]",
+          "px-6 py-3 rounded-full text-lg font-medium relative overflow-hidden cursor-pointer transition-all duration-300 animate-pulse hover:shadow-lg hover:shadow-[#BA2025] hover:translate-x-1 hover:translate-y-[-4px] primary-button",
           {
             "flex items-center gap-2 w-fit": icon,
             "primary-button text-white": type === "primary",

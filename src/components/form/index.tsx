@@ -98,20 +98,12 @@ export default function QuestionForm({
     e.preventDefault();
 
     if (!validateForm()) {
-      console.log("Форма содержит ошибки:", errors);
       return;
     }
 
     setIsSubmitting(true);
 
     try {
-      console.log("Отправка данных:", {
-        name: formData.name,
-        phone: formData.phone,
-        file: formData.file,
-        agree: formData.agree,
-        description: formData.description,
-      });
 
       await new Promise((resolve) => setTimeout(resolve, 1000));
 

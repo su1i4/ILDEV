@@ -6,18 +6,18 @@ export const links = {
   blog: "/blog",
 };
 
-export const MARQUEE_TEXT = () => {
+export const MARQUEE_TEXT = (t: any) => {
   return [
-    "ВЕБ-РАЗРАБОТКА",
-    "DIGITAL MARKETING",
-    "UX/UI ДИЗАЙН",
-    "КОНТЕНТ",
-    "ВЕБ-ДИЗАЙН",
-    "ВЕБ-РАЗРАБОТКА",
-    "DIGITAL MARKETING",
-    "UX/UI ДИЗАЙН",
-    "КОНТЕНТ",
-    "ВЕБ-ДИЗАЙН",
+    t("home.marquee.item1"),
+    t("home.marquee.item2"),
+    t("home.marquee.item3"),
+    t("home.marquee.item4"),
+    t("home.marquee.item5"),
+    t("home.marquee.item6"),
+    t("home.marquee.item7"),
+    t("home.marquee.item8"),
+    t("home.marquee.item9"),
+    t("home.marquee.item10"),
   ];
 };
 
