@@ -4,14 +4,14 @@ import { Animation } from "./ui/animation";
 
 export const Banner = () => {
   return (
-    <div className="w-full h-[100vh] relative">
-       <div className="absolute top-0 bottom-0 w-full flex items-center justify-end">
+    <div className="w-full h-[100vh] lg:h-[80vh] xs:h-[70vh] relative">
+      <div className="absolute top-0 bottom-0 w-full flex items-center justify-end">
         <Animation />
       </div>
       <div className="absolute top-0 bottom-0 w-full flex items-center">
         <Middle />
       </div>
-      <div className="absolute bottom-0 w-full py-[20px] bg-lightDark">
+      <div className="absolute bottom-0 w-full py-[20px] lg:py-[16px] xs:py-[12px] bg-lightDark">
         <MarqueeUi />
       </div>
     </div>

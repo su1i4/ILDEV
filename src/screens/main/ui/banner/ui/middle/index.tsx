@@ -7,8 +7,8 @@ export const Middle = () => {
   const t = useTranslations();
 
   return (
-    <div className="container mx-auto px-6 md:px-24">
-      <h1 className="mb-5 text-[40px] md:text-[64px] font-[600] leading-[44px] md:leading-[60px]">
+    <div className="container mx-auto px-24 lg:px-12 sm:px-6 xs:px-2">
+      <h1 className="mb-5 text-[64px] font-[600] leading-[64px] lg:leading-[44px] lg:text-[44px] sm:text-[26px] sm:leading-[26px] xs:text-[24px] xs:leading-[24px]">
         {t("home.title")
           .split("\n")
           .map((line, lineIndex) => (

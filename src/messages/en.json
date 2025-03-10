@@ -7,9 +7,22 @@
     "title": "next-intl example"
   },
   "home": {
-    "title": "ILDEV — WE CREATE \n REVOLUTIONARY \n DIGITAL SOLUTIONS",
+    "title": "ILDEV — WE CREATE\nREVOLUTIONARY\nDIGITAL SOLUTIONS",
     "action": "Submit request",
     "project": "Projects",
+
+    "marquee": {
+      "item1": "WEB DEVELOPMENT",
+      "item2": "DIGITAL MARKETING",
+      "item3": "UX/UI DESIGN",
+      "item4": "CONTENT",
+      "item5": "WEB DESIGN",
+      "item6": "WEB DEVELOPMENT",
+      "item7": "DIGITAL MARKETING",
+      "item8": "UX/UI DESIGN",
+      "item9": "CONTENT",
+      "item10": "WEB DESIGN"
+    },
 
     "clients": "Clients",
     "service": {

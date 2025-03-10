@@ -20,8 +20,7 @@ export default function HomePage() {
     <div className="w-full h-[100vh] overflow-y-auto">
       <Banner />
 
-      <Services />
-      <Clients />
+      {/* <Services />
 
       <h1 className="text-[64px] font-[600] pl-[100px] mt-[20px]">
         {t("home.project")}
@@ -39,13 +38,14 @@ export default function HomePage() {
             />
           ))}
       </div>
+      <Clients />
       <div className="my-[100px] max-w-[80%] m-auto">
         <QuestionForm
           title={t("home.form.title")}
           description={t("home.form.desc")}
         />
       </div>
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }
