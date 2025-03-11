@@ -8,6 +8,7 @@ export default {
     "./src/screens/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/shared/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/lib/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/assets/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
@@ -29,6 +30,7 @@ export default {
         md: { max: "768px" }, // => @media (max-width: 767px) { ... }
         sm: { max: "640px" }, // => @media (max-width: 639px) { ... }
         xs: { max: "450px" }, // => @media (max-width: 440px) { ... }
+        ms: { max: "400px" }, // => @media (max-width: 375px) { ... }
         "sm!": { min: "640px" },
       },
     },

@@ -27,7 +27,7 @@ export const Middle = () => {
             </span>
           ))}
       </h1>
-      <Button text={t("home.action")} icon={<Link />} />
+      <Button classNames="xs:text-[14px] xs:py-1" text={t("home.action")} icon={<Link />} />
     </div>
   );
 };

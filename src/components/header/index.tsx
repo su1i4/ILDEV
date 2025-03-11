@@ -12,7 +12,7 @@ export const Header = () => {
   const router = useRouter();
   const t = useTranslations();
   return (
-    <div className="w-full mx-auto container flex justify-between items-center sm:gap-[5px] px-24 sm:px-6 xs:px-2 backdrop-blur-md py-2">
+    <div className="w-full mx-auto container flex justify-between items-center sm:gap-[5px] px-24 lg:px-6 xs:px-2 backdrop-blur-md py-2">
       <div
         className="flex items-center gap-1 cursor-pointer"
         onClick={() => router.push("/")}

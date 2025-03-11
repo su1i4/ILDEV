@@ -20,13 +20,13 @@ export default function HomePage() {
     <div className="w-full h-[100vh] overflow-y-auto">
       <Banner />
 
-      {/* <Services />
+      <Services />
 
-      <h1 className="text-[64px] font-[600] pl-[100px] mt-[20px]">
+      <h1 className="text-[64px] lg:text-[48px] sm:text-[32px] xs:text-[24px] font-[600] pl-[100px] xs:pl-0 mt-[20px] xs:text-center">
         {t("home.project")}
       </h1>
 
-      <div className="flex flex-wrap lg:flex-col gap-6 max-w-[90%] m-auto my-[100px]">
+      <div className="flex flex-wrap lg:flex-col gap-6 max-w-[90%] m-auto my-20 sm:my-12 xs:my-6">
         {OUR_WORKS(t)
           .splice(0, 4)
           .map((project, index) => (
@@ -39,13 +39,15 @@ export default function HomePage() {
           ))}
       </div>
       <Clients />
-      <div className="my-[100px] max-w-[80%] m-auto">
+      <div className="my-20 sm:my-12 xs:my-6 max-w-[85%] lg:max-w-[90%] xs:max-w-[96%] m-auto">
         <QuestionForm
           title={t("home.form.title")}
           description={t("home.form.desc")}
         />
       </div>
-      <Footer /> */}
+      <div className="my-20 sm:my-12 xs:my-6 max-w-[85%] lg:max-w-[90%] xs:max-w-[96%] m-auto">
+        <Footer />
+      </div>
     </div>
   );
 }

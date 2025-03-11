@@ -125,9 +125,9 @@ export default function QuestionForm({
   };
 
   return (
-    <div className=" overflow-y-auto">
-      <div className="flex flex-col items-center">
-        <div className="bg-[#18191E] p-6 rounded-2xl shadow-lg w-full flex gap-[30px] lg:flex-col">
+    <div className="overflow-y-auto">
+      <div className="flex flex-col items-center lg:flex-col">
+        <div className="bg-[#18191E] p-6 xs:p-4 rounded-2xl shadow-lg w-full flex gap-[30px] lg:flex-col">
           <div className="flex flex-col">
             <h2 className="text-[48px] font-medium lg:text-[24px]">{title}</h2>
             <p className="text-[#FFFFFF] text-[18px] font-[300] mb-4 lg:text-[15px]">
@@ -209,7 +209,7 @@ export default function QuestionForm({
 
             <Button
               type="primary"
-              classNames="text-center"
+              classNames="text-center xs:text-[14px] xs:py-1"
               text={isSubmitting ? "Отправка..." : t("home.form.send_request")}
             />
           </form>
