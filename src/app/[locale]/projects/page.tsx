@@ -8,7 +8,7 @@ const Projects = () => {
   const t = useTranslations();
 
   return (
-    <div className="w-full h-[100vh] overflow-y-auto">
+    <div className="w-full h-[100vh] overflow-y-auto pb-10">
       <Container className="sm:w-[100%] sm:pb-[30px]">
         <div className="flex justify-between min-h-[204px] xs:min-h-[150px] mt-[70px] items-center sm:flex-col sm:justify-start xs:items-start">
           <h1 className="text-white text-[64px] font-[600] lg:text-[48px] sm:-[32px] xs:text-[20px] leading-[57.6px] max-w-[393px] ">
@@ -20,7 +20,7 @@ const Projects = () => {
         </div>
       </Container>
 
-      <div className="flex flex-wrap lg:flex-col gap-6 max-w-[90%] m-auto mt-[100px]">
+      <div className="flex flex-wrap lg:flex-col gap-6 max-w-[90%] xs:max-w-[96%] m-auto mt-20 md:mt-10 xs:mt-5">
         {OUR_WORKS(t).map((project, index) => (
           <Card
             key={project.title}

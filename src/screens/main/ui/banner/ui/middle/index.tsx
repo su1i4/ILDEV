@@ -8,7 +8,7 @@ export const Middle = () => {
 
   return (
     <div className="container mx-auto px-24 lg:px-12 sm:px-6 xs:px-2">
-      <h1 className="mb-5 text-[64px] font-[600] leading-[64px] lg:leading-[44px] lg:text-[44px] sm:text-[26px] sm:leading-[26px] xs:text-[24px] xs:leading-[24px]">
+      <h1 className="mb-5 text-[64px] font-[600] leading-[64px] lg:leading-[48px] lg:text-[48px] md:text-[26px] md:leading-[26px] xs:text-[24px] xs:leading-[24px]">
         {t("home.title")
           .split("\n")
           .map((line, lineIndex) => (
@@ -27,7 +27,7 @@ export const Middle = () => {
             </span>
           ))}
       </h1>
-      <Button text={t("home.action")} icon={<Link />} />
+      <Button classNames="xs:text-[14px] xs:py-1" text={t("home.action")} icon={<Link />} />
     </div>
   );
 };

@@ -38,12 +38,12 @@ const Card = ({
 
   return (
     <div
-      className={`bg-black w-[48%] lg:w-[100%] text-white h-[502px] sm:h-[442px] p-6 rounded-2xl shadow-lg flex flex-col justify-between gap-4 relative overflow-hidden ${
+      className={`bg-gray-900 w-[48%] lg:w-[100%] text-white h-[502px] sm:h-[442px] xs:h-[400px] p-6 xs:px-3 xs:py-2 rounded-2xl shadow-lg flex flex-col justify-between gap-4 relative overflow-hidden ${
         isLastOdd ? "w-[100%]" : ""
       }`}
       onClick={() => router.push(url)}
     >
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 xs:gap-1">
         <h2 className="text-[48px] md:text-[20px] font-[500] text-[#FFFFFF]">
           {title}
         </h2>
@@ -65,9 +65,9 @@ const Card = ({
         height={200}
         className={secondImageOption.styles}
       />
-      <div className="flex flex-col gap-4">
-        <span className="text-gray-300 font-semibold">{quantity}</span>
-        <span className="text-gray-300 font-semibold">{stats}</span>
+      <div className="flex flex-col gap-2">
+        <span className="text-gray-300 text-[24px] xs:text-[16px] font-semibold">{quantity}</span>
+        <span className="text-gray-300 text-[20px] xs:text-[16px] font-semibold">{stats}</span>
       </div>
     </div>
   );
