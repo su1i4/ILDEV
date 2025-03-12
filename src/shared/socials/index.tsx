@@ -1,8 +1,8 @@
-import { Socials } from "@/lib/data/socials.data";
+import { SocialMediaDisplay } from "@/lib/data/socials.data";
 
 export const SocialMedia = () => (
   <div className="flex items-center gap-[10px]">
-    {Socials.map((item, index) => (
+    {SocialMediaDisplay().map((item, index) => (
       <a key={index}>{item}</a>
     ))}
   </div>

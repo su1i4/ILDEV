@@ -29,7 +29,11 @@ const AlphaCargoBanner = () => {
 
   return (
     <div className=" bg-zinc-900 flex flex-col justify-between gap-[150px] px-6">
-      <div className="relative flex lg:flex-col flex-row  pt-20 lg:pt-32 px-4 lg:px-8 mt-[100px]">
+      <div
+        className="relative flex lg:flex-col pt-20 lg:pt-32 px-4 lg:px-8 mt-[100px] sm:mt-0 
+       
+      "
+      >
         <motion.div
           className="container mx-auto lg:max-w-7xl z-10"
           initial={fadeInUp.initial}
@@ -44,18 +48,16 @@ const AlphaCargoBanner = () => {
         </motion.div>
 
         <motion.div
-          className="relative w-full lg:w-[45%] mt-12 lg:mt-0 lg:absolute lg:right-8 lg:top-1/2 lg:-translate-y-1/2"
+          className="relative w-full sm:w-[35%] mt-12 lg:mt-0 lg:absolute lg:right-8 lg:top-1/2 lg:-translate-y-1/2"
           initial={fadeInRight.initial}
           animate={fadeInRight.animate}
           transition={fadeInRight.transition}
         >
-          <div className="hidden lg:block w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[501px] lg:h-[501px] rounded-full bg-blue-900 absolute z-0 -top-[50px]"></div>
-
           <div className="relative flex justify-center lg:justify-start h-[400px] lg:h-[600px]">
-            <div className="w-[501px] h-[501px] rounded-full bg-custom-gradient absolute "></div>
+            <div className="w-[501px] h-[501px] sm:w-[321px] sm:h-[321px] rounded-full bg-custom-gradient absolute"></div>
 
             <motion.div
-              className="absolute left-0 lg:-left-[120px] top-[100px] z-[2] w-[610px] md:w-[350px] lg:w-auto"
+              className="absolute left-0 lg:left-[120px] top-[100px]  z-[2] w-[610px]  md:w-[350px] md:top-[40px] lg:w-auto"
               initial={imageAnimation.initial}
               animate={imageAnimation.animate}
               transition={imageAnimation.transition}
@@ -63,11 +65,11 @@ const AlphaCargoBanner = () => {
               <Image
                 src={AlphaCargoImage1}
                 alt="Desktop view"
-                className="rounded-lg object-cover shadow-lg hover:scale-105 transition-transform duration-300"
+                className="rounded-lg object-cover xl:w-[510px] shadow-lg hover:scale-105 transition-transform duration-300"
               />
             </motion.div>
             <motion.div
-              className="absolute right-0 lg:left-[200px] lg:-bottom-[200px] z-[1] w-[433px] md:w-[300px] lg:w-auto"
+              className="absolute right-0 lg:left-[200px] md:left-[100px] lg:bottom-[200px] z-[1] w-[433px] md:bottom-[-30px] md:w-[300px] lg:w-auto"
               initial={imageAnimation.initial}
               animate={imageAnimation.animate}
               transition={{ ...imageAnimation.transition, delay: 0.6 }}
@@ -89,7 +91,7 @@ const AlphaCargoBanner = () => {
         transition={{ duration: 0.6, delay: 0.8 }}
       >
         <div>
-          <div className="flex lg:gap-32 gap-[20px]">
+          <div className="flex gap-[20px] md:flex-col sm:text-[15px] sm:text-normal">
             <h2 className="text-2xl lg:text-3xl font-bold text-white text-nowrap">
               {t("alpha-cargo.project.about.title")}
             </h2>
