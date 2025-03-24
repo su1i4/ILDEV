@@ -15,7 +15,7 @@ const ScreenshotCard: React.FC<ScreenshotCardProps> = ({ title, images }) => {
         className={`${
           images.length === 1
             ? "w-full"
-            : "grid grid-flow-col grid-cols-2 auto-cols-max gap-[20px] md:gap-[10px] scrollbar-hide"
+            : "md:gap-[10px] flex flex-wrap justify-center gap-[50px] "
         }`}
       >
         {Array.isArray(images) &&
@@ -24,7 +24,7 @@ const ScreenshotCard: React.FC<ScreenshotCardProps> = ({ title, images }) => {
               <Image
                 src={image}
                 alt={title}
-                className={`object-cover w-full ${className}`}
+                className={`object-cover w-full rounded-xl ${className}`}
                 sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 20vw "
               />
             </div>
@@ -84,7 +84,7 @@ text-[24px] font-[400]"
       </section>
 
       <section>
-        <div className="grid grid-cols-1  gap-6">
+        <div className="grid grid-cols-1 gap-6">
           {screenshots.map((screenshot) => (
             <ScreenshotCard
               key={screenshot.id}

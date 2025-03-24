@@ -29,7 +29,7 @@ const CargoSystemBanner = () => {
   const t = useTranslations();
 
   return (
-    <div className=" bg-zinc-900 flex flex-col justify-between gap-[150px] px-6">
+    <div className=" bg-zinc-900 flex flex-col justify-between gap-[150px] px-6 lg:gap-[300px]">
       <div className="relative flex lg:flex-col flex-row  pt-20 lg:pt-32 px-4 lg:px-8 mt-[100px]">
         <motion.div
           className="container mx-auto lg:max-w-7xl z-10"
@@ -54,7 +54,7 @@ const CargoSystemBanner = () => {
             <div className="w-[501px] h-[501px] rounded-full bg-custom-gradient absolute "></div>
 
             <motion.div
-              className="absolute left-0 lg:-left-[120px] top-[100px] z-[2] w-[610px] md:w-[350px] lg:w-auto"
+              className="absolute left-0 lg:-left-[120px] top-[150px] z-[2] w-[610px] md:w-[350px] lg:w-auto"
               initial={imageAnimation.initial}
               animate={imageAnimation.animate}
               transition={imageAnimation.transition}
@@ -62,11 +62,11 @@ const CargoSystemBanner = () => {
               <Image
                 src={CargoSystem1}
                 alt="Desktop view"
-                className="rounded-lg object-cover shadow-lg hover:scale-105 transition-transform duration-300"
+                className="w-[372px] h-[295px] rounded-lg object-cover shadow-lg hover:scale-105 transition-transform duration-300 rotate-[-15deg]"
               />
             </motion.div>
             <motion.div
-              className="absolute right-0 lg:left-[200px] lg:-bottom-[200px] z-[1] w-[433px] md:w-[300px] lg:w-auto"
+              className="absolute right-[50px]  z-[1] w-[433px] md:w-[300px]"
               initial={imageAnimation.initial}
               animate={imageAnimation.animate}
               transition={{ ...imageAnimation.transition, delay: 0.6 }}
@@ -74,7 +74,7 @@ const CargoSystemBanner = () => {
               <Image
                 src={CargoSystem2}
                 alt="Mobile view"
-                className="rounded-lg shadow-xl object-cover hover:scale-105 transition-transform duration-300"
+                className="w-[415px] h-[233px] rounded-lg hover:scale-105 transition-transform duration-300 "
               />
             </motion.div>
           </div>

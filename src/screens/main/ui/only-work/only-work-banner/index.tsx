@@ -29,7 +29,7 @@ const OnlyWorkBanner = () => {
   const t = useTranslations();
 
   return (
-    <div className=" bg-zinc-900 flex flex-col justify-between gap-[150px] px-6">
+    <div className="bg-zinc-900 flex flex-col justify-between gap-[150px] px-6 lg:gap-[40px] rounded-3xl">
       <div className="relative flex lg:flex-col flex-row items-center pt-20  sm:pt-0 px-4 lg:px-8 mt-[100px]">
         <motion.div
           className="container mx-auto lg:max-w-7xl z-10"
@@ -38,19 +38,19 @@ const OnlyWorkBanner = () => {
           transition={fadeInUp.transition}
         >
           <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-4xl lg:text-6xl font-bold text-white leading-tight mb-8">
+            <h1 className="text-5xl  md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-8 sx!:text-[24px]">
               ONLY WORK
             </h1>
           </div>
         </motion.div>
 
         <motion.div
-          className="relative w-full lg:w-[45%] mt-12 lg:mt-0 lg:absolute lg:right-8 lg:top-1/1 lg:-translate-y-1/2"
+          className="relative w-full lg:w-[45%] mt-12 lg:mt-0  lg:right-8 lg:top-1/1 lg:-translate-y-1/2"
           initial={fadeInRight.initial}
           animate={fadeInRight.animate}
           transition={fadeInRight.transition}
         >
-          <div className="relative flex justify-center lg:justify-start h-[400px] lg:h-[600px]">
+          <div className="relative flex justify-center items-center lg:justify-start h-[400px] lg:h-[600px]">
             <div className="w-[501px] h-[501px] rounded-full bg-custom-gradient absolute sm:w-[350px] sm:h-[350px] sm:left-1/1 sm:top-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2"></div>
 
             <motion.div
@@ -62,11 +62,11 @@ const OnlyWorkBanner = () => {
               <Image
                 src={DashboardLaptop}
                 alt="Desktop view"
-                className="rounded-lg object-cover shadow-lg hover:scale-105 transition-transform duration-300"
+                className="rounded-lg object-cover shadow-lg hover:scale-105 transition-transform duration-300 rotate-6 lg:mt-40"
               />
             </motion.div>
             <motion.div
-              className="absolute right-0 lg:left-[200px] lg:-bottom-[200px] z-[1] w-[316px] md:w-[300px] lg:w-auto"
+              className="absolute right-0 lg:left-[200px] z-[1] w-[316px] md:w-[300px]"
               initial={imageAnimation.initial}
               animate={imageAnimation.animate}
               transition={{ ...imageAnimation.transition, delay: 0.6 }}
@@ -74,7 +74,7 @@ const OnlyWorkBanner = () => {
               <Image
                 src={SignInImage}
                 alt="Mobile view"
-                className="rounded-lg shadow-xl object-cover hover:scale-105 transition-transform duration-300"
+                className="rounded-lg shadow-xl object-cover hover:scale-105 transition-transform duration-300 rotate-[-9deg] lg:mb-32"
               />
             </motion.div>
           </div>
@@ -82,7 +82,7 @@ const OnlyWorkBanner = () => {
       </div>
 
       <motion.div
-        className="py-8 lg:py-16 px-4 lg:px-8"
+        className="py-8 px-4"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.8 }}
@@ -97,7 +97,7 @@ const OnlyWorkBanner = () => {
             </p>
           </div>
           <div className="flex flex-col gap-4 mt-[104px]">
-            <h1 className="text-[32px] font-medium">
+            <h1 className="text-[32px] font-medium lg:text-[24px]">
               {t("only-work.stats.title")}
             </h1>
             <div className="flex gap-[20px] text-white rounded-lg">
