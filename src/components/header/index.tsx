@@ -14,7 +14,7 @@ export const Header = () => {
   return (
     <div className="w-full mx-auto container flex justify-between items-center sm:gap-[5px] px-24 lg:px-6 xs:px-2 backdrop-blur-md py-2">
       <div
-        className="flex items-center gap-1 cursor-pointer"
+        className="flex items-center gap-1 cursor-pointer lg:ml-[50px]"
         onClick={() => router.push("/")}
       >
         <Logo width="36" height="36" />
@@ -36,7 +36,7 @@ export const Header = () => {
             text={t("layout.nav.action")}
             classNames="text-nowrap font-[400] text-[15px] px-3 !min-w-[160px] w-[160px] text-center xs:hidden"
           />
-          <article className="hidden lg:block">
+          <article className="hidden lg:block lg:mr-[50px]">
             <Burger />
           </article>
         </div>
