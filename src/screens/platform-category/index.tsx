@@ -8,7 +8,7 @@ const PlatformCategory = () => {
   const t = useTranslations();
   return (
     <section className="w-[90%] m-auto">
-      <h3 className="text-[48px] font-[500] mb-[30px]">
+      <h3 className="text-[48px] font-[500] mb-[30px] md:text-[32px] xs:text-[24px]">
         {t("vacancies.categories.title")}
       </h3>
       <ul className="flex flex-col gap-[20px]">
@@ -37,7 +37,7 @@ const PlatformCategory = () => {
         ].map((item: { title: string; url: string }) => (
           <li
             key={item.title}
-            className="bg-[#18191E] p-[30px] rounded-[30px] font-[500] text-[32px]"
+            className="bg-[#18191E] p-[30px] rounded-[30px] font-[500] text-[32px] md:text-[24px] xs:text-[20px]"
             onClick={() => router.push("/vacancies/" + item.url)}
           >
             {item.title}
