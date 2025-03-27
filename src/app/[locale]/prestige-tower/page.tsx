@@ -1,7 +1,6 @@
 "use client";
 
 import InfoTitle from "@/screens/infotitle";
-import Technology from "@/screens/technology";
 import Ios from "@/assets/images/ios.png";
 import Android from "@/assets/images/android.png";
 import Card from "@/screens/main/ui/card";
@@ -9,6 +8,7 @@ import { OUR_WORKS } from "@/lib/data/card.data";
 import PrestigeTowerBanner from "@/screens/main/ui/prestige/prestige-tower-banner";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
+import Technology from "@/screens/technology";
 
 const PrestigeTower = () => {
   const [isActive, setIsActive] = useState(false);
@@ -16,14 +16,14 @@ const PrestigeTower = () => {
   const t = useTranslations();
 
   return (
-    <div className="w-full h-[100vh] overflow-y-auto  flex flex-col gap-[100px]">
+    <div className="w-full h-[100vh] mx-auto container overflow-y-auto  flex flex-col gap-[100px]">
       <PrestigeTowerBanner />
       <InfoTitle
         texts={[t("global.desc"), t("global.proccess")]}
         onClick={() => setIsActive(!isActive)}
       />
 
-      <Technology
+      <Technology 
         title={t("global.technology")}
         technologies={[Ios, Android]}
       />

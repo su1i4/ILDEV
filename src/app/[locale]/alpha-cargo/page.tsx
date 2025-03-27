@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import InfoTitle from "@/screens/infotitle";
 import { Screenshots } from "@/screens/screenshots";
-import Technology from "@/screens/technology";
+// import Technology from "@/screens/technology";
 import netframework from "@/assets/images/netframework-1 1.png";
 import JavaScript from "@/assets/images/javascript.png";
 import C from "@/assets/images/C.png";
@@ -27,7 +27,7 @@ const AlphaCargoPage = () => {
 
   if (!mounted) return <div>{t("global.download")}...</div>;
   return (
-    <div className="w-full h-[100vh] overflow-y-auto flex flex-col gap-[100px]">
+    <div className="w-full mx-auto container h-[100vh] overflow-y-auto flex flex-col gap-[100px] sm:gap-[80px] ">
       <AlphaCargoBanner />
       <InfoTitle
         texts={[t("global.desc"), t("global.proccess")]}
@@ -104,11 +104,11 @@ const AlphaCargoPage = () => {
           projectData={projectData(t)}
         />
       )}
-      <Technology
+      {/* <Technology
         title={t("global.technology")}
         technologies={[netframework, JavaScript, C, Vue]}
-      />
-      <div className="flex flex-wrap lg:flex-col gap-6 max-w-[90%] m-auto my-[100px]">
+      /> */}
+      <div className="flex flex-wrap lg:flex-col gap-6   my-[100px]">
         {OUR_WORKS(t)
           .slice(2, 4)
           .map((project, index) => (
