@@ -24,7 +24,7 @@ export default function InfoTitle({
   };
 
   return (
-    <nav className="flex items-center justify-between bg-[#18191E] p-8 pb-6 rounded-2xl w-[90%] m-auto">
+    <nav className="flex items-center justify-between bg-[#18191E] p-8 pb-6 rounded-[30px] w-full ">
       <ul className="flex gap-5 flex-wrap text-gray-500 text-lg font-medium">
         {texts?.map((text, i) => (
           <li

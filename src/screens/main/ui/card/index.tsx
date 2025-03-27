@@ -38,8 +38,8 @@ const Card = ({
 
   return (
     <div
-      className={`bg-gray-900 w-[48%] lg:w-[100%] text-white h-[502px] sm:h-[442px] xs:h-[400px] p-6 xs:px-3 xs:py-2 rounded-2xl shadow-lg flex flex-col justify-between gap-4 relative overflow-hidden ${
-        isLastOdd ? "w-full" : ""
+      className={`bg-[#000000] w-[48%] lg:w-[100%] text-white h-[502px] sm:h-[442px] xs:h-[400px] p-6 xs:px-3 xs:py-2 rounded-2xl shadow-lg flex flex-col justify-between gap-4 relative overflow-hidden ${
+        isLastOdd ? "w-[100%]" : ""
       }`}
       onClick={() => router.push(url)}
     >
