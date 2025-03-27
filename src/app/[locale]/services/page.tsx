@@ -10,6 +10,25 @@ import QuestionForm from "@/components/form";
 import { SocialMedia } from "@/shared/socials";
 import { Logo } from "@/assets/icons/Logo";
 import { useTranslations } from "next-intl";
+import ArticleImage from "@/assets/images/article.png";
+
+const articles = [
+  {
+    title: "Как принципы кинематографа помогают создавать продукты для бизнеса",
+    date: "11.12.2024",
+    image: ArticleImage,
+  },
+  {
+    title: "Как принципы кинематографа помогают создавать продукты для бизнеса",
+    date: "11.12.2024",
+    image: ArticleImage,
+  },
+  {
+    title: "Как принципы кинематографа помогают создавать продукты для бизнеса",
+    date: "11.12.2024",
+    image: ArticleImage,
+  },
+];
 
 const Service = () => {
   const t = useTranslations();
@@ -26,17 +45,19 @@ const Service = () => {
           </p>
         </div>
       </Container>
-      <Image src={ServiceEmployes} alt="employes" />
+      <div className="w-[90%] m-auto">
+        <Image src={ServiceEmployes} alt="employes" />
+      </div>
 
       <Clients />
 
-      <Container>
-        <h1 className="text-[#FFFFFF] text-[48px] font-[500] mb-[10px]">
+      <Container className="md:p-0">
+        <h1 className="text-[#FFFFFF] text-[48px] font-[500] mb-[10px] lg:hidden">
           Кейсы
         </h1>
         <div className="flex flex-wrap lg:flex-col gap-6 m-auto">
           {OUR_WORKS(t)
-            .splice(2, 3)
+            .slice(0, 5)
             .map((project, index) => (
               <Card
                 key={project.title}
@@ -49,11 +70,35 @@ const Service = () => {
       </Container>
 
       <TechStack />
-      <div className="my-[100px] max-w-[80%] m-auto">
+      <div className="my-[100px] max-w-[90%] m-auto">
         <QuestionForm
           title="Готовы обсудить проект?"
           description="Заполните форму и мы свяжемся с вами в ближайшее время"
         />
+      </div>
+      <div className="px-4 w-[90%] container m-auto">
+        <h2 className="text-[48px] md:text-3xl font-medium mb-6">
+          О нас в медиа пространстве
+        </h2>
+        <div className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {articles.map((article, index) => (
+            <div key={index} className="bg-[#131313] p-4 rounded-xl">
+              <h3 className="text-xl font-bold mb-2">Статья</h3>
+              <div className="relative h-48 rounded-lg overflow-hidden mb-4">
+                <Image
+                  src={article.image}
+                  alt={article.title}
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+              <p className="text-[24px] leading-[90%] font-[400] mb-2 text-[#FFFFFF]">
+                {article.title}
+              </p>
+              <p className="text-[#404146] text-[24px] font-[400]">{article.date}</p>
+            </div>
+          ))}
+        </div>
       </div>
       <div className="flex justify-between bg-[#18191E]">
         <div className="py-[40px] pl-[40px] flex flex-col leading-[80px]">

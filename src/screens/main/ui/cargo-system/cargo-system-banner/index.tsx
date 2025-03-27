@@ -88,7 +88,7 @@ const CargoSystemBanner = () => {
         transition={{ duration: 0.6, delay: 0.8 }}
       >
         <div>
-          <div className="flex lg:gap-32 gap-[182px]">
+          <div className="flex md:flex-col md:gap-[10px] gap-[182px]">
             <h2 className="text-2xl lg:text-3xl font-bold text-white text-nowrap">
               {t("prestige-tower.about_projects")}
             </h2>
@@ -98,20 +98,21 @@ const CargoSystemBanner = () => {
               </p>
             </div>
           </div>
+
           <div className="flex flex-col gap-4 mt-[40px]">
             <h1 className="text-[32px] font-medium">
               {t("cargosystem.project-sum")}
             </h1>
-            <div className="flex gap-[20px] text-white rounded-lg">
-              <div className="flex-1 border border-gray-700 p-[30px]">
-                <p className="text-[64px] font-bold">100 000+</p>
-                <p className="text-[48px] font-medium">
+            <div className="flex gap-[20px] sm:flex-col text-white rounded-lg">
+              <div className="flex-1 border border-gray-700 p-[30px] md:p-[20px]">
+                <p className="text-[64px] md:text-[32px] font-bold">100 000+</p>
+                <p className="text-[48px] md:text-[32px] font-medium">
                   {t("cargosystem.download-count")}
                 </p>
               </div>
-              <div className="flex-1 border border-gray-700 p-[30px] ">
-                <p className="text-[64px] font-bold">4.6</p>
-                <p className="text-[48px] font-medium leading-[43.2px]">
+              <div className="flex-1 border border-gray-700 p-[30px] md:p-[20px]">
+                <p className="text-[64px] md:text-[32px] font-bold">4.6</p>
+                <p className="text-[48px] md:text-[32px] font-medium leading-[43.2px]">
                   {t("cargosystem.middle-rating")}
                 </p>
               </div>

@@ -9,8 +9,8 @@ interface ScreenshotCardProps {
 
 const ScreenshotCard: React.FC<ScreenshotCardProps> = ({ title, images }) => {
   return (
-    <div className="">
-      <h2 className="text-[32px] font-medium mb-6">{title}</h2>
+    <div>
+      <h2 className="text-[32px] font-medium mb-6 sm:mb-0">{title}</h2>
       <div
         className={`${
           images.length === 1
@@ -24,8 +24,7 @@ const ScreenshotCard: React.FC<ScreenshotCardProps> = ({ title, images }) => {
               <Image
                 src={image}
                 alt={title}
-                className={`object-cover w-full rounded-xl ${className}`}
-                sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 20vw "
+                className={`object-contain w-full rounded-xl ${className}`}
               />
             </div>
           ))}
@@ -41,20 +40,18 @@ interface ScreenshotsProps {
 
 export const Screenshots = ({ projectData, screenshots }: ScreenshotsProps) => {
   return (
-    <div
-      className="bg-[#18191E] text-white p-8 text-[24px] font-[400]
-text-[24px] font-[400]"
-    >
-      <section className="mb-12 flex gap-[80px] leading-[22.6px]">
+    <div className="bg-[#18191E] text-white p-8 text-[24px] font-[400] text-[24px] font-[400]">
+      <section className="mb-12 flex gap-[80px] leading-[22.6px] md:flex-col md:gap-[20px]">
         <h2 className="text-2xl font-bold mb-4">Задача</h2>
-        <p className="text-white">{projectData.task.description}</p>
+        <p className="text-white md:text-[15px] sm:font-[400]">
+          {projectData.task.description}
+        </p>
       </section>
 
-      <section className="mb-12 flex gap-[40px]">
+      <section className="mb-12 flex gap-[40px] md:flex-col md:gap-[20px]">
         <h2 className="text-2xl font-bold mb-4">Результат</h2>
         <div>
-          <p className="mb-4">{projectData.result.mainText}</p>
-          <ul className="space-y-2 leading-[22.6px]">
+          <ul className="space-y-2 leading-[22.6px] sm:leading-[18px] md:text-[16px]">
             {projectData.result.features.map((feature, index) => (
               <li key={index} className="flex items-start">
                 <span className="text-green-500 mr-2">•</span>
@@ -65,12 +62,12 @@ text-[24px] font-[400]"
         </div>
       </section>
 
-      <section className="mb-12 ml-[172px]">
+      <section className="mb-12 ml-[172px] md:ml-0">
         <div className="leading-[22.6px]">{projectData.result.mainText2}</div>
-        <h2 className="text-2xl font-bold mb-4">
+        <h2 className="text-2xl font-bold mb-4 ">
           {projectData.technicalDetails.title}
         </h2>
-        <ul className="space-y-2">
+        <ul className="space-y-2 md:text-[15px]">
           {projectData.technicalDetails.features.map((feature, index) => (
             <li key={index} className="flex items-start">
               <span className="text-blue-500 mr-2">•</span>

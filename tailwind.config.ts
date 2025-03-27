@@ -31,7 +31,7 @@ export default {
         sm: { max: "640px" }, // => @media (max-width: 639px) { ... }
         xs: { max: "450px" }, // => @media (max-width: 440px) { ... }
         ms: { max: "400px" }, // => @media (max-width: 375px) { ... }
-        "sm!": { min: "640px" },
+        // "sm!": { min: "640px" },
       },
     },
   },

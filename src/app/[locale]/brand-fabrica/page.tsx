@@ -26,7 +26,7 @@ const BrandFabrica = () => {
 
   if (!mounted) return null;
   return (
-    <div className="w-full h-[100vh] overflow-y-auto flex flex-col gap-[100px]">
+    <div className="w-full h-[100vh] overflow-y-auto flex flex-col gap-[100px] md:gap-[40px] mx-container">
       <BrandFabricaBanner />
       <InfoTitle
         texts={[t("global.desc"), t("global.proccess")]}

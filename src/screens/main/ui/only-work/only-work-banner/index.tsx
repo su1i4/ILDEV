@@ -88,7 +88,7 @@ const OnlyWorkBanner = () => {
         transition={{ duration: 0.6, delay: 0.8 }}
       >
         <div className="">
-          <div className="flex lg:gap-32 gap-[182px] sm:gap-0">
+          <div className="flex lg:gap-32 sm:flex-col gap-[182px]">
             <h2 className="text-2xl lg:text-3xl font-bold text-white whitespace-normal lg:whitespace-nowrap">
               {t("only-work.about.title")}
             </h2>
