@@ -48,7 +48,7 @@ export const Screenshots = ({ projectData, screenshots }: ScreenshotsProps) => {
 			</section>
 
 			<section className="mb-12 flex gap-[40px] sm:flex-col " >
-				<h2 className="text-2xl font-bold mb-4">Результат</h2>
+				<h2 className="text-2xl font-bold mb-4">Результат </h2>
 				<div >
 					<p className="mb-4">{projectData.result.mainText}</p>
 					<ul className="space-y-2 leading-[22.6px] sm:ml-[15px]">

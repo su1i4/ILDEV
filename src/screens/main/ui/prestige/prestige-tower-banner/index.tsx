@@ -29,32 +29,30 @@ const PrestigeTowerBanner = () => {
 	const t = useTranslations();
 
 	return (
-		<div className="min-h-[1000px]  bg-custom-gradient flex flex-col gap-10 justify-between px-6">
-			<div className="relative     flex ml:flex-col flex-row items-center pt-20  px-4  mt-[100px]">
+		<div className="min-h-[1000px]  ms:min-h-[850px]   flex flex-col gap-10 justify-between px-6">
+			<div className="relative     flex ml:flex-col flex-row items-center pt-20  px-4  mt-[100px] sm:mt-[60px]">
 				<motion.div
-					className="container mx-auto lg:max-w-7xl z-10"
+					className="container mx-auto lg:max-w-7xl z-10 sm:text-[15px]"
 					initial={fadeInUp.initial}
 					animate={fadeInUp.animate}
 					transition={fadeInUp.transition}>
-					<div className="max-w-3xl">
-						<h1 className="text-5xl    ml:text-[40px]  lg:text-[38px]  font-bold text-white leading-tight mb-8">
+					<div className="max-w-3xl ">
+						<h1 className="text-5xl  ml:text-[40px]  lg:text-[38px] xs:text-[20px]  font-bold text-white leading-tight mb-8 ">
 							{t("prestige-tower.title")}
 						</h1>
 					</div>
 				</motion.div>
 
 				<motion.div
-					className="relative w-full   mt-12   lg:absolute  lg:top-[60%]  "
+					className="relative w-full   mt-12     lg:absolute  lg:top-[60%]  "
 					initial={fadeInRight.initial}
 					animate={fadeInRight.animate}
 					transition={fadeInRight.transition}>
-					{/* <div className="hidden lg:block w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[501px] lg:h-[501px] rounded-full bg-blue-900 absolute z-0 -top-[50px]"></div> */}
-
-					<div className="relative flex justify-center   h-[400px] lg:h-[600px]">
-						<div className="w-[501px] h-[501px] md:w-[450px]  md:h-[450px] rounded-full bg-custom-gradient absolute "></div>
+					<div className="relative flex justify-center    h-[400px]     lg:h-[600px]">
+						<div className="w-[501px] h-[501px] md:w-[450px]  md:h-[450px] sm:w-[300px] sm:h-[300px] xs:w-[300px] xs:h-[300px]  xs:top-[50px] rounded-full bg-custom-gradient absolute  "></div>
 
 						<motion.div
-							className="absolute left-0   top-[20px] z-[2] max-w-[610px] w-full  md:w-[450px] ml:max-w-[700px] lg:left-[45px] lg:top-[60px] "
+							className="absolute left-0   top-[90px] z-[2] max-w-[650px] w-full  ml:max-w-[700px]  md:w-[600px] xs:w-[370px] xs:h-[190px] xs:left-0 xs:top-[125px]  ms:w-[350px]  lg:left-[45px] lg:top-[60px]   md:top-[60px] "
 							initial={imageAnimation.initial}
 							animate={imageAnimation.animate}
 							transition={imageAnimation.transition}>
@@ -64,8 +62,9 @@ const PrestigeTowerBanner = () => {
 								className="rounded-lg object-cover shadow-lg hover:scale-105 transition-transform duration-300"
 							/>
 						</motion.div>
+
 						<motion.div
-							className="absolute right-0  z-[1] w-[433px] md:w-[300px] lg:w-[434px] lg:h-[209px] "
+							className="absolute right-0  z-[1] w-[433px] md:w-[300px]   xs:w-[255px] ms:w-[240px] xs:h-[140px] xs:top-[70px] lg:w-[434px] lg:h-[209px]  "
 							initial={imageAnimation.initial}
 							animate={imageAnimation.animate}
 							transition={{ ...imageAnimation.transition, delay: 0.6 }}>
@@ -80,16 +79,16 @@ const PrestigeTowerBanner = () => {
 			</div>
 
 			<motion.div
-				className="py-8  ml:my-10 "
+				className="py-8  ml:my-10  ms:py-0"
 				initial={{ opacity: 0, y: 20 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.6, delay: 0.8 }}>
 				<div className="">
-					<div className="flex lg:gap-32 gap-[182px]">
-						<h2 className="text-2xl lg:text-3xl font-bold text-white whitespace-normal lg:whitespace-nowrap">
+					<div className="flex ms:flex-col   lg:gap-32  ms:gap-3  gap-[182px]">
+						<h2 className="text-2xl lg:text-3xl xs:text-[20px] font-bold text-white whitespace-normal lg:whitespace-nowrap">
 							{t("prestige-tower.about_projects")}
 						</h2>
-						<p className="text-lg lg:text-xl text-gray-300 max-w-3xl">
+						<p className="text-lg lg:text-xl xs:text-[15px] text-gray-300 max-w-3xl">
 							{t("prestige-tower.projects_desc")}
 						</p>
 					</div>
