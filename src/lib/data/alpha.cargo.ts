@@ -65,7 +65,7 @@ export const appScreenshots = (t: any): AppScreenshot[] => [
     images: [
       {
         image: WebsiteImage,
-        className: "h-[784px] object-contain",
+        className: "h-[784px] sm:h-[fit-content] object-contain",
       },
     ],
   },

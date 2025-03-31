@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import InfoTitle from "@/screens/infotitle";
 import { Screenshots } from "@/screens/screenshots";
-// import Technology from "@/screens/technology";
 import netframework from "@/assets/images/netframework-1 1.png";
 import JavaScript from "@/assets/images/javascript.png";
 import C from "@/assets/images/C.png";
@@ -14,6 +13,7 @@ import AlphaCargoBanner from "@/screens/main/ui/alpha-cargo/alpha-cargo-banner";
 import { appScreenshots, projectData } from "@/lib/data/alpha.cargo";
 import Container from "@/shared/container";
 import { useTranslations } from "next-intl";
+import Technology from "@/screens/technology";
 
 const AlphaCargoPage = () => {
   const [isActive, setIsActive] = useState(false);
@@ -27,7 +27,7 @@ const AlphaCargoPage = () => {
 
   if (!mounted) return <div>{t("global.download")}...</div>;
   return (
-    <div className="w-full mx-auto container h-[100vh] overflow-y-auto flex flex-col gap-[100px] sm:gap-[80px] ">
+    <div className="w-full mx-auto container h-[100vh] overflow-y-auto flex flex-col gap-[100px] sm:gap-[80px]">
       <AlphaCargoBanner />
       <InfoTitle
         texts={[t("global.desc"), t("global.proccess")]}
@@ -104,11 +104,11 @@ const AlphaCargoPage = () => {
           projectData={projectData(t)}
         />
       )}
-      {/* <Technology
+      <Technology
         title={t("global.technology")}
         technologies={[netframework, JavaScript, C, Vue]}
-      /> */}
-      <div className="flex flex-wrap lg:flex-col gap-6   my-[100px]">
+      />
+      <div className="flex flex-wrap lg:flex-col gap-6   my-[100px] sm:my-0">
         {OUR_WORKS(t)
           .slice(2, 4)
           .map((project, index) => (

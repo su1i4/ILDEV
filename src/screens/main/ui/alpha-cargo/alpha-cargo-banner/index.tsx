@@ -82,14 +82,14 @@ const AlphaCargoBanner = () => {
 				transition={{ duration: 0.6, delay: 0.8 }}>
 				<div>
 					<div className="flex lg:gap-32 gap-[20px] sm:flex-col xs:gap-[19px]  ">
-						<h2 className="text-2xl lg:text-3xl md:text-2xl ms:text-[25px]  font-bold text-white text-nowrap">
+						<h2 className="text-2xl lg:text-3xl md:text-2xl  font-bold text-white text-nowrap">
 							{t("alpha-cargo.project.about.title")}
 						</h2>
 						<div className="flex flex-col leading-[22.6px] text-[24px]  xs:text-[15px] ms:text-[13px]">
-							<p className="lg:text-xl ms:text-[15px] text-gray-300 max-w-3xl">
+							<p className="lg:text-xl md:text-[15px] text-gray-300 max-w-3xl">
 								{t("alpha-cargo.project.about.description")}
 							</p>
-							<p className="ms:text-[15px] ">
+							<p className="md:text-[15px] ">
 								{t("alpha-cargo.project.about.steps")}
 							</p>
 							<ul className="pl-8 list-disc mb-[15px]">
@@ -104,11 +104,11 @@ const AlphaCargoBanner = () => {
 
 					<div className="flex flex-col gap-4 mt-[40px]">
 						<h1 className="text-[32px] font-medium">
-							{t("alpha-cargo.project.stats.title")}
+							{t("alpha-cargo.project.stats.title")}asdfsdaf
 						</h1>
-						<div className="flex gap-[20px]  text-white rounded-lg">
+						<div className="flex gap-[20px]  text-white rounded-lg ">
 							<div className=" max-w-[671px] w-full md:w-[100px] flex-1 border border-gray-700 p-[30px] xs:p-[15px] ">
-								<p className="text-[64px] md:text-[48px]  xs:text-[30px] ms:text-[25px] font-bold">
+								<p className="text-[64px] md:text-[48px]  xs:text-[30px] font-bold">
 									{t("alpha-cargo.project.stats.users.number")}
 								</p>
 								<p className="text-[48px] md:text-[32px] sm:text-[15px] xs:text-[15px] ms:text-[13px] font-medium">
@@ -116,7 +116,7 @@ const AlphaCargoBanner = () => {
 								</p>
 							</div>
 							<div className=" max-w-[671px] w-full md:w-[100px] flex-1 border border-gray-700 p-[30px] xs:p-[15px]">
-								<p className="text-[64px] md:text-[48px]  xs:text-[30px] ms:text-[25px] font-bold">
+								<p className="text-[64px] md:text-[48px]  xs:text-[30px] font-bold">
 									{t("alpha-cargo.project.stats.team.number")}
 								</p>
 								<p className="text-[48px] md:text-[32px] sm:text-[15px] xs:text-[15px] ms:text-[13px] font-medium leading-[43.2px]">

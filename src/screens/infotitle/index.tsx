@@ -30,9 +30,9 @@ export default function InfoTitle({
           <li
             key={text}
             onClick={() => tabHandler(i)}
-            className={`cursor-pointer transition-all duration-300 ${
+            className={`cursor-pointer transition-all duration-300 text-[48px] md:text-3xl ${
               i === activeTab
-                ? "gradient-text flex items-center font-medium text-[48px] xs:h-[26px] md:text-[32px] xs:text-[24px]"
+                ? "gradient-text flex items-center font-medium "
                 : "text-gray-600 text-5xl md:text-3xl font-medium"
             }`}
           >
