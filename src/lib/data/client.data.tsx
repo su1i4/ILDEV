@@ -1,9 +1,13 @@
-import { AphaCargoIcon, BrandFabricaIcon, OnlyWorkIcon, PrestigeIcon } from "@/assets/icons/clients";
-
+import {
+  AphaCargoIcon,
+  BrandFabricaIcon,
+  OnlyWorkIcon,
+  PrestigeIcon,
+} from "@/assets/icons/clients";
 
 export const CLIENTS = [
-    <AphaCargoIcon />,
-    <PrestigeIcon />,
-    <OnlyWorkIcon />,
-    <BrandFabricaIcon />
-]
+  <AphaCargoIcon />,
+  <PrestigeIcon />,
+  <OnlyWorkIcon />,
+  <BrandFabricaIcon />,
+];

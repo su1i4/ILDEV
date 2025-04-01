@@ -11,7 +11,7 @@ const Technology = ({
   technologies,
 }: TechnologyProps) => {
   return (
-    <div className="py-10">
+    <div className="py-10 md:py-5">
       <div className="flex flex-col items-center justify-between bg-[#18191E] p-8 pb-6 rounded-2xl w-[90%] m-auto">
         <h1 className="text-[48px] font-medium text-white md:text-[24px]">{title}</h1>
         <div className="flex items-center gap-[50px] mt-[30px] md:gap-[20px]">

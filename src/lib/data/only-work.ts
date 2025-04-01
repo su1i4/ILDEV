@@ -48,11 +48,11 @@ export const ONLY_WORK_SCREEN = (t: any): AppScreenshot[] => [
     images: [
       {
         image: Dashboard,
-        className: "h-[457px] w-[671px]",
+        className: "h-[457px] w-[671px] sm:h-[fit-content]",
       },
       {
         image: SignInImage,
-        className: "h-[457px] w-[471px]",
+        className: "h-[457px] w-[471px] sm:h-auto",
       },
     ],
   },

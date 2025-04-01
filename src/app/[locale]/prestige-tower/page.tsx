@@ -18,7 +18,7 @@ const PrestigeTower = () => {
 	const t = useTranslations();
 
 	return (
-		<div className="w-full h-[100vh]  mx-auto container overflow-y-auto  flex flex-col gap-[100px]">
+		<div className="w-full h-[100vh]  mx-auto container overflow-y-auto  flex flex-col gap-[100px] md:gap-[60px]">
 			<PrestigeTowerBanner />
 			<InfoTitle
 				texts={[t("global.desc"), t("global.proccess")]}

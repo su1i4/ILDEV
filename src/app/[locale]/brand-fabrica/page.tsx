@@ -33,12 +33,12 @@ const BrandFabrica = () => {
         onClick={() => setIsActive(!isActive)}
       />
       {isActive ? (
-        <Container>
-          <div className="flex gap-[40px]">
+        <Container className="md:p-[20px]">
+          <div className="flex gap-[40px] md:flex-col md:gap-[20px]">
             <h2 className="text-[24px] font-medium mb-4">
               {t("global.proccess")}
             </h2>
-            <section className="text-[24px] font-[400]">
+            <section className="text-[24px] font-[400] md:text-[15px]">
               <ul className="list-disc list-inside mb-4 space-y-2">
                 <li>
                   <span className="font-semibold">Frontend:</span>{" "}
@@ -95,7 +95,7 @@ const BrandFabrica = () => {
         title={t("global.technology")}
         technologies={[netframework, JavaScript, C, Vue]}
       />
-      <div className="flex flex-wrap lg:flex-col gap-6 max-w-[90%] m-auto my-[100px]">
+      <div className="flex flex-wrap lg:flex-col gap-6 max-w-[90%] m-auto my-[100px] md:my-0">
         {OUR_WORKS(t)
           .slice(2, 4)
           .map((project, index) => (

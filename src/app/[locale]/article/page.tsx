@@ -12,7 +12,7 @@ const Article = () => {
     <div className="w-full h-[100vh] overflow-y-auto">
       <Container className="md:px-5">
         <div className="mt-[158px] flex md:flex-col gap-[141px] md:gap-[20px] md:mt-[100px]">
-          <h1 className="text-[#FFFFFF] text-[54px] font-bold md:text-[32px] text-nowrap">
+          <h1 className="text-[#FFFFFF] text-[54px] font-bold md:text-[30px] text-nowrap">
             БЛОГ/ПРИНЦИПЫ
           </h1>
           <p className="text-[24px] font-normal text-[#fff] md:text-[15px]">
@@ -22,7 +22,7 @@ const Article = () => {
         </div>
       </Container>
 
-      <div className="my-[100px]">
+      <div className="my-[100px] md:my-[50px]">
         <InfoTitle
           onClick={() => setIsActive(!isActive)}
           texts={["Все", "Статьи", "Новости", "События"]}
@@ -31,7 +31,7 @@ const Article = () => {
       </div>
       <Container className="md:p-3">
         <div className="container mx-auto px-4 py-12 md:py-8  text-[#FFFFFF]">
-          <h1 className="text-4xl font-bold mb-8 md:text-[24px] md:leading-[90%]">
+          <h1 className="text-4xl font-bold mb-8 md:text-[20px] md:leading-[90%]">
             Как принципы кинематографа помогают создавать продукты для бизнеса
           </h1>
 
@@ -61,7 +61,7 @@ const Article = () => {
                     Как ты вообще пришел к тому, чем занимаешься?
                   </h2>
 
-                  <p className="font-[300] text-[18px]">
+                  <p className="font-[300] text-[18px] md:text-[15px]">
                     Я порядка 20 лет занимался бизнесом. У меня была компания,
                     которая занимала заметный продуктовый и технологический
                     кусок рынка в разных областях как софтверной разработки, так
@@ -78,7 +78,7 @@ const Article = () => {
             </div>
           </div>
         </div>
-        <p className="text-[24px] font-[400] text-[#404146]">11.12.2024</p>
+        <p className="text-[24px] font-[400] text-[#404146] md:text-[16px]">11.12.2024</p>
       </Container>
     </div>
   );

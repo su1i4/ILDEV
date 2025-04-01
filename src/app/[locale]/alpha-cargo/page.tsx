@@ -34,12 +34,12 @@ const AlphaCargoPage = () => {
         onClick={() => setIsActive(!isActive)}
       />
       {isActive ? (
-        <Container>
-          <div className="flex gap-[40px]">
+        <Container className="md:p-[20px]">
+          <div className="flex gap-[40px] md:flex-col md:gap-[10px]">
             <h2 className="text-[24px] font-medium mb-4">
               {t("global.proccess")}
             </h2>
-            <div className="text-[24px] font-[400] leading-[23.6px]">
+            <div className="text-[24px] font-[400] leading-[23.6px] md:text-[15px]">
               <p className="mb-4">{t("alpha-cargo.technology.introduction")}</p>
               <p className="mb-4">
                 {t.rich("alpha-cargo.technology.frontend", {
@@ -108,7 +108,7 @@ const AlphaCargoPage = () => {
         title={t("global.technology")}
         technologies={[netframework, JavaScript, C, Vue]}
       />
-      <div className="flex flex-wrap lg:flex-col gap-6   my-[100px] sm:my-0">
+      <div className="flex flex-wrap lg:flex-col gap-6  my-[100px] sm:my-0 md:mx-[20px]">
         {OUR_WORKS(t)
           .slice(2, 4)
           .map((project, index) => (

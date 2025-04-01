@@ -28,14 +28,14 @@ const CargoSystem = () => {
   if (!mounted) return null;
 
   return (
-    <div className="w-full h-[100vh] overflow-y-auto flex flex-col gap-[100px]">
+    <div className="w-full h-[100vh] overflow-y-auto flex flex-col gap-[100px] md:gap-[20px]">
       <CargoSystemBanner />
       <InfoTitle
         texts={[t("global.desc"), t("global.proccess")]}
         onClick={() => setIsActive(!isActive)}
       />
       {isActive ? (
-        <Container>
+        <Container className="md:p-6 md:mt-2">
           <div className="text-white rounded-2xl shadow-lg w-full">
             <div className="flex gap-[20px] items-center">
               <h2 className="text-xl font-semibold mb-4">
@@ -43,7 +43,7 @@ const CargoSystem = () => {
               </h2>
               <p className="mb-4">{t("cargosystem.proccess.text")}</p>
             </div>
-            <ul className="list-disc list-inside mb-4 ml-[110px] space-y-2 text-[24px]">
+            <ul className="list-disc list-inside mb-4 ml-[110px] space-y-2 text-[24px] md:ml-0 md:text-[15px]">
               <li>
                 <span className="font-semibold">Frontend:</span>
                 {t("cargosystem.proccess.frontend")}
@@ -96,7 +96,7 @@ const CargoSystem = () => {
         title={t("global.technology")}
         technologies={[netframework, JavaScript, C, Vue]}
       />
-      <div className="flex flex-wrap lg:flex-col gap-6 max-w-[90%] m-auto my-[100px]">
+      <div className="flex flex-wrap lg:flex-col gap-6 max-w-[90%] m-auto my-[100px] md:my-0">
         {OUR_WORKS(t)
           .splice(2, 3)
           .map((project, index) => (

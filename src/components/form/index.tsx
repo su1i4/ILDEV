@@ -125,7 +125,7 @@ export default function QuestionForm({
   };
 
   return (
-    <div className="overflow-y-auto pt-[100px]">
+    <div className="overflow-y-auto pt-[100px] md:pt-0">
       <div className="flex flex-col items-center lg:flex-col">
         <div className="bg-[#18191E] p-6 xs:p-4 rounded-2xl shadow-lg w-full flex gap-[30px] lg:flex-col">
           <div className="flex flex-col">

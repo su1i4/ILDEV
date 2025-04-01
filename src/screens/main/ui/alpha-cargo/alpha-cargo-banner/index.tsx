@@ -28,7 +28,7 @@ const AlphaCargoBanner = () => {
 	const t = useTranslations();
 
 	return (
-		<div className="   flex flex-col justify-between gap-[50px] px-6 sm:px-3  xs:px-2 ">
+		<div className="flex flex-col justify-between gap-[50px] px-6 sm:px-3  xs:px-2 ">
 			<div
 				className="relative flex lg:flex-col pt-20 lg:pt-32 px-4  lg:px-8 mt-[100px] xs:mt-[10px] lg:gap-[88px]    ">
 				<motion.div

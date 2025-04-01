@@ -97,7 +97,7 @@ const OnlyWork = () => {
         title={t("global.technology")}
         technologies={[netframework, JavaScript, C, Vue]}
       />
-      <div className="flex flex-wrap lg:flex-col gap-6 max-w-[90%] m-auto my-[100px]">
+      <div className="flex flex-wrap lg:flex-col gap-6 max-w-[90%] m-auto my-[100px] md:my-0">
         {OUR_WORKS(t)
           .splice(0, 2)
           .map((project, index) => (

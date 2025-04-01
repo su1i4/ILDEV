@@ -46,7 +46,7 @@ export const CARGO_SYSTEM_SCREEN = (t: any): AppScreenshot[] => [
       },
       {
         image: CargoOrder,
-        className: "h-[242px] rotate-20",
+        className: "-rotate-6",
       },
     ],
   },
