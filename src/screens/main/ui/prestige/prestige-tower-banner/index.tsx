@@ -50,11 +50,11 @@ const PrestigeTowerBanner = () => {
           animate={fadeInRight.animate}
           transition={fadeInRight.transition}
         >
-          <div className="relative flex justify-center    h-[400px]   lg:h-[600px]">
-            <div className="w-[501px] h-[501px] md:w-[450px]  md:h-[450px] sm:w-[300px] sm:h-[300px] xs:w-[300px] xs:h-[300px]  xs:top-[50px] rounded-full bg-custom-gradient absolute  "></div>
+          <div className="relative flex justify-center    h-[400px]    ">
+            <div className="w-[501px] h-[501px] md:w-[450px]  md:h-[450px] sm:w-[300px] sm:h-[300px] xs:w-[300px] xs:h-[300px]  xs:top-[50px] rounded-full bg-custom-gradient absolute lg:w-[400px] lg:h-[400px]   "></div>
 
             <motion.div
-              className="absolute left-0   top-[90px] z-[2] max-w-[650px] w-full  ml:max-w-[700px]  md:w-[600px] xs:w-[370px] xs:h-[190px] xs:left-0 xs:top-[125px]  ms:w-[350px]  lg:left-[45px] lg:top-[60px]   md:top-[60px] "
+              className="absolute left-0   top-[90px] z-[2] max-w-[650px] w-full  ml:max-w-[700px]  md:w-[200px] xs:w-[370px] xs:h-[190px] xs:left-0 xs:top-[125px]  ms:w-[320px]  lg:inset-[170px]  lg:top-[60px] lg:w-[500px] md:-left-[150px]  md:top-[60px] "
               initial={imageAnimation.initial}
               animate={imageAnimation.animate}
               transition={imageAnimation.transition}
@@ -67,7 +67,7 @@ const PrestigeTowerBanner = () => {
             </motion.div>
 
             <motion.div
-              className="absolute right-0  z-[1] w-[433px] md:w-[300px]   xs:w-[255px] ms:w-[240px] xs:h-[140px] xs:top-[70px] lg:w-[434px] lg:h-[209px]  "
+              className="absolute right-0  z-[1] w-[433px] md:w-[300px]   xs:w-[255px] ms:w-[240px] xs:h-[140px] xs:top-[70px] xs:left-[150px] lg:w-[334px] lg:h-[209px] lg:right-[80px] ms:left-[100px]  "
               initial={imageAnimation.initial}
               animate={imageAnimation.animate}
               transition={{ ...imageAnimation.transition, delay: 0.6 }}
@@ -83,7 +83,7 @@ const PrestigeTowerBanner = () => {
       </div>
 
       <motion.div
-        className="py-8  ms:py-0 md:mt-[300px]"
+        className="py-8  mt-[80px] lg:mt-[300px] ms:py-0 md:mt-[300px]"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.8 }}
