@@ -86,8 +86,8 @@ const BrandFabricaBanner = () => {
 						<h2 className="text-2xl font-bold lg:font-medium text-white text-nowrap">
 							{t("brandfabrica.aboutProject.title")}
 						</h2>
-						<div className="flex flex-col leading-[22.6px] text-[24px]">
-							<p className="lg:text-xl text-gray-300 max-w-3xl">
+						<div className="flex flex-col leading-[22.6px] text-[24px] md:text-[15px]">
+							<p className="text-gray-300 max-w-3xl">
 								{t("brandfabrica.aboutProject.description")}
 							</p>
 						</div>
