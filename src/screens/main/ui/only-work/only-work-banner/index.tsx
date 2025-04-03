@@ -38,7 +38,7 @@ const OnlyWorkBanner = () => {
           transition={fadeInUp.transition}
         >
           <div className="max-w-3xl">
-            <h1 className="text-5xl  md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-8 sx!:text-[24px]">
+            <h1 className="text-5xl  md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-8 sx!:text-[24px] sm:text-[32px] xs:text-[28px]">
               ONLY WORK
             </h1>
           </div>
@@ -50,11 +50,11 @@ const OnlyWorkBanner = () => {
           animate={fadeInRight.animate}
           transition={fadeInRight.transition}
         >
-          <div className="relative flex justify-center items-center lg:justify-start h-[400px] lg:h-[600px]">
-            <div className="w-[501px] h-[501px] rounded-full bg-custom-gradient absolute sm:w-[350px] sm:h-[350px] sm:left-1/1 sm:top-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2"></div>
+          <div className="relative flex justify-center items-center lg:justify-start h-[400px] lg:h-[600px]  ">
+            <div className="w-[501px] h-[501px] rounded-full bg-custom-gradient absolute sm:w-[400px] sm:h-[400px] sm:-left-[50px]  xs:w-[350px] xs:h-[350px] xs:-left-[80px] "></div>
 
             <motion.div
-              className="absolute left-0 lg:-left-[120px] top-[20px] w-[410px] md:w-[350px] lg:w-auto sm:top-1/2 sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 transform rotate-[20deg]"
+              className="absolute left-0 lg:-left-[120px] top-[100px] w-[410px] md:w-[350px]  lg:top-[5px]   sm:top-10 xs:w-[320px] md:-right-[80px] xs:-left-[90px]  xs:top-[50px] ms:w-[310px]  ms:-left-[80px]  lg:w-auto   transform rotate-[20deg]"
               initial={imageAnimation.initial}
               animate={imageAnimation.animate}
               transition={imageAnimation.transition}
@@ -62,11 +62,11 @@ const OnlyWorkBanner = () => {
               <Image
                 src={DashboardLaptop}
                 alt="Desktop view"
-                className="rounded-lg object-cover shadow-lg hover:scale-105 transition-transform duration-300 rotate-6 lg:mt-40"
+                className="  object-cover shadow-lg hover:scale-105 transition-transform duration-300 rotate-6 lg:mt-40"
               />
             </motion.div>
             <motion.div
-              className="absolute right-0 lg:left-[200px] z-[1] w-[316px] md:w-[300px]"
+              className="absolute  lg:left-[200px]  z-[1] w-[316px] top-[10px]  right-[60px] lg:top-[60px]   md:w-[300px] sm:max-w-[250px]  xs:w-[220px] xs:top-[150px]  xs:left-[60px] ms:w-[205px]"
               initial={imageAnimation.initial}
               animate={imageAnimation.animate}
               transition={{ ...imageAnimation.transition, delay: 0.6 }}
@@ -74,7 +74,7 @@ const OnlyWorkBanner = () => {
               <Image
                 src={SignInImage}
                 alt="Mobile view"
-                className="rounded-lg shadow-xl object-cover hover:scale-105 transition-transform duration-300 rotate-[-9deg] lg:mb-32"
+                className="  shadow-xl object-cover hover:scale-105 transition-transform duration-300 rotate-[-9deg] lg:mb-32"
               />
             </motion.div>
           </div>
@@ -88,7 +88,7 @@ const OnlyWorkBanner = () => {
         transition={{ duration: 0.6, delay: 0.8 }}
       >
         <div className="">
-          <div className="flex lg:gap-32 sm:flex-col gap-[182px]">
+          <div className="flex lg:gap-32  sm:flex-col gap-[182px] xs:gap-[50px]">
             <h2 className="text-2xl lg:text-3xl font-bold text-white whitespace-normal lg:whitespace-nowrap">
               {t("only-work.about.title")}
             </h2>
@@ -100,18 +100,18 @@ const OnlyWorkBanner = () => {
             <h1 className="text-[32px] font-medium lg:text-[24px]">
               {t("only-work.stats.title")}
             </h1>
-            <div className="flex gap-[20px] text-white rounded-lg">
-              <div className="flex-1 border border-gray-700 p-[30px]">
-                <p className="text-[64px] font-bold">
+            <div className="flex gap-[20px] text-white  xs:flex-col rounded-lg">
+              <div className="flex-1 border border-gray-700 p-[30px] ">
+                <p className="text-[64px] font-bold sm:text-[32px] ">
                   {t("only-work.stats.users.number")}
                 </p>
-                <p className="text-[48px] font-medium">
+                <p className="text-[48px] font-medium sm:text-[32px] ">
                   {t("only-work.stats.users.label")}
                 </p>
               </div>
-              <div className="flex-1 border border-gray-700 p-[30px] ">
-                <p className="text-[64px] font-bold">4</p>
-                <p className="text-[48px] font-medium leading-[43.2px]">
+              <div className="flex-1 border border-gray-700 p-[30px]  ">
+                <p className="text-[64px] font-bold sm:text-[32px] ">4</p>
+                <p className="text-[48px] font-medium leading-[43.2px] sm:text-[32px] ">
                   {t("only-work.stats.team.label")}
                 </p>
               </div>
