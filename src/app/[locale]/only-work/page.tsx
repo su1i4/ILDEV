@@ -26,7 +26,7 @@ const OnlyWork = () => {
 
   if (!mounted) return null;
   return (
-    <div className="w-full h-[100vh] overflow-y-auto flex flex-col gap-[50px]">
+    <div className="w-full mx-auto container h-[100vh] overflow-y-auto flex flex-col gap-[50px]">
       <OnlyWorkBanner />
       <InfoTitle
         texts={[t("global.desc"), t("global.proccess")]}
