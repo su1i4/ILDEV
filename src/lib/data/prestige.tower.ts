@@ -16,7 +16,6 @@ export const projectData = (t: any): ProjectData => {
         t("prestige-towers.projectData.result.features.list1"),
         t("prestige-towers.projectData.result.features.list2"),
         t("prestige-towers.projectData.result.features.list3"),
-   
       ],
       mainText2: t("alpha-cargo.projectData.result.mainText2"),
     },
@@ -33,28 +32,27 @@ export const projectData = (t: any): ProjectData => {
   };
 };
 
-export const Screenshots = (t: any): AppScreenshot[] => [
+export const PRESTIGE_TOWER_SCREEN = (t: any): AppScreenshot[] => [
   {
     id: 1,
     title: t("alpha-cargo.appScreenshots.application"),
     images: [
       {
         image: Application1,
-        className: "max-h-[700px] ",
+        className: "w-[295px] md:w-[190px] sm:h-[284px] md:mb-2 xs:w-[130px]",
       },
       {
         image: Application2,
-        className: "max-h-[700px] ",
+        className: "w-[295px] md:w-[190px] sm:h-[284px] xs:w-[130px]",
       },
       {
         image: Application3,
-        className: "max-h-[700px] ",
+        className: "w-[295px] md:w-[190px] sm:h-[284px] xs:w-[130px]",
       },
       {
         image: Application4,
-        className: "max-h-[700px] ",
+        className: "w-[295px] md:w-[190px] sm:h-[284px] xs:w-[130px]",
       },
     ],
   },
- 
 ];
