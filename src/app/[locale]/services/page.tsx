@@ -34,7 +34,7 @@ const Service = () => {
   const t = useTranslations();
 
   return (
-    <div className="w-full h-[100vh] overflow-y-auto flex flex-col gap-[100px] md:gap-[60px]">
+    <div className="w-full mx-auto container h-[100vh] overflow-y-auto flex flex-col gap-[100px] md:gap-[60px]">
       <Container>
         <div className="mt-[120px] md:mt-[80px] flex flex-col gap-[20px]">
           <h1 className="text-[64px] font-[600] md:text-[32px]">Наши услуги</h1>

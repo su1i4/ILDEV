@@ -10,23 +10,23 @@ interface ScreenshotCardProps {
 const ScreenshotCard: React.FC<ScreenshotCardProps> = ({ title, images }) => {
   return (
     <div>
-      <h2 className="text-[32px] font-medium mb-6 sm:mb-0 md:text-[20px] md:mb-[15px]">
+      <h2 className="text-[32px] font-medium mb-6 md:mb-0 md:text-[20px]  ">
         {title}
       </h2>
       <div
         className={`${
           images.length === 1
             ? "w-full"
-            : "md:gap-[10px] flex flex-wrap justify-center gap-[50px] "
+            : "  flex md:flex-col   sm:mb-[20px]  gap-[20px]  "
         }`}
       >
         {Array.isArray(images) &&
           images.map(({ image, className }, i) => (
-            <div key={i}>
+            <div key={i } className=''> 
               <Image
                 src={image}
                 alt={title}
-                className={`object-contain w-full rounded-xl ${className}`}
+                className={`object-contain max-w-[661px] w-full  max-h-[377px]   h-full  md:w-full       rounded-xl ${className}`}
               />
             </div>
           ))}

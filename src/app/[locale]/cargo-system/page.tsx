@@ -27,9 +27,9 @@ const CargoSystem = () => {
 
   if (!mounted) return null;
 
-  return (
-    <div className="w-full h-[100vh] overflow-y-auto flex flex-col gap-[100px] md:gap-[20px]">
-      <CargoSystemBanner />
+  return ( 
+    <div className="w-full h-[100vh] mx-auto container  overflow-y-auto flex flex-col gap-[100px] md:gap-[20px]">
+      <CargoSystemBanner /> 
       <InfoTitle
         texts={[t("global.desc"), t("global.proccess")]}
         onClick={() => setIsActive(!isActive)}

@@ -15,7 +15,7 @@ const Contacts = () => {
 
   const currentWidth = width > 770 ? "80px" : "40px";
   return (
-    <div className="w-full min-h-screen overflow-y-auto pt-[250px] md:pt-[150px]">
+    <div className="w-full mx-auto container min-h-screen overflow-y-auto pt-[250px] md:pt-[150px]">
       <div className="flex  lg:flex-col justify-between items-center gap-10 max-w-[90%] md:max-w-[85%] lg:max-w-[80%] mx-auto">
         <div
           className={`text-white text-center lg:text-left mb-4 lg:mb-0 ${

@@ -1,5 +1,5 @@
 import CargoLogin from "@/assets/images/login.png";
-import CargoOrder from "@/assets/images/cargo-system-2.png";
+import CargoOrder from "@/assets/images/image 33.png";
 import CargoMaps from "@/assets/images/cargo-maps.png";
 import CargoDashboard from "@/assets/images/cargo-dashboard.png";
 
@@ -46,7 +46,7 @@ export const CARGO_SYSTEM_SCREEN = (t: any): AppScreenshot[] => [
       },
       {
         image: CargoOrder,
-        className: "-rotate-6",
+        className: "h-[242px]",
       },
     ],
   },

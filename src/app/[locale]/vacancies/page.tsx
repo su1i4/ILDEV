@@ -9,7 +9,7 @@ const Vacancies = ({ params: { locale } }: Props) => {
   const t = useTranslations();
 
   return (
-    <div className="w-full h-[100vh] overflow-y-auto flex flex-col gap-[100px]">
+    <div className="w-full mx-auto container h-[100vh] overflow-y-auto flex flex-col gap-[100px]">
       <Container>
         <div className="mt-[100px]">
           <h1 className="text-[64px] font-[600] mb-[20px] xs:text-[24px] md:text-[32px] lg:text-[38px] ">
