@@ -1,4 +1,5 @@
 import { AppScreenshot, ProjectData } from "@/common";
+import { useTranslations } from "next-intl";
 import Image, { StaticImageData } from "next/image";
 import React from "react";
 
@@ -17,18 +18,17 @@ const ScreenshotCard: React.FC<ScreenshotCardProps> = ({ title, images }) => {
         className={`${
           images.length === 1
             ? "w-full"
-            : "  flex md:flex-col   sm:mb-[20px]  gap-[20px]  "
+            : "flex md:flex-col sm:mb-[20px]  gap-[20px]"
         }`}
       >
         {Array.isArray(images) &&
           images.map(({ image, className }, i) => (
-            <div key={i } className=''> 
-              <Image
-                src={image}
-                alt={title}
-                className={`object-contain max-w-[661px] w-full  max-h-[377px]   h-full  md:w-full       rounded-xl ${className}`}
-              />
-            </div>
+            <Image
+              key={i}
+              src={image}
+              alt={title}
+              className={`object-contain  md:w-full  rounded-xl ${className}`}
+            />
           ))}
       </div>
     </div>
@@ -41,17 +41,18 @@ interface ScreenshotsProps {
 }
 
 export const Screenshots = ({ projectData, screenshots }: ScreenshotsProps) => {
+  const t = useTranslations();
   return (
     <div className="bg-[#18191E] rounded-[28px] text-white p-8 text-[24px] font-[400]  ">
       <section className="mb-12 flex gap-[80px]  leading-[22.6px] sm:flex-col sm:gap-[20px]">
-        <h2 className="text-2xl font-bold mb-4">Задача</h2>
+        <h2 className="text-2xl font-bold mb-4">{t("screen.task")}</h2>
         <p className="text-white sm:text-[15px]">
           {projectData.task.description}
         </p>
       </section>
 
       <section className="mb-12 flex gap-[40px] sm:flex-col sm:gap-[20px]">
-        <h2 className="text-2xl font-bold mb-4">Результат</h2>
+        <h2 className="text-2xl font-bold mb-4">{t("screen.result")}</h2>
         <div>
           <p className="mb-4 sm:text-[15px]">{projectData.result.mainText}</p>
           <ul className="space-y-2 leading-[22.6px] sm:ml-[15px] sm:text-[15px]">

@@ -42,11 +42,11 @@ export const CARGO_SYSTEM_SCREEN = (t: any): AppScreenshot[] => [
     images: [
       {
         image: CargoLogin,
-        className: "h-[242px]",
+        className: "w-[47%]",
       },
       {
         image: CargoOrder,
-        className: "h-[242px]",
+        className: "w-[47%]",
       },
     ],
   },
@@ -56,11 +56,11 @@ export const CARGO_SYSTEM_SCREEN = (t: any): AppScreenshot[] => [
     images: [
       {
         image: CargoMaps,
-        className: "h-[242px]",
+        className: "w-[47%]",
       },
       {
         image: CargoDashboard,
-        className: "h-[242px]",
+        className: "w-[47%]",
       },
     ],
   },

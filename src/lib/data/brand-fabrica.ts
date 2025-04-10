@@ -40,6 +40,7 @@ export const BRAND_FABRICA_SCREEN = (t: any): AppScreenshot[] => [
     images: [
       {
         image: ResultImage1,
+        className: "max-h-[558px]",
       },
     ],
   },
@@ -49,6 +50,7 @@ export const BRAND_FABRICA_SCREEN = (t: any): AppScreenshot[] => [
     images: [
       {
         image: ResultImage2,
+        className: "max-h-[558px]",
       },
     ],
   },
