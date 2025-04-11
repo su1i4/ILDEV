@@ -1,5 +1,6 @@
 import { Tech } from "@/common";
 import { techStack } from "@/lib/data/techstacks";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 const TechCard = ({ title, icons = [], description }: Tech) => (
@@ -17,11 +18,12 @@ const TechCard = ({ title, icons = [], description }: Tech) => (
 );
 
 const TechStack = () => {
+  const t = useTranslations("ServicesText")
   return (
-    <div className="container w-[90%] mx-auto">
+    <div className="container w-[90%] mx-auto ">
       <h2 className="text-3xl font-bold text-white mb-8 md:text-2xl">
-        Стек / Технологии
-      </h2>
+        {t("text4")}
+      </h2> 
       <div className="grid grid-cols-3 md:grid-cols-1 gap-x-5 gap-y-7">
         {techStack.map((tech, index) => (
           <TechCard key={index} {...tech} />

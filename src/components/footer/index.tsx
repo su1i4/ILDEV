@@ -32,7 +32,7 @@ const Footer = () => {
             </Link>
           ))}
         </div>
-        <p className="text-white">© 2024 ILDEV. Все права защищены</p>
+        <p className="text-white">{t("layout.nav.text")}</p>
       </div>
       <div className="flex flex-col gap-4">
         <div className="flex items-center gap-[5px]">

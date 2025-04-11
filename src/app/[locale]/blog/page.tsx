@@ -57,7 +57,7 @@ export default function Blog() {
           <h1 className="text-[#FFFFFF] text-[54px] font-bold md:text-[30px] text-nowrap">
             {t("blog.blogtext")}
           </h1>
-          <p className="text-[24px] w-[548px] font-normal text-[#fff] md:text-[15px] text-end">
+          <p className="text-[24px] w-[548px] font-normal text-[#fff] md:w-full md:text-start  md:text-[14px] text-end">
             {t("blog.desc")}
           </p>
         </div>
@@ -76,7 +76,7 @@ export default function Blog() {
       </Container>
 
       <div className="px-16 py-8">
-        <div className="grid grid-cols-3 lg:grid-cols-2 md:grid-cols-1 gap-[20px]">
+        <div className="grid grid-cols-3 lg:grid-cols-2 md:grid-cols-1 sm:flex sm:flex-col  gap-[20px]">
           {articles.map((article) => (
             <div
               key={article.id}

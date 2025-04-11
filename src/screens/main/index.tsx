@@ -6,7 +6,6 @@ import Card from "./ui/card";
 import { OUR_WORKS } from "@/lib/data/card.data";
 import { useTranslations } from "next-intl";
 
-import AnimatedBackground from "./ui/animated-background";
 
 // const AnimatedBackground = React.lazy(() => import("./ui/animated-background"));
 const Services = React.lazy(() => import("./ui/services"));

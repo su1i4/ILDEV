@@ -9,28 +9,29 @@ import { useTranslations } from "next-intl";
 
 const Article = () => {
   const [isActive, setIsActive] = useState(false);
-  const t = useTranslations();
+  const t = useTranslations("article");
+  const b = useTranslations("blog");
   return (
-    <div className="container w-full h-[100vh] overflow-y-auto">
+    <div className="container mx-auto w-full h-[100vh] overflow-y-auto">
       <Container className="md:px-5">
-        <div className="mt-[158px] flex md:flex-col gap-[141px] md:gap-[20px] md:mt-[100px]">
+        <div className="mt-[158px] flex lg:flex-col lg:gap-[20px] gap-[141px]  md:mt-[100px]">
           <h1 className="text-[#FFFFFF] text-[54px] font-bold md:text-[30px] text-nowrap">
-            {t("article.title")}
+            {t("title")}
           </h1>
           <p className="text-[24px] font-normal text-[#fff] md:text-[15px]">
-            {t("article.desc")}
+            {t("desc")}
           </p>
         </div>
       </Container>
 
-      <div className="my-[100px] md:my-[50px]">
+      <div className="my-[100px] lg:flex-col ">
         <InfoTitle
           onClick={() => setIsActive(!isActive)}
           texts={[
-            t("blog.info.all"),
-            t("blog.info.articles"),
-            t("blog.info.new"),
-            t("blog.info.events"),
+            b("info.all"),
+            b("info.articles"),
+            b("info.new"),
+            b("info.events"),
           ]}
           search={true}
         />
@@ -38,16 +39,16 @@ const Article = () => {
       <Container className="md:p-3">
         <div className="container mx-auto px-4 py-12 md:py-8  text-[#FFFFFF]">
           <h1 className="text-4xl font-bold mb-8 md:text-[20px] md:leading-[90%]">
-            {t("article.text1")}
+            {t("text1")}
           </h1>
 
           <div className="flex flex-col md:flex-row gap-8 items-center">
             <div className="flex-1 text-lg">
               <p className="mb-4 text-[#FFFFFF] text-[24px] font-medium md:text-[15px] md:leading-[90%]">
-                {t("article.text2")}
+                {t("text2")}
               </p>
 
-              <section className="flex gap-[20px] flex-wrap justify-center">
+              <section className="flex gap-[20px] lg:flex-col lg:items-center  justify-center">
                 <Image
                   src={ArticleImage}
                   alt="Вадим Миткин"
@@ -57,11 +58,11 @@ const Article = () => {
                 />
                 <div>
                   <h2 className="text-2xl font-semibold mb-4 md:text-[15px] md:font-bold">
-                    {t("article.text3")}
+                    {t("text3")}
                   </h2>
 
                   <p className="font-[300] text-[18px] md:text-[15px]">
-                    {t("article.text4")}
+                    {t("text4")}
                   </p>
                 </div>
               </section>
