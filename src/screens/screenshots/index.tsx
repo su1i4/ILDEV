@@ -24,11 +24,11 @@ const ScreenshotCard: React.FC<ScreenshotCardProps> = ({ title, images }) => {
         {Array.isArray(images) &&
           images.map(({ image, className }, i) => (
             <Image
-              key={i}
-              src={image}
-              alt={title}
-              className={`object-contain  md:w-full  rounded-xl ${className}`}
-            />
+            key={i}
+            src={image}
+            alt={title}
+            className={`object-contain md:w-full rounded-xl transition-shadow duration-300 hover:shadow-2xl cursor-pointer   ${className}`}
+          />
           ))}
       </div>
     </div>

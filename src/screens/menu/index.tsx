@@ -8,7 +8,7 @@ import { useTranslations } from "next-intl";
 const Menu = () => {
   const t = useTranslations();
   return (
-    <div className="w-full h-[100vh] flex items-center">
+    <div className="w-full mx-auto container h-[100vh] flex items-center">
       <div className="px-24 grid grid-cols-2 lg:grid-cols-1 gap-10 sm:px-12 xs:px-6">
         {ROUTES(t).map((item: IRoutes) => (
           <Link key={item.link} href={item.link}>

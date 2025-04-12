@@ -12,7 +12,7 @@ const BackendVacancies = () => {
   const currentPlatform = PLATFORM(t).find((item) => item.id === platform);
 
   return (
-    <div className="w-full h-[100vh] overflow-y-auto flex flex-col gap-[100px]">
+    <div className="w-full h-[100vh] overflow-y-auto mx-auto container flex flex-col gap-[100px]">
       <Container>
         <div className="mt-[100px] mr-[179px] w-full">
           <h1 className="text-[64px] font-[600] mb-[20px] lg:text-[39px] md:text-[32px] xs:text-[24px]">
