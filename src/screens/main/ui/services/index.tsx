@@ -30,7 +30,7 @@ const Services = () => {
 
   return (
     <div className="w-full py-20 sm:py-12 xs:py-6 flex flex-col gap-20 sm:gap-12 xs:gap-6">
-      <Title text={t("home.service.our_service")} classNames="text-center" />
+      <Title text={t("home.service.our_service")} classNames="text-center  " />
       <div ref={sliderRef} className="keen-slider px-8 sm:px-4 xs:px-2">
         {SERVICES(t).map((item: IService, index: number) => (
           <ServiceCard {...item} key={index} />

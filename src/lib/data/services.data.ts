@@ -1,8 +1,8 @@
-import MobileDevelopment from "../../../public/MobileDevelopment.png";
-import SoftwareDevelopment from "../../../public/SoftwareDevelopment.png";
-import Cubersecurity from "../../../public/Cybersecurity.png";
-import UIUX from "../../../public/UiUxDesign.png";
-import AI from "../../../public/AI.png";
+import MobileDevelopment from "../../../public/Group 2.svg";
+import SoftwareDevelopment from "../../../public/разработка.svg";
+import Cubersecurity from "../../../public/Cyber_Attack.svg";
+import UIUX from "../../../public/дизайн.svg";
+import AI from "../../../public/ai_illustration.svg";
 
 export const SERVICES = (t: any) => {
   return [
