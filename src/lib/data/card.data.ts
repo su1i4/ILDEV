@@ -39,12 +39,10 @@ export const OUR_WORKS = (t?: any) => {
       stats: t("home.projects.prestigetower.sumdesc"),
       firstImageOption: {
         image: Iphone13LeftBlack,
-        styles:
-          "w-[314px] sm:w-[170px] absolute right-[120px] bottom-[0px] xs:bottom-[45px] hover:scale-105 transition-all duration-300",
+        styles: "w-[314px] sm:w-[170px] absolute right-[120px] bottom-[0px] xs:bottom-[45px] hover:scale-105 transition-all duration-300",
       },
       secondImageOption: {
-        styles:
-          "w-[215px] sm:w-[153px] absolute right-0 bottom-[-10px] hover:scale-105 transition-all duration-300 hover:translate-x-[-20px]",
+        styles: "w-[215px] sm:w-[153px] absolute right-0 bottom-[-10px] hover:scale-105 transition-all duration-300 hover:translate-x-[-20px]",
         image: Iphone13RightBlack,
       },
       url: "/prestige-tower",
