@@ -4,7 +4,8 @@ import { Props } from "@/common";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
 
-const Vacancies = ({ params: { locale } }: Props) => {
+const Vacancies = async ({ params }: Props) => {
+  const { locale } = await params;
   unstable_setRequestLocale(locale);
   const t = useTranslations();
 

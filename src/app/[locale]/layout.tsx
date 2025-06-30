@@ -62,7 +62,7 @@ const myFont = localFont({
 
 type Props = {
   children: ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
 export function generateStaticParams() {
@@ -70,8 +70,10 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({
-  params: { locale },
+  params,
 }: Omit<Props, "children">) {
+  const { locale } = await params;
+  unstable_setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "LocaleLayout" });
   return {
     title: t("title"),
@@ -81,11 +83,12 @@ export async function generateMetadata({
 
 export default async function RootLayout({
   children,
-  params: { locale },
+  params,
 }: Readonly<{
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }>) {
+  const { locale } = await params;
   unstable_setRequestLocale(locale);
   const messages = await getMessages();
   return (

@@ -50,5 +50,5 @@ export interface PlatformData {
 }
 
 export type Props = {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
