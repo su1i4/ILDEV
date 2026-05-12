@@ -27,11 +27,13 @@ export const Middle = () => {
             </span>
           ))}
       </h1>
-      <Button
+      <a href="#form">
+        <Button
         classNames="xs:text-[14px] xs:py-1"
         text={t("home.action")}
         icon={<Link />}
       />
+      </a>
     </div>
   );
 };

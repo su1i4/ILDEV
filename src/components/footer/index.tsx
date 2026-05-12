@@ -37,13 +37,20 @@ const Footer = () => {
       <div className="flex flex-col gap-4">
         <div className="flex items-center gap-[5px]">
           <Email />
-          <p>ildev@info.kg</p>
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=ildevkg@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
+            ildevkg@gmail.com
+          </a>
         </div>
-        <div className="flex items-center gap-[5px]">
-          {/* <Download /> */}
+        {/* <div className="flex items-center gap-[5px]">
+          <Download />
           <p>{t("layout.nav.download")}</p>
         </div>
-        <p>{t("layout.nav.politic")}</p>
+        <p>{t("layout.nav.politic")}</p> */}
       </div>
     </footer>
   );

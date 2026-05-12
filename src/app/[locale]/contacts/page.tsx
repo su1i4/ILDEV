@@ -14,9 +14,10 @@ const Contacts = () => {
   }, []);
 
   const currentWidth = width > 770 ? "80px" : "40px";
+
   return (
     <div className="w-full mx-auto container min-h-screen overflow-y-auto pt-[250px] md:pt-[150px]">
-      <div className="flex  lg:flex-col justify-between items-center gap-10 max-w-[90%] md:max-w-[85%] lg:max-w-[80%] mx-auto">
+      <div className="flex lg:flex-col justify-between items-center gap-10 max-w-[90%] md:max-w-[85%] lg:max-w-[80%] mx-auto">
         <div
           className={`text-white text-center lg:text-left mb-4 lg:mb-0 ${
             isVisible
@@ -27,7 +28,10 @@ const Contacts = () => {
           <h2 className="text-[64px] sm:text-[48px] font-bold mb-4">
             {t("contacts.email")}
           </h2>
-          <div className="flex items-center justify-center lg:justify-start gap-2 text-lg">
+          <a
+            href="mailto:ildevkg@gmail.com"
+            className="flex items-center justify-center lg:justify-start gap-2 text-lg hover:opacity-80 transition-opacity"
+          >
             <svg
               width="24"
               height="24"
@@ -36,7 +40,7 @@ const Contacts = () => {
               xmlns="http://www.w3.org/2000/svg"
               className="sm:w-[30px] sm:h-[30px]"
             >
-              <g clipPath="url(#clip0_251_5714)">
+              <g clipPath="url(#clip-contacts-email)">
                 <path
                   fillRule="evenodd"
                   clipRule="evenodd"
@@ -45,44 +49,51 @@ const Contacts = () => {
                 />
               </g>
               <defs>
-                <clipPath id="clip0_251_5714">
+                <clipPath id="clip-contacts-email">
                   <rect width="30" height="30" fill="white" />
                 </clipPath>
               </defs>
             </svg>
             <span className="text-[18px] sm:text-lg font-[300]">
-              ildev@info.kg
+              ildevkg@gmail.com
             </span>
-          </div>
+          </a>
         </div>
 
         <div className="flex ml:flex-col items-center gap-10">
-          <div
-            className={`w-[400px] h-[400px] sm:w-48 sm:h-48 md:w-64 md:h-64  bg-yellow-600 rounded-full flex flex-col items-center justify-center gap-4 sm:gap-[15px] lg:gap-[30px] text-black font-bold shadow-lg transition-all duration-700 ${
+          <a
+            href="tel:+996777792777"
+            className={`w-[400px] h-[400px] sm:w-48 sm:h-48 md:w-64 md:h-64 bg-yellow-600 rounded-full flex flex-col items-center justify-center gap-4 sm:gap-[15px] lg:gap-[30px] text-black font-bold shadow-lg transition-all duration-700 ${
               isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
             } hover:scale-110`}
           >
             <span className="text-[54px] sm:text-4xl font-semibold">
               {t("contacts.contact")}
             </span>
-            <span className="italic text-[34px]  md:text-2xl font-medium text-center px-4">
-              +7 777 777 77 77
+            <span className="italic text-[34px] md:text-2xl font-medium text-center px-4">
+              +996 777 79 27 77
             </span>
-          </div>
+          </a>
 
           <div
-            className={`w-[400px] h-[400px] sm:w-48 sm:h-48 md:w-64 md:h-64  bg-[#B0183C] rounded-full flex items-center justify-center shadow-lg transition-all duration-700  sm:mt-0 ${
+            className={`w-[400px] h-[400px] sm:w-48 sm:h-48 md:w-64 md:h-64 bg-[#B0183C] rounded-full flex items-center justify-center shadow-lg transition-all duration-700 sm:mt-0 ${
               isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
             } hover:scale-110`}
           >
             <div className="grid grid-cols-2 gap-3 sm:gap-3 md:gap-4 text-white">
-              {SocialMediaDisplay(currentWidth, currentWidth)?.map(
-                (item: any, index: number) => (
-                  <a className="cursor-pointer block" key={index}>
-                    {item}
-                  </a>
-                )
-              )}
+              {SocialMediaDisplay(currentWidth, currentWidth).map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={item.label}
+                  title={item.label}
+                  className="cursor-pointer block hover:scale-110 transition-transform"
+                >
+                  {item.icon()}
+                </a>
+              ))}
             </div>
           </div>
         </div>

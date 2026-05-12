@@ -28,7 +28,8 @@ const CargoSystem = () => {
   if (!mounted) return null;
 
   return ( 
-    <div className="w-full h-[100vh] mx-auto container  overflow-y-auto flex flex-col gap-[100px] md:gap-[20px]">
+   <div className="h-screen overflow-y-auto">
+     <div className="w-full mx-auto container flex flex-col gap-[100px] md:gap-[20px]">
       <CargoSystemBanner /> 
       <InfoTitle
         texts={[t("global.desc"), t("global.proccess")]}
@@ -109,6 +110,7 @@ const CargoSystem = () => {
           ))}
       </div>
     </div>
+   </div>
   );
 };
 

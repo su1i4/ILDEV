@@ -104,13 +104,13 @@ const CargoSystemBanner = () => {
               {t("cargosystem.project-sum")}
             </h1>
             <div className="flex gap-[20px] sm:flex-col text-white rounded-lg ">
-              <div className="flex-1 border border-gray-700 p-[30px] md:p-[20px]">
+              <div className="flex-1 border border-dashed border-[#D1D1D1] p-[30px] md:p-[20px]">
                 <p className="text-[64px] md:text-[32px] font-bold">100 000+</p>
                 <p className="text-[48px] md:text-[32px] font-medium">
                   {t("cargosystem.download-count")}
                 </p>
               </div>
-              <div className="flex-1 border border-gray-700 p-[30px] md:p-[20px]">
+              <div className="flex-1 border border-dashed border-[#D1D1D1] p-[30px] md:p-[20px]">
                 <p className="text-[64px] md:text-[32px] font-bold">4.6</p>
                 <p className="text-[48px] md:text-[32px] font-medium leading-[43.2px]">
                   {t("cargosystem.middle-rating")}

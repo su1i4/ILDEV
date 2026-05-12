@@ -25,16 +25,16 @@ export default function InfoTitle({
   };
 
   return (
-    <nav className="flex items-center justify-between md:flex-wrap lg:flex-col lg:items-start gap-4 bg-[#18191E] p-8 pb-6 rounded-[30px] w-full ">
+    <nav className="flex items-center justify-between md:flex-wrap lg:flex-col lg:items-start gap-4 bg-[#18191E] p-8 pb-6 rounded-[30px] w-full">
       <ul className="flex gap-5 flex-wrap text-gray-500 text-lg font-medium">
         {texts?.map((text, i) => (
           <li
             key={text}
             onClick={() => tabHandler(i)}
-            className={`cursor-pointer transition-all duration-300 text-[48px] md:text-3xl ${
+            className={`cursor-pointer transition-all duration-300 text-[48px] md:text-3xl font-medium leading-[0.9] ${
               i === activeTab
-                ? "gradient-text flex items-center font-medium "
-                : "text-gray-600 text-5xl md:text-3xl font-medium"
+                ? "bg-gradient-to-r from-[#BA2025] via-[#A6181B] via-[#DB7746] via-[#CF6F35] to-[#D57238] bg-clip-text text-transparent"
+                : "text-[#36373C] text-5xl md:text-3xl"
             }`}
           >
             {text}
@@ -47,7 +47,7 @@ export default function InfoTitle({
           placeholder={t("global.search")}
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="bg-gray-700 text-white px-4 py-2 w-full lg:max-w-full  max-w-md rounded-full outline-none transition-all"
+          className="bg-gray-700 text-white px-4 py-2 w-full lg:max-w-full max-w-md rounded-full outline-none transition-all"
         />
       )}
     </nav>

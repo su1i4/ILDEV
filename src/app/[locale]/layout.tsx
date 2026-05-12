@@ -102,7 +102,6 @@ export default async function RootLayout({
             {children}
             <SpeedInsights />
             <Analytics />
-            <Footer />
           </div>
         </NextIntlClientProvider>
       </body>

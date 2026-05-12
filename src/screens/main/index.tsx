@@ -25,9 +25,8 @@ export default function HomePage() {
 					{t("home.project")}
 				</h1>
 
-				<div className="flex  flex-wrap lg:flex-col gap-6 max-w-[90%] m-auto my-20 sm:my-12 xs:my-6">
+				<div className="flex flex-wrap lg:flex-col gap-6 max-w-[90%] m-auto my-20 sm:my-12 xs:my-6">
 					{OUR_WORKS(t)
-						.splice(0, 4)
 						.map((project, index) => (
 							<Card
 								key={project.title}

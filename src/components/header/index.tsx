@@ -32,10 +32,12 @@ export const Header = () => {
 
         <div className="flex items-center gap-[20px] sm:gap-[10px] z-10">
           <LocaleSwitcher />
-          <Button
+          <a href="#form" >
+            <Button
             text={t("layout.nav.action")}
             classNames="text-nowrap font-[400] text-[15px] px-3 !min-w-[160px] w-[160px] text-center xs:hidden"
           />
+          </a>
           <article className="hidden lg:block lg:mr-[50px]">
             <Burger />
           </article>

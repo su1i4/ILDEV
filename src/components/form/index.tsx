@@ -49,8 +49,39 @@ export default function QuestionForm({
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const validatePhone = (phone: string): boolean => {
-    const phoneRegex = /^\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2}$/;
-    return phoneRegex.test(phone.replace(/\s/g, ""));
+    const digits = phone.replace(/\D/g, "");
+    // KG: 996 + 9 цифр = 12 всего
+    return /^996\d{9}$/.test(digits);
+  };
+
+  const formatPhoneNumber = (value: string): string => {
+    let digits = value.replace(/\D/g, "");
+
+    // если ввели без кода 996 — подставляем
+    if (digits.length > 0 && !digits.startsWith("996")) {
+      // 0XXX → 996XXX (локальный формат KG)
+      if (digits.startsWith("0")) {
+        digits = "996" + digits.slice(1);
+      } else {
+        digits = "996" + digits;
+      }
+    }
+
+    // обрезаем до 12 цифр (996 + 9)
+    digits = digits.slice(0, 12);
+
+    const code = digits.slice(0, 3);
+    const part1 = digits.slice(3, 6);
+    const part2 = digits.slice(6, 8);
+    const part3 = digits.slice(8, 10);
+    const part4 = digits.slice(10, 12);
+
+    if (digits.length === 0) return "";
+    if (digits.length <= 3) return `+${code}`;
+    if (digits.length <= 6) return `+${code} ${part1}`;
+    if (digits.length <= 8) return `+${code} ${part1} ${part2}`;
+    if (digits.length <= 10) return `+${code} ${part1} ${part2} ${part3}`;
+    return `+${code} ${part1} ${part2} ${part3} ${part4}`;
   };
 
   const validateForm = (): boolean => {
@@ -65,7 +96,7 @@ export default function QuestionForm({
     if (!formData.phone.trim()) {
       newErrors.phone = "Введите номер телефона";
     } else if (!validatePhone(formData.phone)) {
-      newErrors.phone = "Введите корректный номер телефона";
+      newErrors.phone = "Введите корректный номер (+996 XXX XX XX XX)";
     }
 
     if (!formData.agree) {
@@ -76,36 +107,31 @@ export default function QuestionForm({
     return Object.keys(newErrors).length === 0;
   };
 
-  const formatPhoneNumber = (value: string): string => {
-    const phone = value.replace(/\D/g, "");
-    if (phone.length === 0) return "";
-    if (phone.length <= 1) return `+${phone}`;
-    if (phone.length <= 4) return `+${phone.slice(0, 1)} (${phone.slice(1)}`;
-    if (phone.length <= 7)
-      return `+${phone.slice(0, 1)} (${phone.slice(1, 4)}) ${phone.slice(4)}`;
-    if (phone.length <= 9)
-      return `+${phone.slice(0, 1)} (${phone.slice(1, 4)}) ${phone.slice(
-        4,
-        7
-      )}-${phone.slice(7)}`;
-    return `+${phone.slice(0, 1)} (${phone.slice(1, 4)}) ${phone.slice(
-      4,
-      7
-    )}-${phone.slice(7, 9)}-${phone.slice(9, 11)}`;
-  };
+  const handleSubmit = async (e?: FormEvent) => {
+    if (e) e.preventDefault();
 
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-
-    if (!validateForm()) {
-      return;
-    }
+    if (!validateForm()) return;
 
     setIsSubmitting(true);
 
     try {
+      const body = new FormData();
+      body.append("name", formData.name);
+      body.append("phone", formData.phone);
+      if (formData.description)
+        body.append("description", formData.description);
+      if (formData.file) body.append("file", formData.file);
 
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      const res = await fetch("/api/lead", {
+        method: "POST",
+        body,
+      });
+
+      const data = await res.json();
+
+      if (!res.ok || !data.ok) {
+        throw new Error(data.error || "Не удалось отправить");
+      }
 
       setFormData({
         name: "",
@@ -125,17 +151,19 @@ export default function QuestionForm({
   };
 
   return (
-    <div className="overflow-y-auto pt-[100px] md:pt-0">
+    <div id="form" className="overflow-y-auto pt-[100px] md:pt-0">
       <div className="flex flex-col items-center lg:flex-col">
         <div className="bg-[#18191E] p-6 xs:p-4 rounded-2xl shadow-lg w-full flex gap-[30px] lg:flex-col">
           <div className="flex flex-col">
-            <h2 className="text-[48px] font-medium lg:text-[32px] xs:text-[24px]">{title}</h2>
+            <h2 className="text-[48px] font-medium lg:text-[32px] xs:text-[24px]">
+              {title}
+            </h2>
             <p className="text-[#FFFFFF] text-[18px] font-[300] mb-4 lg:text-[15px]">
               {description}
             </p>
             <SocialMedia />
             <h3 className="text-[48px] mt-[30px] font-medium text-white lg:text-[24px]">
-              +7 777 777 77 77
+              +996 777 79 27 77
             </h3>
           </div>
           <form onSubmit={handleSubmit} className="flex flex-col gap-4 flex-1">
@@ -156,7 +184,7 @@ export default function QuestionForm({
 
             <div>
               <Input
-                placeholder={t("home.form.phoneNumber")}
+                placeholder="+996 XXX XX XX XX"
                 value={formData.phone}
                 onChange={(e) =>
                   setFormData((prev) => ({
@@ -171,6 +199,7 @@ export default function QuestionForm({
                 <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
               )}
             </div>
+
             {textarea && (
               <div>
                 <TextArea
@@ -207,11 +236,15 @@ export default function QuestionForm({
               <p className="text-red-500 text-sm mt-1">{errors.agree}</p>
             )}
 
-            <Button
-              type="primary"
-              classNames="text-center xs:text-[14px] xs:py-1"
-              text={isSubmitting ? "Отправка..." : t("home.form.send_request")}
-            />
+            <button type="submit" disabled={isSubmitting} className="contents">
+              <Button
+                type="primary"
+                classNames="text-center xs:text-[14px] xs:py-1 w-full"
+                text={
+                  isSubmitting ? "Отправка..." : t("home.form.send_request")
+                }
+              />
+            </button>
           </form>
         </div>
       </div>
