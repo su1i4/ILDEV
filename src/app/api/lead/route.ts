@@ -3,9 +3,9 @@ import { Resend } from "resend";
 
 export async function POST(req: NextRequest) {
   try {
-    const apiKey = process.env.RESEND_API_KEY;
-    const emailFrom = process.env.LEAD_EMAIL_FROM;
-    const emailTo = process.env.LEAD_EMAIL_TO;
+    const apiKey = "re_JtBecpCu_ET8AhkwHPkiBxHDVLPBABbcq";
+    const emailFrom = "onboarding@resend.dev";
+    const emailTo = "ildevkg@gmail.com";
 
     if (!apiKey || !emailFrom || !emailTo) {
       console.error("Missing email configuration");
