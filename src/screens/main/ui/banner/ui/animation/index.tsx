@@ -1,16 +1,8 @@
 "use client";
 
 import React, { useState, useCallback, useMemo } from "react";
-import dynamic from "next/dynamic";
+import Spline from "@splinetool/react-spline";
 import { useWindowWidth } from "@/lib/helpers";
-
-const Spline = dynamic(
-  () => import("@splinetool/react-spline/next").then((mod) => mod.default),
-  {
-    ssr: false,
-    loading: () => <div className="w-full h-full bg-[#121212]" />,
-  }
-);
 
 const MOBILE_BREAKPOINT = 768;
 
