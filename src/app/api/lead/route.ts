@@ -1,11 +1,22 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(req: NextRequest) {
-  console.log("KEY:", process.env.RESEND_API_KEY?.slice(0, 8));
   try {
+    const apiKey = process.env.RESEND_API_KEY;
+    const emailFrom = process.env.LEAD_EMAIL_FROM;
+    const emailTo = process.env.LEAD_EMAIL_TO;
+
+    if (!apiKey || !emailFrom || !emailTo) {
+      console.error("Missing email configuration");
+      return NextResponse.json(
+        { ok: false, error: "Email service not configured" },
+        { status: 500 }
+      );
+    }
+
+    const resend = new Resend(apiKey);
+
     const formData = await req.formData();
 
     const name = String(formData.get("name") ?? "");
@@ -30,8 +41,8 @@ export async function POST(req: NextRequest) {
     }
 
     const { error } = await resend.emails.send({
-      from: process.env.LEAD_EMAIL_FROM!,
-      to: process.env.LEAD_EMAIL_TO!,
+      from: emailFrom,
+      to: emailTo,
       subject: `🔔 Новая заявка от ${name}`,
       html: `
         <div style="font-family: system-ui, sans-serif; line-height: 1.6;">
