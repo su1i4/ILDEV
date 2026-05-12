@@ -4,13 +4,15 @@ import React, { useState, useCallback, useMemo } from "react";
 import dynamic from "next/dynamic";
 import { useWindowWidth } from "@/lib/helpers";
 
-// Spline грузится только на клиенте и только когда компонент реально нужен
-const Spline = dynamic(() => import("@splinetool/react-spline"), {
-  ssr: false,
-  loading: () => <div className="w-full h-full bg-[#121212]" />,
-});
+// v4+ требует subpath /next или /lazy
+const Spline = dynamic(
+  () => import("@splinetool/react-spline/next").then((mod) => mod.default),
+  {
+    ssr: false,
+    loading: () => <div className="w-full h-full bg-[#121212]" />,
+  }
+);
 
-// Брейкпоинт для отключения 3D на слабых устройствах
 const MOBILE_BREAKPOINT = 768;
 
 export const Animation = React.memo(() => {
@@ -21,7 +23,6 @@ export const Animation = React.memo(() => {
     setIsLoaded(true);
   }, []);
 
-  // Считаем высоту через useMemo — не пересоздаём объект style на каждый ререндер
   const splineStyle = useMemo(
     () => ({
       width: "100%",
@@ -31,7 +32,6 @@ export const Animation = React.memo(() => {
     [windowWidth]
   );
 
-  // На мобилках вообще не монтируем Spline — показываем статичный фон/постер
   const isMobile = windowWidth > 0 && windowWidth < MOBILE_BREAKPOINT;
 
   if (isMobile) {
@@ -40,9 +40,7 @@ export const Animation = React.memo(() => {
         className="relative w-full h-full bg-[#121212]"
         style={{ height: "70vh" }}
         aria-hidden="true"
-      >
-        {/* сюда можно положить статичный poster.webp от Spline-сцены */}
-      </div>
+      />
     );
   }
 
