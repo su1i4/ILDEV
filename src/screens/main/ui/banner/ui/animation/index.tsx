@@ -4,7 +4,6 @@ import React, { useState, useCallback, useMemo } from "react";
 import dynamic from "next/dynamic";
 import { useWindowWidth } from "@/lib/helpers";
 
-// v4+ требует subpath /next или /lazy
 const Spline = dynamic(
   () => import("@splinetool/react-spline").then((mod) => mod.default),
   {

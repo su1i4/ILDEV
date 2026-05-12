@@ -11,7 +11,6 @@ import {
 import { NextIntlClientProvider } from "next-intl";
 import { locales } from "@/config";
 import { ReactNode } from "react";
-import Footer from "@/components/footer";
 
 const myFont = localFont({
   src: [
