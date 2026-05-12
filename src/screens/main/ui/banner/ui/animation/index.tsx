@@ -6,7 +6,7 @@ import { useWindowWidth } from "@/lib/helpers";
 
 // v4+ требует subpath /next или /lazy
 const Spline = dynamic(
-  () => import("@splinetool/react-spline/next").then((mod) => mod.default),
+  () => import("@splinetool/react-spline").then((mod) => mod.default),
   {
     ssr: false,
     loading: () => <div className="w-full h-full bg-[#121212]" />,
