@@ -1,7 +1,8 @@
-import Application1 from "@/assets/images/application-1.png";
-import Application2 from "@/assets/images/application-2.png";
-import Application3 from "@/assets/images/application-3.png";
-import Application4 from "@/assets/images/application-4.png";
+import Application1 from "@/assets/images/application-1.webp";
+import Application2 from "@/assets/images/application-2.webp";
+import Application3 from "@/assets/images/application-3.webp";
+import Application4 from "@/assets/images/application-4.webp";
+import Application5 from "@/assets/images/application-5.webp";
 import WebsiteImage from "@/assets/images/website.png";
 import { AppScreenshot, ProjectData } from "@/common";
 
@@ -43,19 +44,23 @@ export const appScreenshots = (t: any): AppScreenshot[] => [
     images: [
       {
         image: Application1,
-        className: "h-[634px]",
+        className: "h-[634px] md:h-[400px]",
       },
       {
         image: Application2,
-        className: "h-[634px]",
+        className: "h-[634px] md:h-[400px]",
       },
       {
         image: Application3,
-        className: "h-[634px]",
+        className: "h-[634px] md:h-[400px]",
       },
       {
         image: Application4,
-        className: "h-[634px]",
+        className: "h-[634px] md:h-[400px]",
+      },
+      {
+        image: Application5,
+        className: "h-[634px] md:h-[400px]",
       },
     ],
   },

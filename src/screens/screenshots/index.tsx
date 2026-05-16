@@ -86,8 +86,8 @@ export const Screenshots = ({ projectData, screenshots }: ScreenshotsProps) => {
         </div>
       </section>
 
-      <section>
-        <div className="grid grid-cols-1 gap-6 sm:gap-0">
+      <section className="w-full">
+        <div className="w-full grid grid-cols-1 gap-6 sm:gap-0">
           {screenshots.map((screenshot) => (
             <ScreenshotCard
               key={screenshot.id}
