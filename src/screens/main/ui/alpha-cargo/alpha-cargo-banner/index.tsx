@@ -25,6 +25,7 @@ const AlphaCargoBanner = () => {
     animate: { scale: 1, opacity: 1 },
     transition: { duration: 0.8, delay: 0.4 },
   };
+
   const t = useTranslations();
 
   return (
