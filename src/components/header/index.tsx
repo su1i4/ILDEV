@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter } from "@/navigation";
+import { useRouter, usePathname } from "@/navigation";
 import { Logo } from "@/assets/icons/Logo";
 import { Routers } from "./ui/routers";
 import { Button } from "@/shared/button";
@@ -10,7 +10,20 @@ import { useTranslations } from "next-intl";
 
 export const Header = () => {
   const router = useRouter();
+  const pathname = usePathname();
   const t = useTranslations();
+
+  const handleContactClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (pathname === "/") {
+      document
+        .getElementById("form")
+        ?.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      router.push("/#form");
+    }
+  };
+
   return (
     <div className="w-full mx-auto container flex justify-between items-center sm:gap-[5px] px-24 lg:px-6 xs:px-2 backdrop-blur-md py-2">
       <div
@@ -32,11 +45,11 @@ export const Header = () => {
 
         <div className="flex items-center gap-[20px] sm:gap-[10px] z-10">
           <LocaleSwitcher />
-          <a href="#form" >
+          <a href="/#form" onClick={handleContactClick}>
             <Button
-            text={t("layout.nav.action")}
-            classNames="text-nowrap font-[400] text-[15px] px-3 !min-w-[160px] w-[160px] text-center xs:hidden"
-          />
+              text={t("layout.nav.action")}
+              classNames="text-nowrap font-[400] text-[15px] px-3 !min-w-[160px] w-[160px] text-center xs:hidden"
+            />
           </a>
           <article className="hidden lg:block lg:mr-[50px]">
             <Burger />

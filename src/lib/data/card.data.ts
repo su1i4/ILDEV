@@ -7,11 +7,14 @@ import Iphone13RightBlack from "@/assets/images/iphone-13-black-right.png";
 import SignInImage from "@/assets/images/signin-image.png";
 import DashboardLaptop from "@/assets/images/dashboard-laptop.png";
 
-import FabricaLeft from "@/assets/images/fabrica-left.png";
-import FabricaRight from "@/assets/images/fabrica-right.png";
+import FabricaLeft from "@/assets/images/brand-fabrica-1.png";
+import FabricaRight from "@/assets/images/brand-fabrica-2.png";
 
 import DashboardGraphic from "@/assets/images/dashboard-graphic.png";
 import MenuImage from "@/assets/images/menu-image.png";
+
+import RossCargoIntro1 from "@/assets/images/ross-cargo-intro.png";
+import RossCargoIntro2 from "@/assets/images/ross-cargo-intro2.png";
 
 export const OUR_WORKS = (t?: any) => {
   return [
@@ -39,10 +42,12 @@ export const OUR_WORKS = (t?: any) => {
       stats: t("home.projects.prestigetower.sumdesc"),
       firstImageOption: {
         image: Iphone13LeftBlack,
-        styles: "w-[314px] sm:w-[170px] absolute right-[120px] bottom-[0px] xs:bottom-[45px] hover:scale-105 transition-all duration-300",
+        styles:
+          "w-[314px] sm:w-[170px] absolute right-[120px] bottom-[0px] xs:bottom-[45px] hover:scale-105 transition-all duration-300",
       },
       secondImageOption: {
-        styles: "w-[215px] sm:w-[153px] absolute right-0 bottom-[-10px] hover:scale-105 transition-all duration-300 hover:translate-x-[-20px]",
+        styles:
+          "w-[215px] sm:w-[153px] absolute right-0 bottom-[-10px] hover:scale-105 transition-all duration-300 hover:translate-x-[-20px]",
         image: Iphone13RightBlack,
       },
       url: "/prestige-tower",
@@ -89,14 +94,31 @@ export const OUR_WORKS = (t?: any) => {
       firstImageOption: {
         image: DashboardGraphic,
         styles:
-          "w-[508px] absolute right-[160px] md:w-[300px] bottom-[10px] h-[] z-[10] lg:right-[0px]  sm:bottom-[90px] sm:right-0",
+          "w-[308px] absolute right-[30px] md:w-[300px] bottom-[10px] lg:right-[0px]  sm:bottom-[90px] sm:right-0",
       },
       secondImageOption: {
         image: MenuImage,
         styles:
-          "w-[400px] sm:w-[237px] absolute right-0 bottom-[10px] lg:hidden ",
+          "w-[240px] sm:w-[237px] absolute right-0 bottom-[180px] lg:hidden z-[10] sm:bottom-[237px]",
       },
       url: "/cargo-system",
+    },
+    {
+      title: t("home.projects.rosscargo.title"),
+      description: t("home.projects.rosscargo.desc"),
+      quantity: t("home.projects.rosscargo.sum"),
+      stats: t("home.projects.rosscargo.sumdesc"),
+      firstImageOption: {
+        image: RossCargoIntro1,
+        styles:
+          "w-[410px] sm:w-[322px] absolute right-[-0] bottom-[-30px] sm:bottom-[120px] hover:scale-105 transition-all duration-300",
+      },
+      secondImageOption: {
+        image: RossCargoIntro2,
+        styles:
+          "w-[315px] sm:w-[237px] absolute right-0 top-[42%] sm:top-[59%] hover:scale-105 transition-all duration-300",
+      },
+      url: "/ross-cargo",
     },
   ];
 };

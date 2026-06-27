@@ -1,5 +1,5 @@
-import ResultImage1 from "@/assets/images/result-fabrica-1.png";
-import ResultImage2 from "@/assets/images/result-fabrica-2.png";
+import ResultImage1 from "@/assets/images/brand-fabrica-1.png";
+import ResultImage2 from "@/assets/images/brand-fabrica-2.png";
 
 import { AppScreenshot, ProjectData } from "@/common";
 

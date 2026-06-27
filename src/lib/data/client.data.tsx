@@ -1,5 +1,5 @@
 import {
-  AphaCargoIcon,
+  AlphaCargoIcon,
   BrandFabricaIcon,
   OnlyWorkIcon,
   PrestigeIcon,
@@ -13,7 +13,7 @@ export interface IClient {
 
 export const CLIENTS: IClient[] = [
   {
-    icon: <AphaCargoIcon />,
+    icon: <AlphaCargoIcon />,
     url: "https://alpha-cargo.kg",
     name: "Alpha Cargo",
   },
@@ -30,6 +30,6 @@ export const CLIENTS: IClient[] = [
   {
     icon: <BrandFabricaIcon />,
     url: "https://brandfabrica.kg",
-    name: "Brand Fabrica",
+    name: "Brand All",
   },
 ];

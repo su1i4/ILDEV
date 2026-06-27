@@ -37,7 +37,7 @@ const BrandFabricaBanner = () => {
 					transition={fadeInUp.transition}>
 					<div className="max-w-3xl">
 						<h1 className="text-5xl font-bold text-white leading-tight mb-8 sm:text-4xl ms:text-[30px] ms:text-[26px] ">
-							BRAND FABRICA
+							BRAND ALL
 						</h1>
 					</div>
 				</motion.div>

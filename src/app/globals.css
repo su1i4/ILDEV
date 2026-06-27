@@ -3,18 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0a;
+  --foreground: #ffffff;
   --lightDark: #18191e;
   --lightOrange: #cb6337;
   --font-custom: "TT Firs Neue", sans-serif;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
@@ -27,8 +20,7 @@ body {
   max-width: 1640px;
 }
 
-
-/* Button background lienear animation */
+/* Button background linear animation */
 .primary-button {
   background: linear-gradient(
     90deg,
@@ -81,8 +73,4 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.container {
-  max-width: 1440px;
 }

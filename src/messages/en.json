@@ -30,7 +30,8 @@
 			"list1": "Mobile application development",
 			"list2": "Software and website development",
 			"list3": "Cybersecurity",
-			"list4": "UX/UI, motion design, branding and illustrations"
+			"list4": "UX/UI, motion design, branding and illustrations",
+			"list5": "Programming and AI training"
 		},
 		"projects": {
 			"alphacargo": {
@@ -52,7 +53,7 @@
 				"sumdesc": "Routine task automation"
 			},
 			"brandfabrica": {
-				"title": "BRAND FABRICA",
+				"title": "BRAND ALL",
 				"desc": "Wholesale marketplace for factory",
 				"sum": "1 000",
 				"sumdesc": "orders through the website"
@@ -62,6 +63,12 @@
 				"desc": "ERP - CRM System for Cargo operations",
 				"sum": "400+",
 				"sumdesc": "Active users"
+			},
+			"rosscargo": {
+				"title": "ROSS CARGO",
+				"desc": "Website for a logistics company delivering cargo from Kyrgyzstan and China across Russia",
+				"sum": "82 000+",
+				"sumdesc": "Delivered parcels"
 			}
 		},
 		"form": {
@@ -327,6 +334,31 @@
 			"punkt": "Alpha Points"
 		}
 	},
+	"project": {
+		"about": {
+			"title": "ABOUT THE PROJECT",
+			"description": "Alpha Cargo is a leader in the market of clothing and textile transportation from Kyrgyzstan to Russia. Together we developed a digital ecosystem for clients, including a modern website and mobile application that simplify the process of sending, tracking, and paying for cargo.",
+			"steps": "Now users can go through the entire delivery process in just a few steps:",
+			"stepsList": {
+				"step1": "Submit a cargo pickup request with convenient geolocation.",
+				"step2": "Track delivery status in real-time.",
+				"step3": "Pay for services online.",
+				"step4": "Store, download, and manage all documentation in the personal account."
+			},
+			"results": "Since the beginning of 2024, thanks to the implementation of new technologies and digitalization of processes, interest in Alpha Cargo services has significantly increased. Clients note the convenience of using the platform and the ability to resolve all transportation-related issues in one place."
+		},
+		"stats": {
+			"title": "PROJECT IN NUMBERS",
+			"users": {
+				"number": "100 000+",
+				"label": "users"
+			},
+			"team": {
+				"number": "12",
+				"label": "people worked on this project"
+			}
+		}
+	},
 	"only-work": {
 		"about": {
 			"title": "ABOUT THE PROJECT",
@@ -386,6 +418,50 @@
 			}
 		}
 	},
+
+	"ross-cargo": {
+		"web": "Website",
+		"task": {
+			"description": "In 2024, Ross Cargo approached us with the task of developing a modern website for a logistics company with over 17 years of experience. The goal was to simplify client interaction with the cargo delivery service from Kyrgyzstan and China to all cities of Russia, including cost calculation, parcel tracking, and a full cycle of fulfillment services for marketplace sellers."
+		},
+		"about": {
+			"title": "ABOUT THE PROJECT",
+			"description": "Ross Cargo is a logistics company with over 17 years of experience, delivering cargo from Kyrgyzstan and China to all cities of Russia. We developed a modern website with an online cost calculator, parcel tracking, and a full cycle of services, including buying, goods inspection, and fulfillment for marketplace sellers."
+		},
+		"stats": {
+			"title": "PROJECT IN NUMBERS",
+			"users": {
+				"number": "82 000+",
+				"label": "delivered parcels"
+			},
+			"team": {
+				"number": "5000+",
+				"label": "satisfied clients"
+			}
+		},
+		"result": {
+			"mainText": "Key objectives:",
+			"mainText2": "To boost client engagement, we implemented a fulfillment section for marketplace sellers with a full cycle of services: storage, quality control, labeling, packaging, and fast deliveries to warehouses.",
+			"features": {
+				"list1": "Develop an online delivery cost calculator with selection of origin city, destination, product type, and weight.",
+				"list2": "Implement a real-time parcel tracking system.",
+				"list3": "Build a consultation request form with notification integration.",
+				"list4": "Create separate sections for delivery from Kyrgyzstan, China, and fulfillment for marketplaces."
+			}
+		},
+		"technicalDetails": {
+			"title": "Technical Features",
+			"title2": "The project was successfully completed on time and helped Ross Cargo automate delivery calculation and request processing, increasing client flow.",
+			"features": {
+				"list1": "Convenient calculator. Clients calculate delivery cost in a couple of clicks, without contacting a manager.",
+				"list2": "Delivery transparency. Cargo status tracking increased client trust.",
+				"list3": "Integration with Yandex.Maps to display branches in Bishkek.",
+				"list4": "Full website adaptability for mobile devices and tablets.",
+				"list5": "Fulfillment section for sellers: storage, quality control, labeling, and fast deliveries to marketplace warehouses."
+			}
+		}
+	},
+
 	"brandfabrica": {
 		"text": "Order Management System Development",
 		"details": {
@@ -400,7 +476,7 @@
 		"stages": {
 			"list1": {
 				"title": "Analysis and Design",
-				"description": "An audit of the current business processes of Brand Fabrica was conducted. A prototype interface was created with modules: product catalog, order management system, and reporting."
+				"description": "An audit of the current business processes of Brand All was conducted. A prototype interface was created with modules: product catalog, order management system, and reporting."
 			},
 			"list2": {
 				"title": "Backend Development",
@@ -420,7 +496,7 @@
 			}
 		},
 		"data": {
-			"task": "In 2024, ILDEV began developing the Brand Fabrica platform, designed for the production and wholesale sale of branded clothing. The main goal of the project is to simplify interactions with customers from Russia and Kazakhstan, automate order management, and integrate key processes into a single solution.",
+			"task": "In 2024, ILDEV began developing the Brand All platform, designed for the production and wholesale sale of branded clothing. The main goal of the project is to simplify interactions with customers from Russia and Kazakhstan, automate order management, and integrate key processes into a single solution.",
 			"result": {
 				"mainText": "Key Objectives:",
 				"features": {
@@ -442,7 +518,7 @@
 		},
 		"aboutProject": {
 			"title": "ABOUT THE PROJECT",
-			"description": "Brand Fabrica is a specialized platform designed to automate the production and wholesale sales of branded clothing. The project was developed to simplify interactions with clients from Russia and Kazakhstan. The main focus is on integrating all stages, from design selection and ordering to the delivery of finished products. The company ILDEV took on the task of modernizing the production process by creating a digital ecosystem."
+			"description": "Brand All is a specialized platform designed to automate the production and wholesale sales of branded clothing. The project was developed to simplify interactions with clients from Russia and Kazakhstan. The main focus is on integrating all stages, from design selection and ordering to the delivery of finished products. The company ILDEV took on the task of modernizing the production process by creating a digital ecosystem."
 		},
 		"projectNumbers": {
 			"title": "PROJECT IN NUMBERS",
@@ -502,7 +578,7 @@
 			"download": "Download presentation",
 			"politic": "Privacy policy",
 			"action": "contact us!",
-			"text": "© 2024 ILDEV. All rights reserved"
+			"text": "© 2024 ILDEV. All rights reserved"
 		}
 	},
 	"global": {
